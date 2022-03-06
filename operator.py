@@ -11,17 +11,28 @@ operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://operator.example.com/cb"
 
+scope_list = ['banking', 'public', 'medical']
+
 access_token = None
 access_token_expires_in = None
 
+err_msg = lambda x : '[ERROR] ' + x + '\n'
+
+def check_args(args, li):
+    for i in li:
+        if args.get(i) == None:
+            return False
+    return True
+
 @app.get('/')
 def home():
-    #cur.execute("INSERT INTO user (id, pw) VALUES ('test_id_001', 'test_pw_001');")
-    #return str(len(cur.fetchall()))
     return "mydata_cloud: Operator System\n"
 
 @app.post('/signup')
 def sign_up():
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+
     new_id = request.form['id']
     new_pw = request.form['password']
     
@@ -33,11 +44,21 @@ def sign_up():
 
     return 'sign up success\n'
 
-
-@app.get('/register')
+@app.post('/register')
 def register():
-    if request.args['scope'] == None:
-        return '[ERROR] parameter "scope" required'
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+
+    sql  = "SELECT id FROM user WHERE "
+    sql += "id='%s' AND pw='%s';"%(request.form['id'], request.form['password'])
+    cur.execute(sql)
+    if len(cur.fetchall()) != 1:
+        return 'wrong id or password\n'
+
+    if not check_args(request.args, ['scope']):
+        return err_msg('scope required')
+    if request.args['scope'] not in scope_list:
+        return err_msg('wrong scope')
 
     redirect_url  = "http://data-source.example.com/authorize"
     redirect_url += "?response_type=code"
@@ -49,8 +70,10 @@ def register():
 
 @app.get('/cb')
 def callback():
+    if not check_args(request.args, ['code']):
+        return err_msg('code required')
 
-    grant_code = request.args.get('code')
+    grant_code = request.args['code']
     url = 'http://data-source.example.com/token'
     params = {'grant_type':'authorization_code',
                 'code':grant_code,
