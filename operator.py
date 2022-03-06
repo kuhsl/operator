@@ -1,18 +1,16 @@
 from flask import Flask, request, redirect, jsonify
-import pymysql
+from database import init_db, scope_list
 import requests
 from base64 import b64encode
 
 app = Flask(__name__)
-db = None
-cur = None
+db = init_db()
+scope_list = list(scope_list.keys())
 
 operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://operator.example.com/cb"
 data_source_url = "http://data-source.example.com:8080"
-
-scope_list = ['banking', 'public', 'medical']
 
 request_queue = {}
 
@@ -38,15 +36,7 @@ def sign_up():
         new_id = request.form['id']
         new_pw = request.form['password']
     
-    sql  = "INSERT INTO user (id, pw) "
-    sql += "VALUES ('%s', '%s')"%(new_id, new_pw)
-    cur.execute(sql)
-
-    sql  = "INSERT INTO token (id) "
-    sql += "VALUES ('%s')"%(new_id)
-    cur.execute(sql)
-
-    db.commit()
+    db.add_user(new_id, new_pw)
 
     return 'sign up success\n'
 
@@ -59,10 +49,7 @@ def register():
         _id = request.form['id']
         _pw = request.form['password']
 
-    sql  = "SELECT id FROM user WHERE "
-    sql += "id = '%s' AND pw = '%s'"%(_id, _pw)
-    cur.execute(sql)
-    if len(cur.fetchall()) != 1:
+    if db.get_user(_id, _pw) == None:
         return 'wrong id or password\n'
 
     ### check scope
@@ -117,42 +104,12 @@ def callback():
     expires_in = response['expires_in']
 
     ### save token in db
-    scope_prefix = _scope[0] + '_'  # ex) 'banking' -> 'b_'
-    sql = "UPDATE token "
-    sql += "SET %stoken = '%s', "%(scope_prefix, access_token)
-    sql += "%sexpire = %d "%(scope_prefix, expires_in)
-    sql += "WHERE id = '%s'"%(_id)
-    cur.execute(sql)
-    db.commit()
+    db.add_token(_id, _scope, access_token, expires_in)
+
+    ### get data from data source
+    db.get_data(_id, _scope)
 
     return 'success\n'
 
-def init_db():
-    global db, cur
-    # create database operator;
-    # create user operator@localhost identified by 'mysql_pw';
-    # grant all on operator.* to operator@localhost;
-
-    ### connect db
-    db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
-    cur = db.cursor()
-
-    ### creat table "user"
-    sql  = "CREATE TABLE IF NOT EXISTS user ("
-    sql += "id varchar(20) UNIQUE NOT NULL, "
-    sql += "pw varchar(20) NOT NULL)"
-    cur.execute(sql)
-
-    ### create table "token"
-    sql  = "CREATE TABLE IF NOT EXISTS token ("
-    sql += "id varchar(20) UNIQUE NOT NULL, "
-    sql += "b_token char(22), b_expire int, "
-    sql += "p_token char(22), p_expire int, "
-    sql += "m_token char(22), m_expire int)"
-    cur.execute(sql)
-
-    db.commit()
-
 if __name__ == '__main__':
-    init_db()
     app.run(host='127.0.0.1', port=80, debug=True)
