@@ -13,10 +13,12 @@ access_token_expires_in = None
 
 @app.get('/')
 def home():
-    return "Hello World!"
+    return "mydata_cloud: Operator System"
 
 @app.get('/register')
 def register():
+    if request.args.get('scope') == None:
+        return '[ERROR] parameter "scope" required'
 
     redirect_url  = "http://data-source.example.com/authorize"
     redirect_url += "?response_type=code"
