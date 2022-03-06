@@ -1,8 +1,10 @@
 from flask import Flask, request, redirect, jsonify
+import pymysql
 import requests
 from base64 import b64encode
 
 app = Flask(__name__)
+cur = None
 
 operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
@@ -14,6 +16,11 @@ access_token_expires_in = None
 @app.get('/')
 def home():
     return "mydata_cloud: Operator System"
+
+@app.get('/signup')
+def sign_up():
+    return 'SIGN UP'
+
 
 @app.get('/register')
 def register():
@@ -40,10 +47,23 @@ def callback():
                 'Content-Type':'application/x-www-form-urlencoded'}
     requests.post(url, data = params, headers=headers)
 
-    # HTTP_response = receive_HTTP_response()	
+    # HTTP_response = receive_HTTP_response()
 	# access_token = get_HTTP_body(HTTP_response)
 
     return 'success'
 
+def init_db():
+    # create database operator;
+    # create user operator@localhost identified by 'mysql_pw';
+    # grant all on operator.* to operator@localhost;
+    db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+    cur = db.cursor()
+    sql  = "CREATE TABLE IF NOT EXISTS user ("
+    sql += "id varchar(20) UNIQUE NOT NULL, "
+    sql += "pw varchar(20) NOT NULL, "
+    sql += "token char(22))"
+    cur.execute(sql)
+
 if __name__ == '__main__':
+    init_db()
     app.run(host='127.0.0.1', port=80, debug=True)
