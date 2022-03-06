@@ -52,10 +52,9 @@ class Control:
             return None
 
     def add_token(self, id, scope, token, expire):
-        scope_prefix = scope[0] + '_'  # ex) 'banking' -> 'b_'
         sql  = "UPDATE token "
-        sql += "SET %stoken = '%s', "%(scope_prefix, token)
-        sql += "%sexpire = %d "%(scope_prefix, expire)
+        sql += "SET %s_token = '%s', "%(scope, token)
+        sql += "%s_expire = %d "%(scope, expire)
         sql += "WHERE id = '%s'"%(id)
         self.cur.execute(sql)
         self.db.commit()
@@ -84,9 +83,9 @@ def init_db():
     ### create table "token"
     sql  = "CREATE TABLE IF NOT EXISTS token ("
     sql += "id varchar(20) UNIQUE NOT NULL, "
-    sql += "b_token char(22), b_expire int, "
-    sql += "p_token char(22), p_expire int, "
-    sql += "m_token char(22), m_expire int)"
+    for scope in scope_list.keys():
+        sql += "%s_token char(22), %s_expire int, "%(scope, scope)
+    sql = sql[:-2] + ')'
     cur.execute(sql)
 
     ### create data tables as specified by "schema"
