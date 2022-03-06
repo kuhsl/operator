@@ -31,6 +31,7 @@ class Control:
         self.cur = cur
 
     def add_user(self, new_id, new_pw):
+        ### add user info into db
         sql  = "INSERT INTO user (id, pw) "
         sql += "VALUES ('%s', '%s')"%(new_id, new_pw)
         self.cur.execute(sql)
@@ -42,6 +43,7 @@ class Control:
         self.db.commit()
 
     def get_user(self, id, pw):
+        ### get user id from db
         sql  = "SELECT id FROM user WHERE "
         sql += "id = '%s' AND pw = '%s'"%(id, pw)
         count = self.cur.execute(sql)
@@ -52,6 +54,7 @@ class Control:
             return None
 
     def add_token(self, id, scope, token, expire):
+        ### add token into db
         sql  = "UPDATE token "
         sql += "SET %s_token = '%s', "%(scope, token)
         sql += "%s_expire = %d "%(scope, expire)
@@ -60,9 +63,19 @@ class Control:
         self.db.commit()
     
     def del_token(self, id, scope):
+        ### delete token from db
+        pass
+    
+    def request_data(self, id, scope):
+        ### request data to data source
         pass
     
     def get_data(self, id, scope):
+        ### get data from db
+        pass
+    
+    def del_data(self, id, scope):
+        ### delete data from db
         pass
 
 def init_db():
