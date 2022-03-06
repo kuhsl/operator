@@ -14,6 +14,8 @@ data_source_url = "http://data-source.example.com:8080"
 
 scope_list = ['banking', 'public', 'medical']
 
+request_queue = {}
+
 # ERROR message
 err_msg = lambda x : '[ERROR] ' + x + '\n'
 
@@ -58,7 +60,7 @@ def register():
         _pw = request.form['password']
 
     sql  = "SELECT id FROM user WHERE "
-    sql += "id='%s' AND pw='%s'"%(_id, _pw)
+    sql += "id = '%s' AND pw = '%s'"%(_id, _pw)
     cur.execute(sql)
     if len(cur.fetchall()) != 1:
         return 'wrong id or password\n'
@@ -72,10 +74,13 @@ def register():
     if _scope not in scope_list:
         return err_msg('wrong scope')
 
+    ### add info into request_queue
+    request_queue[_id] = _scope
+
     ### make redirect response
     redirect_url  = data_source_url + "/authorize"
     redirect_url += "?response_type=code"
-    redirect_url += "&scope=" + request.args['scope']
+    redirect_url += "&scope=" + _scope
     redirect_url += "&operator_id=" + operator_id
     redirect_url += "&redirect_uri=" + callback_url
     redirect_url += "&state=" + _id
@@ -85,10 +90,17 @@ def register():
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
     ### parse request and get grant code
-    if not check_args(request.args, ['code']):
-        return err_msg('code required')
+    if not check_args(request.args, ['state', 'code']):
+        return err_msg('state, code required')
     else:
+        _id = request.args['state']
         grant_code = request.args['code']
+    
+    ### validate if the user once requested for register data
+    if request_queue.get(_id) == None:
+        return err_msg('Not Proper Access')
+    else:
+        _scope = request_queue.pop(_id)
 
     ### make request for data source
     url = data_source_url + "/token"
@@ -97,7 +109,7 @@ def callback():
                 'redirect_uri':callback_url}
     headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
                 'Content-Type':'application/x-www-form-urlencoded'}
-    response = requests.post(url, data = params, headers=headers)
+    response = requests.post(url, data = params, headers=headers).json()
     # response : dict type
 
     ### parse response and get access token
@@ -105,10 +117,13 @@ def callback():
     expires_in = response['expires_in']
 
     ### save token in db
-    sql  = "INSERT INTO user"
-    ### NOT FINISHED
-    ### 
-    ###
+    scope_prefix = _scope[0] + '_'  # ex) 'banking' -> 'b_'
+    sql = "UPDATE token "
+    sql += "SET %stoken = '%s', "%(scope_prefix, access_token)
+    sql += "%sexpire = %d "%(scope_prefix, expires_in)
+    sql += "WHERE id = '%s'"%(_id)
+    cur.execute(sql)
+    db.commit()
 
     return 'success\n'
 
