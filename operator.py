@@ -19,6 +19,7 @@ access_token_expires_in = None
 err_msg = lambda x : '[ERROR] ' + x + '\n'
 
 def check_args(args, li):
+    ### check if necessary parameter included
     for i in li:
         if args.get(i) == None:
             return False
@@ -28,7 +29,7 @@ def check_args(args, li):
 def home():
     return "mydata_cloud: Operator System\n"
 
-@app.post('/signup')
+@app.post('/signup')        # sign up to mydata system
 def sign_up():
     if not check_args(request.form, ['id', 'password']):
         return err_msg('id, password required')
@@ -44,8 +45,9 @@ def sign_up():
 
     return 'sign up success\n'
 
-@app.post('/register')
+@app.post('/register')      # register data to mydata system
 def register():
+    ### check id, pw
     if not check_args(request.form, ['id', 'password']):
         return err_msg('id, password required')
 
@@ -55,11 +57,13 @@ def register():
     if len(cur.fetchall()) != 1:
         return 'wrong id or password\n'
 
+    ### check scope
     if not check_args(request.args, ['scope']):
         return err_msg('scope required')
     if request.args['scope'] not in scope_list:
         return err_msg('wrong scope')
 
+    ### make redirect response
     redirect_url  = "http://data-source.example.com/authorize"
     redirect_url += "?response_type=code"
     redirect_url += "&scope=" + request.args['scope']
@@ -68,20 +72,24 @@ def register():
 
     return redirect(redirect_url, code=302)
 
-@app.get('/cb')
+@app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
+    ### parse request and get grant code
     if not check_args(request.args, ['code']):
         return err_msg('code required')
 
     grant_code = request.args['code']
+
+    ### make request for data source
     url = 'http://data-source.example.com/token'
     params = {'grant_type':'authorization_code',
                 'code':grant_code,
                 'redirect_uri':callback_url}
     headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
                 'Content-Type':'application/x-www-form-urlencoded'}
-    requests.post(url, data = params, headers=headers)
+    re = requests.post(url, data = params, headers=headers)
 
+    ### parse response and get access token
     # HTTP_response = receive_HTTP_response()
 	# access_token = get_HTTP_body(HTTP_response)
 
