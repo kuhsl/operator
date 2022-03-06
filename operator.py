@@ -4,6 +4,7 @@ import requests
 from base64 import b64encode
 
 app = Flask(__name__)
+db = None
 cur = None
 
 operator_id = 'operator_id_001'
@@ -15,21 +16,32 @@ access_token_expires_in = None
 
 @app.get('/')
 def home():
-    return "mydata_cloud: Operator System"
+    #cur.execute("INSERT INTO user (id, pw) VALUES ('test_id_001', 'test_pw_001');")
+    #return str(len(cur.fetchall()))
+    return "mydata_cloud: Operator System\n"
 
-@app.get('/signup')
+@app.post('/signup')
 def sign_up():
-    return 'SIGN UP'
+    new_id = request.form['id']
+    new_pw = request.form['password']
+    
+    sql  = "INSERT INTO user (id, pw) "
+    sql += "VALUES ('%s', '%s');"%(new_id, new_pw)
+
+    cur.execute(sql)
+    db.commit()
+
+    return 'sign up success\n'
 
 
 @app.get('/register')
 def register():
-    if request.args.get('scope') == None:
+    if request.args['scope'] == None:
         return '[ERROR] parameter "scope" required'
 
     redirect_url  = "http://data-source.example.com/authorize"
     redirect_url += "?response_type=code"
-    redirect_url += "&scope=" + request.args.get('scope')
+    redirect_url += "&scope=" + request.args['scope']
     redirect_url += "&operator_id=" + operator_id
     redirect_url += "&redirect_uri=" + callback_url
 
@@ -50,9 +62,10 @@ def callback():
     # HTTP_response = receive_HTTP_response()
 	# access_token = get_HTTP_body(HTTP_response)
 
-    return 'success'
+    return 'success\n'
 
 def init_db():
+    global db, cur
     # create database operator;
     # create user operator@localhost identified by 'mysql_pw';
     # grant all on operator.* to operator@localhost;
