@@ -1,8 +1,29 @@
 import pymysql
+from itertools import chain
 
-scope_list = {'banking':[], 
-            'public':[], 
-            'medical':[]}
+scope_list = {'banking':['transaction_data', 'financial_data'],
+                'public':['Public_data'],
+                'medical':['medical_data']}
+
+schema = {'transaction_data':[('transaction_data', 'varchar(30)', ''),
+                        ('financial_SSN', 'int', 'UNIQUE NOT NULL'),
+                        ('deposit_amount', 'int', ''),
+                        ('withdrawal_amount', 'int', '')], 
+            'financial_data':[('financial_SSN', 'int', 'UNIQUE NOT NULL'),
+                        ('Account', 'int', ''),
+                        ('balance', 'int', '')], 
+            'Public_data':[('Public_SSN', 'int', 'UNIQUE NOT NULL'),
+                        ('Relation', 'varchar(30)', ''), 
+                        ('Relation_name', 'varchar(30)', ''), 
+                        ('Relation_DOB', 'varchar(30)', ''), 
+                        ('relation_SSN', 'int', ''), 
+                        ('SEX', 'varchar(30)', '')], 
+            'medical_data':[('medical_SSN', 'varchar(30)', 'UNIQUE NOT NULL'), 
+                        ('data_time', 'varchar(30)', ''), 
+                        ('image_path', 'varchar(30)', '')]}
+
+table_list = list(chain(*scope_list.values()))
+assert(table_list == list(schema.keys()))
 
 class Control:
     def __init__(self, db, cur):
@@ -67,6 +88,14 @@ def init_db():
     sql += "p_token char(22), p_expire int, "
     sql += "m_token char(22), m_expire int)"
     cur.execute(sql)
+
+    ### create data tables as specified by "schema"
+    for table_name in table_list:
+        sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
+        for column, type, option in schema[table_name]:
+            sql += "%s %s %s, "%(column, type, option)
+        sql = sql[:-2] + ')'
+        cur.execute(sql)
 
     db.commit()
 
