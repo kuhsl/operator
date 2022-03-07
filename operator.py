@@ -66,7 +66,7 @@ def register():
 
     ### make redirect response
     redirect_url  = data_source_url + "/authorize"
-    redirect_url += "?response_type=code"
+    redirect_url += "?response_type=authorization_code"
     redirect_url += "&scope=" + _scope
     redirect_url += "&operator_id=" + operator_id
     redirect_url += "&redirect_uri=" + callback_url
