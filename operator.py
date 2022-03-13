@@ -74,6 +74,30 @@ def register():
 
     return redirect(redirect_url, code=302)
 
+@app.post('/refresh')       # get data from data-source again if token not expired
+def refresh():
+    ### check id, pw
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+    else:
+        _id = request.form['id']
+        _pw = request.form['password']
+
+    if db.get_user(_id, _pw) == None:
+        return 'wrong id or password\n'
+
+    ### check scope
+    if not check_args(request.args, ['scope']):
+        return err_msg('scope required')
+    else:
+        _scope = request.args['scope']
+
+    if _scope not in scope_list:
+        return err_msg('wrong scope')
+    
+    ### get data from data source
+    return db.request_data(_id, _scope)
+
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
     ### parse request and get grant code
@@ -107,9 +131,7 @@ def callback():
     db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
-    db.get_data(_id, _scope)
-
-    return 'success\n'
+    return db.request_data(_id, _scope) + '\n
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=80, debug=True)

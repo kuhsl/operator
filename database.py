@@ -1,5 +1,6 @@
 import pymysql
 from itertools import chain
+import time
 
 scope_list = {'banking':['transaction_data', 'financial_data'],
                 'public':['Public_data'],
@@ -66,13 +67,46 @@ class Control:
         ### delete token from db
         pass
     
+    def get_token(self, id, scope):
+        ### get token from db if exists & not expired
+        sql  = "SELECT %s_token, %s_expire "%(scope, scope)
+        sql += "FROM token "
+        sql += "WHERE id = '%s'"%(id)
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+        
+        if count == 1:
+            token = result[0][0]
+            expire = result[0][1]
+            if int(time.time()) <= expire:
+                return token
+            else:
+                return "token expired"
+        else:
+            return None
+    
     def request_data(self, id, scope):
         ### request data to data source
-        pass
+        token = self.get_token(id, scope)
+
+        return "success"
     
     def get_data(self, id, scope):
         ### get data from db
-        pass
+        data = {}
+        for table_name in scope_list[scope]:
+            columns = [x[0] for x in schema[table_name]]
+            sql  = "SELECT * "%(', '.join(columns))
+            sql += "FROM %s "%(table_name)
+            sql += "WHERE id = '%s'"%(id)
+            count = self.cur.execute(sql)
+            result = self.cur.fetchall()
+
+            if count == 1:
+                for i in len(columns):
+                    data[columns[i]] = result[0][i]
+            
+        return data
     
     def del_data(self, id, scope):
         ### delete data from db
