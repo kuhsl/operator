@@ -66,10 +66,8 @@ class Control:
         sql  = "DELETE FROM token "
         sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
         count = self.cur.execute(sql)
-        if count == 1:
-            return "success"
-        else:
-            return "No token matched"
+        
+        return count
     
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
@@ -114,7 +112,13 @@ class Control:
     
     def del_data(self, id, scope):
         ### delete data from db
-        pass
+        count = 0
+        for table_name in scope_list[scope]:
+            sql  = "DELETE FROM %s "%(table_name)
+            sql += "WHERE id = '%s'"%(id)
+            count += self.cur.execute(sql)
+        
+        return count
 
 def init_db():
     # create database operator;
