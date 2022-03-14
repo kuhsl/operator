@@ -120,7 +120,9 @@ def delete():
         return err_msg('wrong scope')
     
     ### delete data from operator db
-    return db.delete_data(_id, _scope)
+    db.del_data(_id, _scope)
+    db.del_token(_id, _scope)
+    return "success"
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
@@ -155,7 +157,7 @@ def callback():
     db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
-    return db.request_data(_id, _scope) + '\n
+    return db.request_data(_id, _scope) + '\n'
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=80, debug=True)

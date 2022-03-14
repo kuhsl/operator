@@ -56,16 +56,20 @@ class Control:
 
     def add_token(self, id, scope, token, expire):
         ### add token into db
-        sql  = "UPDATE token "
-        sql += "SET %s_token = '%s', "%(scope, token)
-        sql += "%s_expire = %d "%(scope, expire)
-        sql += "WHERE id = '%s'"%(id)
+        sql  = "INSERT INTO token (id, scope, token, expire) "
+        sql += "VALUES ('%s', '%s', '%s', %d)"%(id, scope, token, expire)
         self.cur.execute(sql)
         self.db.commit()
     
     def del_token(self, id, scope):
         ### delete token from db
-        pass
+        sql  = "DELETE FROM token "
+        sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
+        count = self.cur.execute(sql)
+        if count == 1:
+            return "success"
+        else:
+            return "No token matched"
     
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
@@ -130,9 +134,9 @@ def init_db():
     ### create table "token"
     sql  = "CREATE TABLE IF NOT EXISTS token ("
     sql += "id varchar(20) UNIQUE NOT NULL, "
-    for scope in scope_list.keys():
-        sql += "%s_token char(22), %s_expire int, "%(scope, scope)
-    sql = sql[:-2] + ')'
+    sql += "scope varchar(20), "
+    sql += "token char(22), "
+    sql += "expire int )"
     cur.execute(sql)
 
     ### create data tables as specified by "schema"
