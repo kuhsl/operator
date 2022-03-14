@@ -98,6 +98,30 @@ def refresh():
     ### get data from data source
     return db.request_data(_id, _scope)
 
+@app.post('/delete')        # delete data from operator db
+def delete():
+    ### check id, pw
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+    else:
+        _id = request.form['id']
+        _pw = request.form['password']
+
+    if db.get_user(_id, _pw) == None:
+        return 'wrong id or password\n'
+    
+    ### check scope
+    if not check_args(request.args, ['scope']):
+        return err_msg('scope required')
+    else:
+        _scope = request.args['scope']
+
+    if _scope not in scope_list:
+        return err_msg('wrong scope')
+    
+    ### delete data from operator db
+    return db.delete_data(_id, _scope)
+
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
     ### parse request and get grant code
