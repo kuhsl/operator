@@ -1,15 +1,15 @@
-### PREPARE
+# PREPARE
 pip3 install Flask
 pip3 install PyMySQL
 
-### DATABASE SETTINGS
+# DATABASE SETTINGS
 ...
 
-### ACTIVATE SERVER
+# ACTIVATE SERVER
 sudo /etc/init.d/mysql start
 sudo python3 operator.py
 
-### TESTCASE
+# TESTCASE
 ## 1. user authorization request
 (user -> data-source)
 `curl -X GET {{data-source IP}}/authorize?response_type=authorization_code&scope={{1}}&operator_id=operator_id_001&redirect_uri=http://operator.example.com/cb&state={{2}}`
