@@ -2,26 +2,26 @@ import pymysql
 from itertools import chain
 import time
 
-scope_list = {'banking':['transaction_data', 'financial_data'],
-                'public':['Public_data'],
-                'medical':['medical_data']}
+scope_list = {'financial_data':['transaction_data', 'financial_data'],
+                'public_data':['public_data'],
+                'medical_data':['medical_data']}
 
-schema = {'transaction_data':[('transaction_data', 'varchar(30)', ''),
-                        ('financial_SSN', 'int', 'UNIQUE NOT NULL'),
-                        ('deposit_amount', 'int', ''),
-                        ('withdrawal_amount', 'int', '')], 
-            'financial_data':[('financial_SSN', 'int', 'UNIQUE NOT NULL'),
-                        ('Account', 'int', ''),
-                        ('balance', 'int', '')], 
-            'Public_data':[('Public_SSN', 'int', 'UNIQUE NOT NULL'),
-                        ('Relation', 'varchar(30)', ''), 
-                        ('Relation_name', 'varchar(30)', ''), 
-                        ('Relation_DOB', 'varchar(30)', ''), 
-                        ('relation_SSN', 'int', ''), 
-                        ('SEX', 'varchar(30)', '')], 
-            'medical_data':[('medical_SSN', 'varchar(30)', 'UNIQUE NOT NULL'), 
-                        ('data_time', 'varchar(30)', ''), 
-                        ('image_path', 'varchar(30)', '')]}
+schema = {'transaction_data':[('transaction_data', 'timestamp', ''),
+                        ('user', 'varchar(22)', ''),
+                        ('deposit_amount', 'bigint(20)', ''),
+                        ('withdrawal_amount', 'bigint(20)', '')], 
+            'financial_data':[('user', 'varchar(22)', ''),
+                        ('account', 'bigint(20)', ''),
+                        ('balance', 'bigint(20)', '')], 
+            'public_data':[('user', 'varchar(22)', ''),
+                        ('relation', 'varchar(5)', ''), 
+                        ('relation_name', 'varchar(5)', ''), 
+                        ('relation_DOB', 'date', ''), 
+                        ('relation_SSN', 'bigint', ''), 
+                        ('SEX', 'varchar(2)', '')], 
+            'medical_data':[('user', 'varchar(22)', ''), 
+                        ('data_time', 'datetime', ''), 
+                        ('image', 'longblob', '')]}
 
 table_list = list(chain(*scope_list.values()))
 assert(table_list == list(schema.keys()))
