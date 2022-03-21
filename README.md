@@ -20,9 +20,9 @@ $ sudo pip3 install requests
 
 ## ACTIVATE SERVER
 ```bash
-$ sudo /etc/init.d/mysql start
-~/operator $ git pull           # update files from github
-~/operator $ sudo python3 operator.py
+$ sudo /etc/init.d/mysql start			# start mysql server
+~/operator $ git pull           		# update newest files from github
+~/operator $ sudo python3 operator.py	# start operator server
 ```
 
 ## Usage
