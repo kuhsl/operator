@@ -14,9 +14,10 @@ grant all on operator.* to operator@localhost;
 ```
 
 # ACTIVATE SERVER
-```base
+```bash
 $ sudo /etc/init.d/mysql start
-$ sudo python3 operator.py
+~/operator $ git pull           ; update files from github
+~/operator $ sudo python3 operator.py
 ```
 
 # TESTCASE
