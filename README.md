@@ -1,7 +1,9 @@
 # PREPARE
 ```bash
-# pip3 install Flask
-# pip3 install PyMySQL
+$ sudo apt install mysql-server
+$ sudo apt install python3-pip
+$ sudo pip3 install Flask
+$ sudo pip3 install PyMySQL
 ```
 
 # DATABASE SETTINGS

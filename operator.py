@@ -9,8 +9,8 @@ scope_list = list(scope_list.keys())
 
 operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
-callback_url = "http://operator.example.com/cb"
-data_source_url = "http://data-source.example.com:8080"
+callback_url = "http://10.11.12.3/cb"
+data_source_url = "http://163.152.30.239"
 
 request_queue = {}
 
