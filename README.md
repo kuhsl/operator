@@ -7,7 +7,11 @@ $ sudo pip3 install PyMySQL
 ```
 
 # DATABASE SETTINGS
-...
+```sql
+create database operator;
+create user operator@localhost identified by 'mysql_pw';
+grant all on operator.* to operator@localhost;
+```
 
 # ACTIVATE SERVER
 ```base
