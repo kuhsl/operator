@@ -4,6 +4,8 @@ $ sudo apt install mysql-server
 $ sudo apt install python3-pip
 $ sudo pip3 install Flask
 $ sudo pip3 install PyMySQL
+$ sudo pip3 install flask-mysql
+$ sudo pip3 install requests
 ;https://askubuntu.com/questions/1261775/why-cant-i-install-python-3-8
 ```
 
