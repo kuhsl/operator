@@ -74,6 +74,30 @@ def register():
 
     return redirect(redirect_url, code=302)
 
+@app.post('/data')          # user get data from operator
+def get_data():
+    ### check id, pw
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+    else:
+        _id = request.form['id']
+        _pw = request.form['password']
+
+    if db.get_user(_id, _pw) == None:
+        return 'wrong id or password\n'
+
+    ### check scope
+    if not check_args(request.args, ['scope']):
+        return err_msg('scope required')
+    else:
+        _scope = request.args['scope']
+
+    if _scope not in scope_list:
+        return err_msg('wrong scope')
+    
+    ### get data from operator's db
+    return jsonify(db.get_data(_id, _scope))
+
 @app.post('/refresh')       # get data from data-source again if token not expired
 def refresh():
     ### check id, pw
