@@ -122,7 +122,7 @@ def delete():
     ### delete data from operator db
     db.del_data(_id, _scope)
     db.del_token(_id, _scope)
-    return "success"
+    return "success\n"
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
