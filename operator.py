@@ -24,6 +24,17 @@ def check_args(args, li):
             return False
     return True
 
+def request_data(id, scope):
+    ### request data to data source
+    token = db.get_token(id, scope)
+    params = {'token':token, 'data':scope}
+    response = requests.get(data_source_url, params = params).json()
+
+    ### store data in db
+    
+
+    return "success"
+
 @app.get('/')
 def home():
     return "mydata_cloud: Operator System\n"
@@ -120,7 +131,7 @@ def refresh():
         return err_msg('wrong scope')
     
     ### get data from data source
-    return db.request_data(_id, _scope)
+    return request_data(_id, _scope)
 
 @app.post('/delete')        # delete data from operator db
 def delete():
@@ -181,7 +192,7 @@ def callback():
     db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
-    return db.request_data(_id, _scope) + '\n'
+    return request_data(_id, _scope) + '\n'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

@@ -61,14 +61,6 @@ class Control:
         self.cur.execute(sql)
         self.db.commit()
     
-    def del_token(self, id, scope):
-        ### delete token from db
-        sql  = "DELETE FROM token "
-        sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
-        count = self.cur.execute(sql)
-        
-        return count
-    
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
         sql  = "SELECT %s_token, %s_expire "%(scope, scope)
@@ -87,11 +79,13 @@ class Control:
         else:
             return None
     
-    def request_data(self, id, scope):
-        ### request data to data source
-        token = self.get_token(id, scope)
-
-        return "success"
+    def del_token(self, id, scope):
+        ### delete token from db
+        sql  = "DELETE FROM token "
+        sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
+        count = self.cur.execute(sql)
+        
+        return count
     
     def get_data(self, id, scope):
         ### get data from db
