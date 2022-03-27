@@ -6,7 +6,7 @@ scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
                 'medical_data':['medical_data']}
 
-schema = {'transaction_data':[('transaction_data', 'timestamp', ''),
+schema = {'transaction_data':[('transaction_date', 'timestamp', ''),
                         ('user', 'varchar(22)', ''),
                         ('deposit_amount', 'bigint(20)', ''),
                         ('withdrawal_amount', 'bigint(20)', '')], 
