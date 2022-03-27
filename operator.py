@@ -28,10 +28,10 @@ def request_data(id, scope):
     ### request data to data source
     token = db.get_token(id, scope)
     params = {'token':token, 'data':scope}
-    response = requests.get(data_source_url, params = params).json()
+    data = requests.get(data_source_url, params = params).json()
 
     ### store data in db
-    
+    db.add_data(id, scope, data)
 
     return "success"
 

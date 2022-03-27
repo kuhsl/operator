@@ -42,6 +42,8 @@ class Control:
         self.cur.execute(sql)
 
         self.db.commit()
+        
+        return "success"
 
     def get_user(self, id, pw):
         ### get user id from db
@@ -60,6 +62,7 @@ class Control:
         sql += "VALUES ('%s', '%s', '%s', %d)"%(id, scope, token, expire)
         self.cur.execute(sql)
         self.db.commit()
+        return "success"
     
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
@@ -86,8 +89,13 @@ class Control:
         count = self.cur.execute(sql)
         
         return count
+
+    def add_data(self, id, scope, data):  # 데이터 전송 양식 통일 후 수정 필요
+        ### add data into db
+        
+        return "success"
     
-    def get_data(self, id, scope):
+    def get_data(self, id, scope):  # 데이터 전송 양식 통일 후 수정 필요
         ### get data from db
         data = {}
         for table_name in scope_list[scope]:
