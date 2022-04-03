@@ -37,10 +37,6 @@ class Control:
         sql += "VALUES ('%s', '%s')"%(new_id, new_pw)
         self.cur.execute(sql)
 
-        sql  = "INSERT INTO token (id) "
-        sql += "VALUES ('%s')"%(new_id)
-        self.cur.execute(sql)
-
         self.db.commit()
         
         return "success"
