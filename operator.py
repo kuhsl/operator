@@ -11,6 +11,7 @@ operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://163.152.71.223/cb"
 data_source_url = "http://163.152.30.239"
+data_source_url = "http://localhost:8080"
 
 request_queue = {}
 
@@ -28,12 +29,12 @@ def request_data(id, scope):
     ### request data to data source
     token = db.get_token(id, scope)
     params = {'token':token, 'data':scope}
-    data = requests.get(data_source_url, params = params).json()
+    data = requests.get(data_source_url + '/resource', params = params).json()
 
     ### store data in db
-    db.add_data(id, scope, data)
+    db.add_data(id, scope, data[scope])
 
-    return "success"
+    return "success\n"
 
 @app.get('/')
 def home():
@@ -107,7 +108,8 @@ def get_data():
         return err_msg('wrong scope')
     
     ### get data from operator's db
-    return jsonify(db.get_data(_id, _scope))
+    data = db.get_data(_id, _scope)
+    return jsonify({_scope:data})
 
 @app.post('/refresh')       # get data from data-source again if token not expired
 def refresh():
@@ -192,7 +194,7 @@ def callback():
     db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
-    return request_data(_id, _scope) + '\n'
+    return request_data(_id, _scope)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=80, debug=True)

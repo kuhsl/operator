@@ -6,7 +6,7 @@ scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
                 'medical_data':['medical_data']}
 
-schema = {'transaction_data':[('transaction_date', 'timestamp', ''),
+schema = {'transaction_data':[('transaction_data', 'timestamp', ''),
                         ('user', 'varchar(22)', ''),
                         ('deposit_amount', 'bigint(20)', ''),
                         ('withdrawal_amount', 'bigint(20)', '')], 
@@ -57,6 +57,9 @@ class Control:
             return None
 
     def add_token(self, id, scope, token, expire):
+        ### delete old token
+        self.del_token(id, scope)
+
         ### add token into db
         sql  = "INSERT INTO token (id, scope, token, expire) "
         sql += "VALUES ('%s', '%s', '%s', %d)"%(id, scope, token, expire)
@@ -66,9 +69,9 @@ class Control:
     
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
-        sql  = "SELECT %s_token, %s_expire "%(scope, scope)
+        sql  = "SELECT token, expire "
         sql += "FROM token "
-        sql += "WHERE id = '%s'"%(id)
+        sql += "WHERE id = '%s' and scope = '%s'"%(id, scope)
         count = self.cur.execute(sql)
         result = self.cur.fetchall()
         
@@ -87,11 +90,27 @@ class Control:
         sql  = "DELETE FROM token "
         sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
         count = self.cur.execute(sql)
+        self.db.commit()
         
         return count
 
     def add_data(self, id, scope, data):  # 데이터 전송 양식 통일 후 수정 필요
+        ### delete old data
+        self.del_data(id, scope)
+
         ### add data into db
+        table_names = list(data)
+        for table_name in table_names:
+            for d in data[table_name]:
+                columns = list(d)
+                vals = [d[x] for x in columns]
+                sql  = "INSERT INTO %s "%(table_name)
+                sql += "(id, " + ", ".join(columns) + ") "
+                sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
+                print(sql)
+                self.cur.execute(sql)
+        
+        self.db.commit()
         
         return "success"
     
@@ -99,16 +118,20 @@ class Control:
         ### get data from db
         data = {}
         for table_name in scope_list[scope]:
+            print(table_name)
             columns = [x[0] for x in schema[table_name]]
-            sql  = "SELECT * "%(', '.join(columns))
+            sql  = "SELECT " + ', '.join(columns) + ' '
             sql += "FROM %s "%(table_name)
             sql += "WHERE id = '%s'"%(id)
             count = self.cur.execute(sql)
             result = self.cur.fetchall()
 
-            if count == 1:
-                for i in len(columns):
-                    data[columns[i]] = result[0][i]
+            data[table_name] = []
+            for i in range(count):
+                d = {}
+                for j in range(len(columns)):
+                    d[columns[j]] = result[i][j]
+                data[table_name].append(d)
             
         return data
     
@@ -119,7 +142,9 @@ class Control:
             sql  = "DELETE FROM %s "%(table_name)
             sql += "WHERE id = '%s'"%(id)
             count += self.cur.execute(sql)
-        
+
+        self.db.commit()
+
         return count
 
 def init_db():
@@ -139,7 +164,7 @@ def init_db():
 
     ### create table "token"
     sql  = "CREATE TABLE IF NOT EXISTS token ("
-    sql += "id varchar(20) UNIQUE NOT NULL, "
+    sql += "id varchar(20) NOT NULL, "
     sql += "scope varchar(20), "
     sql += "token char(22), "
     sql += "expire int )"
@@ -148,6 +173,7 @@ def init_db():
     ### create data tables as specified by "schema"
     for table_name in table_list:
         sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
+        sql += "id varchar(20) NOT NULL, "
         for column, type, option in schema[table_name]:
             sql += "%s %s %s, "%(column, type, option)
         sql = sql[:-2] + ')'
