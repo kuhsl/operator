@@ -11,7 +11,6 @@ operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://163.152.71.223/cb"
 data_source_url = "http://163.152.30.239"
-data_source_url = "http://localhost:8080"
 
 request_queue = {}
 
