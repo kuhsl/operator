@@ -42,13 +42,18 @@ def make_cookie(seed):
 
     return seed
 
-def check_cookie(seed, cookie):
+def check_cookie(cookie):
     ### verify cookie
 
-    if seed == cookie:
-        return True
-    
-    return False
+    if cookie == None:  # no cookie set
+        return None
+
+    seed = None
+
+    ### verifying logic comes here
+    seed = cookie
+
+    return seed
 
 @app.get('/')
 def home():
@@ -120,16 +125,14 @@ def login():
     return response
 
 @app.post('/data')          # user get data from operator
+@app.get('/data')
 def get_data():
     ### check id, pw
-    if not check_args(request.form, ['id', 'password']):
-        return err_msg('id, password required')
-    else:
-        _id = request.form['id']
-        _pw = request.form['password']
+    cookie = request.cookies.get("login")
+    _id = check_cookie(cookie)
 
-    if db.get_user(_id, _pw) == None:
-        return err_msg('wrong id or password')
+    if _id == None:
+        return err_msg('login first')
 
     ### check scope
     if not check_args(request.args, ['scope']):
@@ -145,16 +148,14 @@ def get_data():
     return jsonify({_scope:data})
 
 @app.post('/refresh')       # get data from data-source again if token not expired
+@app.get('/refresh')
 def refresh():
     ### check id, pw
-    if not check_args(request.form, ['id', 'password']):
-        return err_msg('id, password required')
-    else:
-        _id = request.form['id']
-        _pw = request.form['password']
+    cookie = request.cookies.get("login")
+    _id = check_cookie(cookie)
 
-    if db.get_user(_id, _pw) == None:
-        return err_msg('wrong id or password')
+    if _id == None:
+        return err_msg('login first')
 
     ### check scope
     if not check_args(request.args, ['scope']):
@@ -169,16 +170,14 @@ def refresh():
     return request_data(_id, _scope)
 
 @app.post('/delete')        # delete data from operator db
+@app.get('/delete')
 def delete():
     ### check id, pw
-    if not check_args(request.form, ['id', 'password']):
-        return err_msg('id, password required')
-    else:
-        _id = request.form['id']
-        _pw = request.form['password']
+    cookie = request.cookies.get("login")
+    _id = check_cookie(cookie)
 
-    if db.get_user(_id, _pw) == None:
-        return 'wrong id or password\n'
+    if _id == None:
+        return err_msg('login first')
     
     ### check scope
     if not check_args(request.args, ['scope']):
