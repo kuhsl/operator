@@ -1,7 +1,8 @@
-from flask import Flask, request, redirect, jsonify
+from flask import Flask, request, redirect, jsonify, make_response
 from database import init_db, scope_list
 import requests
 from base64 import b64encode
+from secrets import token_bytes
 
 app = Flask(__name__)
 db = init_db()
@@ -13,6 +14,7 @@ callback_url = "http://163.152.71.223/cb"
 data_source_url = "http://163.152.30.239"
 
 request_queue = {}
+cookie_secret_key = ''
 
 # ERROR message
 err_msg = lambda x : '[ERROR] ' + x + '\n'
@@ -34,6 +36,19 @@ def request_data(id, scope):
     db.add_data(id, scope, data[scope])
 
     return "success\n"
+
+def make_cookie(seed):
+    ### make secret cookie 
+
+    return seed
+
+def check_cookie(seed, cookie):
+    ### verify cookie
+
+    if seed == cookie:
+        return True
+    
+    return False
 
 @app.get('/')
 def home():
@@ -61,7 +76,7 @@ def register():
         _pw = request.form['password']
 
     if db.get_user(_id, _pw) == None:
-        return 'wrong id or password\n'
+        return err_msg('wrong id or password')
 
     ### check scope
     if not check_args(request.args, ['scope']):
@@ -85,6 +100,25 @@ def register():
 
     return redirect(redirect_url, code=302)
 
+@app.post('/login')
+def login():
+    ### check id, pw
+    if not check_args(request.form, ['id', 'password']):
+        return err_msg('id, password required')
+    else:
+        _id = request.form['id']
+        _pw = request.form['password']
+
+    if db.get_user(_id, _pw) == None:
+        return err_msg('wrong id or password')
+    
+    ### make response (with cookie)
+    cookie_value = make_cookie(_id)
+    response = make_response("login success\n")
+    response.set_cookie("login", cookie_value)
+
+    return response
+
 @app.post('/data')          # user get data from operator
 def get_data():
     ### check id, pw
@@ -95,7 +129,7 @@ def get_data():
         _pw = request.form['password']
 
     if db.get_user(_id, _pw) == None:
-        return 'wrong id or password\n'
+        return err_msg('wrong id or password')
 
     ### check scope
     if not check_args(request.args, ['scope']):
@@ -120,7 +154,7 @@ def refresh():
         _pw = request.form['password']
 
     if db.get_user(_id, _pw) == None:
-        return 'wrong id or password\n'
+        return err_msg('wrong id or password')
 
     ### check scope
     if not check_args(request.args, ['scope']):
@@ -196,4 +230,5 @@ def callback():
     return request_data(_id, _scope)
 
 if __name__ == '__main__':
+    cookie_secret_key = token_bytes(22)
     app.run(host='0.0.0.0', port=80, debug=True)
