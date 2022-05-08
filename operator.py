@@ -74,14 +74,11 @@ def sign_up():
 @app.post('/register')      # register data to mydata system
 def register():
     ### check id, pw
-    if not check_args(request.form, ['id', 'password']):
-        return err_msg('id, password required')
-    else:
-        _id = request.form['id']
-        _pw = request.form['password']
+    cookie = request.cookies.get("login")
+    _id = check_cookie(cookie)
 
-    if db.get_user(_id, _pw) == None:
-        return err_msg('wrong id or password')
+    if _id == None:
+        return err_msg('login first')
 
     ### check scope
     if not check_args(request.args, ['scope']):
