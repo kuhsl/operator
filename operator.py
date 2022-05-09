@@ -71,7 +71,7 @@ def sign_up():
 
     return 'sign up success\n'
 
-@app.post('/register')      # register data to mydata system
+@app.get('/register')      # register data to mydata system
 def register():
     ### check id, pw
     cookie = request.cookies.get("login")
@@ -95,7 +95,7 @@ def register():
     ### make redirect response
     redirect_url  = data_source_url + "/authorize"
     redirect_url += "?response_type=authorization_code"
-    redirect_url += "&scope=" + _scope
+    redirect_url += "&scope=" + ""
     redirect_url += "&operator_id=" + operator_id
     redirect_url += "&redirect_uri=" + callback_url
     redirect_url += "&state=" + _id
@@ -121,8 +121,8 @@ def login():
 
     return response
 
-@app.post('/data')          # user get data from operator
-@app.get('/data')
+#@app.post('/data')
+@app.get('/data')          # user get data from operator
 def get_data():
     ### check id, pw
     cookie = request.cookies.get("login")
@@ -144,8 +144,8 @@ def get_data():
     data = db.get_data(_id, _scope)
     return jsonify({_scope:data})
 
-@app.post('/refresh')       # get data from data-source again if token not expired
-@app.get('/refresh')
+#@app.post('/refresh')
+@app.get('/refresh')       # get data from data-source again if token not expired
 def refresh():
     ### check id, pw
     cookie = request.cookies.get("login")
@@ -166,8 +166,8 @@ def refresh():
     ### get data from data source
     return request_data(_id, _scope)
 
-@app.post('/delete')        # delete data from operator db
-@app.get('/delete')
+#@app.post('/delete')
+@app.get('/delete')        # delete data from operator db
 def delete():
     ### check id, pw
     cookie = request.cookies.get("login")
