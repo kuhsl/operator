@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, jsonify, make_response
-from database import init_db, scope_list
+from database import init_db, scope_list, url_list
 import requests
 from base64 import b64encode
 from secrets import token_bytes
@@ -11,7 +11,6 @@ scope_list = list(scope_list.keys())
 operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://163.152.71.223/cb"
-data_source_url = "http://163.152.30.239"
 
 request_queue = {}
 cookie_secret_key = ''
@@ -28,6 +27,7 @@ def check_args(args, li):
 
 def request_data(id, scope):
     ### request data to data source
+    data_source_url = url_list[scope]
     token = db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params).json()
@@ -93,9 +93,10 @@ def register():
     request_queue[_id] = _scope
 
     ### make redirect response
+    data_source_url = url_list[_scope]
     redirect_url  = data_source_url + "/authorize"
     redirect_url += "?response_type=authorization_code"
-    redirect_url += "&scope=" + ""
+    redirect_url += "&scope=" + _scope
     redirect_url += "&operator_id=" + operator_id
     redirect_url += "&redirect_uri=" + callback_url
     redirect_url += "&state=" + _id
@@ -206,6 +207,7 @@ def callback():
         _scope = request_queue.pop(_id)
 
     ### make request for data source
+    data_source_url = url_list[_scope]
     url = data_source_url + "/token"
     params = {'grant_type':'authorization_code',
                 'code':grant_code,

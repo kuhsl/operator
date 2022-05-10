@@ -6,25 +6,30 @@ scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
                 'medical_data':['medical_data']}
 
-schema = {'transaction_data':[('transaction_data', 'timestamp', ''),
-                        ('user', 'varchar(22)', ''),
-                        ('deposit_amount', 'bigint(20)', ''),
-                        ('withdrawal_amount', 'bigint(20)', '')], 
-            'financial_data':[('user', 'varchar(22)', ''),
-                        ('account', 'bigint(20)', ''),
-                        ('balance', 'bigint(20)', '')], 
-            'public_data':[('user', 'varchar(22)', ''),
-                        ('relation', 'varchar(5)', ''), 
-                        ('relation_name', 'varchar(5)', ''), 
-                        ('relation_DOB', 'date', ''), 
-                        ('relation_SSN', 'bigint', ''), 
-                        ('SEX', 'varchar(2)', '')], 
-            'medical_data':[('user', 'varchar(22)', ''), 
-                        ('data_time', 'datetime', ''), 
-                        ('image', 'longblob', '')]}
+url_list = {'financial_data':'http://163.152.30.239/financial',
+                'public_data':'http://163.152.30.239/public',
+                'medical_data':'http://163.152.30.239/medical'}
+
+schema = {'public_data':[('user_id', 'varchar(50)', ''),
+                        ('name', 'varchar(20)', ''), 
+                        ('relation', 'varchar(10)', ''), 
+                        ('birth', 'date', ''), 
+                        ('ssn', 'varchar(15)', ''), 
+                        ('sex', 'enum(\'F\',\'M\')', '')], 
+            'financial_data':[('user_id', 'varchar(50)', ''),
+                        ('account', 'varchar(20)', ''),
+                        ('balance', 'bigint', '')], 
+            'transaction_data':[('user_id', 'varchar(50)', ''),
+                        ('date_time', 'varchar(50)', ''),
+                        ('deposit_amount', 'bigint', ''),
+                        ('withdrawal_amount', 'bigint', '')], 
+            'medical_data':[('user_id', 'varchar(50)', ''), 
+                        ('data_time', 'varchar(50)', ''), 
+                        ('image_path', 'varchar(200)', '')]}
 
 table_list = list(chain(*scope_list.values()))
 assert(table_list == list(schema.keys()))
+assert(list(url_list.keys()) == list(scope_list.keys()))
 
 class Control:
     def __init__(self, db, cur):
@@ -154,13 +159,13 @@ def init_db():
 
     ### creat table "user"
     sql  = "CREATE TABLE IF NOT EXISTS user ("
-    sql += "id varchar(20) UNIQUE NOT NULL, "
-    sql += "pw varchar(20) NOT NULL)"
+    sql += "id varchar(50) UNIQUE NOT NULL, "
+    sql += "pw varchar(50) NOT NULL)"
     cur.execute(sql)
 
     ### create table "token"
     sql  = "CREATE TABLE IF NOT EXISTS token ("
-    sql += "id varchar(20) NOT NULL, "
+    sql += "id varchar(50) NOT NULL, "
     sql += "scope varchar(20), "
     sql += "token char(22), "
     sql += "expire int )"
@@ -169,7 +174,7 @@ def init_db():
     ### create data tables as specified by "schema"
     for table_name in table_list:
         sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
-        sql += "id varchar(20) NOT NULL, "
+        sql += "id varchar(50) NOT NULL, "
         for column, type, option in schema[table_name]:
             sql += "%s %s %s, "%(column, type, option)
         sql = sql[:-2] + ')'
