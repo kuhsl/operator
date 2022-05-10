@@ -22,7 +22,12 @@ $ sudo pip3 install requests
 ```bash
 $ sudo /etc/init.d/mysql start			# start mysql server
 ~/operator $ git pull           		# update newest files from github
-~/operator $ sudo python3 operator.py	# start operator server
+$ sudo systemctl daemon-reload
+$ sudo systemctl restart flask.service	# start operator server
+$ sudo systemctl status flask.service 	# checking for web server log
+
+
+### ~/operator $ sudo python3 operator.py	# start operator server
 ```
 
 ## Usage
