@@ -95,7 +95,7 @@ class Control:
         
         return count
 
-    def add_data(self, id, scope, data):  # 데이터 전송 양식 통일 후 수정 필요
+    def add_data(self, id, scope, data):
         ### delete old data
         self.del_data(id, scope)
 
@@ -115,7 +115,7 @@ class Control:
         
         return "success"
     
-    def get_data(self, id, scope):  # 데이터 전송 양식 통일 후 수정 필요
+    def get_data(self, id, scope):
         ### get data from db
         data = {}
         for table_name in scope_list[scope]:
