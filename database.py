@@ -27,9 +27,9 @@ schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('data_time', 'varchar(50)', ''), 
                         ('image_path', 'varchar(200)', '')]}
 
-table_list = list(chain(*scope_list.values()))
-assert(table_list == list(schema.keys()))
-assert(list(url_list.keys()) == list(scope_list.keys()))
+table_list = set(chain(*scope_list.values()))
+assert(table_list == set(schema.keys()))
+assert(set(url_list.keys()) == set(scope_list.keys()))
 
 class Control:
     def __init__(self, db, cur):
