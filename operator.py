@@ -1,5 +1,5 @@
 from flask import Flask, request, redirect, jsonify, make_response
-from database import init_db, scope_list, url_list
+from database import init_db, scope_list, url_list_front, url_list_back
 import requests
 from base64 import b64encode
 from secrets import token_bytes
@@ -27,7 +27,7 @@ def check_args(args, li):
 
 def request_data(id, scope):
     ### request data to data source
-    data_source_url = url_list[scope]
+    data_source_url = url_list_back[scope]
     token = db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params).json()
@@ -71,6 +71,10 @@ def sign_up():
 
     return 'sign up success\n'
 
+@app.get('/test')
+def test():
+    return jsonify(request_queue)
+
 @app.get('/register')      # register data to mydata system
 def register():
     ### check id, pw
@@ -93,7 +97,7 @@ def register():
     request_queue[_id] = _scope
 
     ### make redirect response
-    data_source_url = url_list[_scope]
+    data_source_url = url_list_front[_scope]
     redirect_url  = data_source_url + "/authorize"
     redirect_url += "?response_type=authorization_code"
     redirect_url += "&scope=" + _scope
@@ -204,10 +208,10 @@ def callback():
     if request_queue.get(_id) == None:
         return err_msg('Not Proper Access')
     else:
-        _scope = request_queue.pop(_id)
+        _scope = request_queue.get(_id)
 
     ### make request for data source
-    data_source_url = url_list[_scope]
+    data_source_url = url_list_back[_scope]
     url = data_source_url + "/token"
     params = {'grant_type':'authorization_code',
                 'code':grant_code,
@@ -225,7 +229,11 @@ def callback():
     db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
-    return request_data(_id, _scope)
+    result = request_data(_id, _scope)
+
+    request_queue.pop(_id)      # prevent race condition
+
+    return result
 
 if __name__ == '__main__':
     cookie_secret_key = token_bytes(22)
