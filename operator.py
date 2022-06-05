@@ -1,8 +1,11 @@
 from flask import Flask, request, redirect, jsonify, make_response
 from database import init_db, scope_list, url_list_front, url_list_back
 import requests
-from base64 import b64encode
+from base64 import b64encode, b64decode
 from secrets import token_bytes
+import hashlib
+from Crypto.Cipher import AES
+import time
 
 app = Flask(__name__)
 db = init_db()
@@ -17,6 +20,11 @@ cookie_secret_key = ''
 
 # ERROR message
 err_msg = lambda x : '[ERROR] ' + x + '\n'
+
+# related to cookie (encryption)
+BLOCK_SIZE = 16
+pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE)
+unpad = lambda s: s[:-ord(s[len(s) - 1:])]
 
 def check_args(args, li):
     ### check if necessary parameter included
@@ -39,21 +47,28 @@ def request_data(id, scope):
 
 def make_cookie(seed):
     ### make secret cookie 
+    timestamp = str(int(time.time())).rjust(BLOCK_SIZE, '0')
+    aes = AES.new(cookie_secret_key, AES.MODE_CBC, timestamp)
+    enc = aes.encrypt(pad(seed))
+    cookie = seed + ':' + b64encode(enc).decode()
 
-    return seed
+    return cookie
 
 def check_cookie(cookie):
     ### verify cookie
-
     if cookie == None:  # no cookie set
         return None
 
-    seed = None
-
     ### verifying logic comes here
-    seed = cookie
-
-    return seed
+    seed, enc = cookie.split(':')
+    aes = AES.new(cookie_secret_key, AES.MODE_CBC, pad(seed)[:16])
+    timestamp = int(aes.decrypt(b64decode(enc))[:16])
+    diff = int(time.time()) - timestamp
+    
+    if diff >= 3600:
+        return None
+    else:
+        return seed
 
 @app.get('/')
 def home():
@@ -67,7 +82,9 @@ def sign_up():
         new_id = request.form['id']
         new_pw = request.form['password']
     
-    db.add_user(new_id, new_pw)
+    pw_hash = hashlib.sha256(new_pw.encode()).hexdigest()
+
+    db.add_user(new_id, pw_hash)
 
     return 'sign up success\n'
 
@@ -116,7 +133,9 @@ def login():
         _id = request.form['id']
         _pw = request.form['password']
 
-    if db.get_user(_id, _pw) == None:
+    pw_hash = hashlib.sha256(_pw.encode()).hexdigest()
+
+    if db.get_user(_id, pw_hash) == None:
         return err_msg('wrong id or password')
     
     ### make response (with cookie)
@@ -236,5 +255,5 @@ def callback():
     return result
 
 if __name__ == '__main__':
-    cookie_secret_key = token_bytes(22)
-    app.run(host='0.0.0.0', port=80, debug=True)
+    cookie_secret_key = token_bytes(BLOCK_SIZE)
+    app.run(host='0.0.0.0', port=80, debug=False)
