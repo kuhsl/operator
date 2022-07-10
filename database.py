@@ -16,7 +16,8 @@ url_list_back = {'financial_data':'http://163.152.30.239:3000/api/financial',
 
 schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('name', 'varchar(20)', ''),
-                        ('relation', 'varchar(10)', ''),
+                        ('relations', 'varchar(200)', ''),
+                        ('address', 'varchar(50)', ''),
                         ('birth', 'date', ''),
                         ('ssn', 'varchar(15)', ''),
                         ('sex', 'enum(\'F\',\'M\')', '')],
@@ -28,7 +29,13 @@ schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('deposit_amount', 'bigint', ''),
                         ('withdrawal_amount', 'bigint', '')], 
             'medical_data':[('user_id', 'varchar(50)', ''), 
+                        ('name', 'varchar(20)', ''), 
+                        ('sex', 'enum(\'F\',\'M\')', ''),
+                        ('ssn', 'varchar(15)', ''),
                         ('date_time', 'varchar(50)', ''), 
+                        ('recovered', 'enum(\'Y\',\'N\')', ''),
+                        ('disease_name', 'varchar(30)', ''), 
+                        ('disease_num', 'varchar(30)', ''), 
                         ('image_path', 'varchar(200)', '')]}
 
 table_list = set(chain(*scope_list.values()))
