@@ -175,7 +175,7 @@ def init_db():
     ### creat table "user"
     sql  = "CREATE TABLE IF NOT EXISTS user ("
     sql += "id varchar(50) UNIQUE NOT NULL, "
-    sql += "pw varchar(50) NOT NULL)"
+    sql += "pw varchar(200) NOT NULL)"
     cur.execute(sql)
 
     ### create table "token"
