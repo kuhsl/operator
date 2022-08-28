@@ -1,4 +1,5 @@
 from flask import Flask, request, redirect, jsonify, make_response
+import json
 from database import init_db, scope_list, url_list_front, url_list_back
 import requests
 from base64 import b64encode, b64decode
@@ -218,12 +219,13 @@ def delete():
 
 @app.get('/engine1')
 def operator_engine1():
-    res = engine1.run()
-    return res
+    res = json.dumps(engine1.run(), ensure_ascii = False)
+    return make_response(res)
 
 @app.get('/engine2')
 def operator_engine2():
-    pass
+    res = json.dumps(engine2.run(), ensure_ascii = False)
+    return make_response(res)
 
 @app.get('/engine3')
 def operator_engine3():
@@ -272,3 +274,4 @@ def callback():
 if __name__ == '__main__':
     cookie_secret_key = token_bytes(BLOCK_SIZE)
     app.run(host='0.0.0.0', port=80, debug=False)
+    app.config['JSON_AS_ASCII'] = False

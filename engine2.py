@@ -11,21 +11,23 @@ result={}
 
 def engine2():
     ### connect db
-    conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+    conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
     cur = conn.cursor()
 
     sql="SELECT balance, disease_num FROM financial_data a LEFT OUTER JOIN medical_data b ON a.ssn=b.ssn ORDER BY balance ASC"
     #sql="SELECT balance, disease_num FROM financial_data a JOIN medical_data b ON a.ssn=b.ssn WHERE disease_num IN ('I10','R81','E66') ORDER BY balance ASC"
 
     df=pd.read_sql(sql, con=conn)
-    display(df)
+    #display(df)
 
     df['label']=pd.cut(df['balance'],
                         bins=3,
                         labels=labels,
                         include_lowest=True)
 
-    print(df)
+    #print(df)
     
     for label in labels:
 
@@ -36,20 +38,20 @@ def engine2():
         patient_cnt = len(df.loc[condition1 & condition2])
 
         if(tot_cnt == 0) :
-            print('No Data for ('+label+') : Can not proceed analysis')
+            #print('No Data for ('+label+') : Can not proceed analysis')
             result[label]=-1
             continue
         
         ret=(patient_cnt/tot_cnt)*100
         
-        print(ret)
+        #print(ret)
         result[label]=ret
 
-    print(result)
+    #print(result)
     return result
 
 def run():
-    engine2()
+    return engine2()
 
 if __name__ == '__main__':
     run()
