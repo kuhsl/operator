@@ -229,7 +229,7 @@ def operator_engine2():
 
 @app.get('/engine3')
 def operator_engine3():
-    pass
+    return engine3.run()    
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
