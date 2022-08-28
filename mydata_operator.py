@@ -7,6 +7,8 @@ import hashlib
 from Crypto.Cipher import AES
 import time
 
+import engine1, engine2, engine3
+
 app = Flask(__name__)
 db = init_db()
 scope_list = list(scope_list.keys())
@@ -213,6 +215,19 @@ def delete():
     db.del_data(_id, _scope)
     db.del_token(_id, _scope)
     return "success\n"
+
+@app.get('/engine1')
+def operator_engine1():
+    res = engine1.run()
+    return res
+
+@app.get('/engine2')
+def operator_engine2():
+    pass
+
+@app.get('/engine3')
+def operator_engine3():
+    pass
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():

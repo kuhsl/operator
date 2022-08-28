@@ -12,13 +12,15 @@ result={}
 def engine1(disease_num):
 
     ### connect db
-    conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+    conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
 
     sql="SELECT a.name, a.ssn, relations, FLOOR((CHAR_LENGTH(relations)-CHAR_LENGTH(REPLACE(relations, 'c:','')))/2) AS child_cnt, disease_num FROM public_data a JOIN medical_data b ON a.ssn=b.ssn WHERE disease_num='"+disease_num+"' ORDER BY BIRTH ASC"
 
     df=pd.read_sql(sql, con=conn)
 
-    display(df)
+    #display(df)
     
     cnt=0
     total=0
@@ -37,7 +39,7 @@ def engine1(disease_num):
         child_ssn_list=[]  
         for child in parsed :
             child_ssn_list.append(child.split(':')[1])
-        print(child_ssn_list)
+        #print(child_ssn_list)
 
         #check each child's medical factors
         for ssn in child_ssn_list:
@@ -45,15 +47,15 @@ def engine1(disease_num):
             cnt += check_child(ssn,conn,disease_num)
     
     if(total==0) :
-        print('No data for disease(',disease_num,') : Can not proceed analysis')
+        #print('No data for disease(',disease_num,') : Can not proceed analysis')
         result[disease_num] = -1
     else : 
-        print('Analysis of disease(',disease_num,')has been finished successfully. \nTotal :',total,' cnt : ',cnt,' ',(cnt/total)*100,'%')
+        #print('Analysis of disease(',disease_num,')has been finished successfully. \nTotal :',total,' cnt : ',cnt,' ',(cnt/total)*100,'%')
         result[disease_num] = (cnt/total)*100
     
     conn.close()
 
-    print(result)
+    #print(result)
     
     return result
 
@@ -67,9 +69,13 @@ def check_child(ssn,conn,disease_num):
         return 1
     else:
         return 0
+
 def run():
     for disease_num in disease_list :
         engine1(disease_num)
+    
+    #print(result)
+    return result
 
 if __name__ == '__main__':
     run()
