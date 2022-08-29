@@ -1,19 +1,19 @@
 import pymysql
 import pandas as pd
 import numpy as np
-from IPython.display import display 
+from IPython.display import display
 import warnings
 
 warnings.filterwarnings(action='ignore')
 
-labels=['1-4구간','5-7구간','8-10구간 이상']
-result={}
+labels=['label1','label2','label3']
 
 def engine2():
+    result={}
     ### connect db
-    #conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
-    #conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
-    conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='163.152.71.223', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+    #conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
     cur = conn.cursor()
 
     sql="SELECT balance, disease_num FROM financial_data a LEFT OUTER JOIN medical_data b ON a.ssn=b.ssn ORDER BY balance ASC"
@@ -28,7 +28,7 @@ def engine2():
                         include_lowest=True)
 
     #print(df)
-    
+
     for label in labels:
 
         condition1=(df['label']==label)
@@ -41,17 +41,15 @@ def engine2():
             #print('No Data for ('+label+') : Can not proceed analysis')
             result[label]=-1
             continue
-        
+
         ret=(patient_cnt/tot_cnt)*100
-        
+
         #print(ret)
         result[label]=ret
 
-    #print(result)
     return result
 
 def run():
     return engine2()
 
-if __name__ == '__main__':
-    run()
+#if __name__ == '__main__':
