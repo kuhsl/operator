@@ -45,7 +45,8 @@ def engine3():
     plt.xlabel('balance')
     plt.ylabel('children count')
 
-    filename = dir + dt.now().strftime("%Y-%m-%d_%H%M%S") + ".png"
+    #filename = dir + dt.now().strftime("%Y-%m-%d_%H%M%S") + ".png"
+    filename = dir + "result_image.png"
 
     plt.savefig(filename,
                 facecolor='#eeeeee',
