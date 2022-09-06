@@ -11,7 +11,8 @@ result={}
 
 def engine2():
     ### connect db
-    conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    #conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+    conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
     cur = conn.cursor()
 
     sql="SELECT balance, disease_num FROM financial_data a LEFT OUTER JOIN medical_data b ON a.ssn=b.ssn ORDER BY balance ASC"
@@ -53,3 +54,4 @@ def engine2():
 
 def run():
     return engine2()
+
