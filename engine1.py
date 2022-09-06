@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 import numpy as np
-from IPython.display import display
+from IPython.display import display 
 import warnings
 
 warnings.filterwarnings(action='ignore')
@@ -21,7 +21,7 @@ def engine1(disease_num):
     df=pd.read_sql(sql, con=conn)
 
     #display(df)
-
+    
     cnt=0
     total=0
     for index, row in df.iterrows():
@@ -36,7 +36,7 @@ def engine1(disease_num):
         parsed=parsed[1:-1]
 
         #filter ssn
-        child_ssn_list=[]
+        child_ssn_list=[]  
         for child in parsed :
             child_ssn_list.append(child.split(':')[1])
         #print(child_ssn_list)
@@ -45,18 +45,18 @@ def engine1(disease_num):
         for ssn in child_ssn_list:
             total+=1
             cnt += check_child(ssn,conn,disease_num)
-
+    
     if(total==0) :
         #print('No data for disease(',disease_num,') : Can not proceed analysis')
         result[disease_num] = -1
-    else :
+    else : 
         #print('Analysis of disease(',disease_num,')has been finished successfully. \nTotal :',total,' cnt : ',cnt,' ',(cnt/total)*100,'%')
-        result[disease_num] = (cnt/total)*100
-
+        result[disease_num] = round((cnt/total)*100, 2)
+    
     conn.close()
 
     #print(result)
-
+    
     return result
 
 def check_child(ssn,conn,disease_num):
@@ -73,7 +73,7 @@ def check_child(ssn,conn,disease_num):
 def run():
     for disease_num in disease_list :
         engine1(disease_num)
-
+    
     #print(result)
     return result
 

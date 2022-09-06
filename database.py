@@ -1,6 +1,33 @@
 import pymysql
 from itertools import chain
 import time
+from logging.config import dictConfig
+
+
+
+dictConfig({
+    'version': 1,
+    'formatters': {
+        'default': {
+            'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': 'test_error.log',
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
+            'backupCount': 5,
+            'formatter': 'default',
+        },
+    },
+    'root': {
+        'level': 'INFO',
+        'handlers': ['file']
+    }
+})
+
 
 scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
@@ -22,9 +49,9 @@ schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('ssn', 'varchar(15)', ''),
                         ('sex', 'enum(\'F\',\'M\')', '')],
             'financial_data':[('user_id', 'varchar(50)', ''),
-                        ('ssn', 'varchar(15)', ''),
                         ('account', 'varchar(20)', ''),
-                        ('balance', 'bigint', '')],
+                        ('balance', 'bigint', ''),
+                        ('ssn', 'varchar(15)', '')],
             'transaction_data':[('user_id', 'varchar(50)', ''),
                         ('date_time', 'varchar(50)', ''),
                         ('deposit_amount', 'bigint', ''),

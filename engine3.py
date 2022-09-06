@@ -1,7 +1,7 @@
 import pymysql
 import pandas as pd
 import numpy as np
-from IPython.display import display
+from IPython.display import display 
 import warnings
 
 import matplotlib
@@ -27,7 +27,7 @@ def engine3():
 
     df=pd.read_sql(sql, con=conn)
     df=df.set_index('balance')
-
+    
     #display(df['child_cnt'])
     result_dict = df['child_cnt'].to_dict()
     #print(result_dict)
@@ -37,7 +37,7 @@ def engine3():
 
     #print(list_x_values)
     #print(list_y_values)
-
+    
     plt.scatter(list_x_values, list_y_values, s=1)
     plt.xscale('log')
 
@@ -52,7 +52,7 @@ def engine3():
                 facecolor='#eeeeee',
                 edgecolor='black',
                 format='png', dpi=200)
-
+    
     with open(filename, 'rb') as f:
         img = f.read()
         b64 = b64encode(img).decode()

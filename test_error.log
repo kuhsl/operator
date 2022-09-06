@@ -1,0 +1,2352 @@
+[2022-07-15 07:33:36,654] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-07-15 07:33:36,654] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-07-15 07:33:59,696] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:33:59] "POST /login HTTP/1.1" 200 -
+[2022-07-15 07:34:03,066] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:34:03] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-07-15 07:34:04,756] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:34:04] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 07:34:05,928] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:34:05] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-07-15 07:34:23,947] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xED\\x97\\x88\\xEC\\x8A\\xB9...' for column 'name' at row 1")
+[2022-07-15 07:34:23,949] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:34:23] "[35m[1mGET /cb?code=1hqt53p5q6igrt951z4v36&state=id01 HTTP/1.1[0m" 500 -
+[2022-07-15 07:34:24,019] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:34:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-15 07:39:48,363] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:39:48] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 07:39:49,585] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:39:49] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-07-15 07:40:05,361] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xED\\x97\\x88\\xEC\\x8A\\xB9...' for column 'name' at row 1")
+[2022-07-15 07:40:05,362] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:40:05] "[35m[1mGET /cb?code=i31xvqtjrmekimqp16pbw9&state=id01 HTTP/1.1[0m" 500 -
+[2022-07-15 07:40:05,540] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:40:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-15 07:40:34,279] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 166, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 748, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+[2022-07-15 07:40:34,282] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:40:34] "[35m[1mGET /data?scope=medical_data HTTP/1.1[0m" 500 -
+[2022-07-15 07:40:42,858] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 138, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 92, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-07-15 07:40:42,860] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:40:42] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-07-15 07:40:47,544] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 138, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 92, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-07-15 07:40:47,546] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:40:47] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-07-15 07:40:57,875] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-07-15 07:40:57,876] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-07-15 07:41:25,296] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:41:25] "POST /login HTTP/1.1" 200 -
+[2022-07-15 07:41:27,451] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:41:27] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 07:41:28,819] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:41:28] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-07-15 07:41:42,408] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xED\\x97\\x88\\xEC\\x8A\\xB9...' for column 'name' at row 1")
+[2022-07-15 07:41:42,415] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:41:42] "[35m[1mGET /cb?code=slhuiiaqgzew624etw3qoy&state=id01 HTTP/1.1[0m" 500 -
+[2022-07-15 07:41:42,490] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:41:42] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-15 07:50:41,886] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 138, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 92, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 692, in _read_packet
+    packet_header = self._read_bytes(4)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 748, in _read_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2013, 'Lost connection to MySQL server during query')
+[2022-07-15 07:50:41,887] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:50:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-07-15 07:51:06,218] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 138, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 92, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-07-15 07:51:06,218] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:51:06] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-07-15 07:52:16,548] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-07-15 07:52:16,548] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-07-15 07:52:21,259] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:52:21] "POST /login HTTP/1.1" 200 -
+[2022-07-15 07:52:24,605] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:52:24] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 07:52:25,764] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:52:25] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-07-15 07:52:37,984] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.DataError: (1366, "Incorrect string value: '\\xED\\x97\\x88\\xEC\\x8A\\xB9...' for column 'name' at row 1")
+[2022-07-15 07:52:37,991] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:52:37] "[35m[1mGET /cb?code=x7un3irj59urfjf1z7q1uo&state=id01 HTTP/1.1[0m" 500 -
+[2022-07-15 07:52:38,055] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 07:52:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-15 08:56:39,795] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-07-15 08:56:39,795] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-07-15 08:57:00,734] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:00] "POST /login HTTP/1.1" 200 -
+[2022-07-15 08:57:02,552] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:02] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 08:57:03,640] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:03] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-07-15 08:57:17,942] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:17] "GET /cb?code=82thc6xotf5o2kyk7kt8c1&state=id01 HTTP/1.1" 200 -
+[2022-07-15 08:57:18,107] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-07-15 08:57:21,954] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:21] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 08:57:58,111] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:57:58] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-07-15 08:58:00,668] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:00] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 08:58:02,161] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:02] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-07-15 08:58:06,463] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:06] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-07-15 08:58:08,964] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:08] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-07-15 08:58:20,209] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:20] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-07-15 08:58:21,474] INFO in _internal: 163.152.71.208 - - [15/Jul/2022 08:58:21] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 05:20:25,599] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 05:20:25,600] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 05:24:25,790] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:24:25] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:24:33,182] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:24:33] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:24:49,746] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:24:49] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:24:50,872] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:24:50] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:25:04,245] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:04] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:25:06,233] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:06] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:25:07,109] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:07] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:25:28,493] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:28] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:25:31,709] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:31] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:25:56,527] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:56] "GET /cb?code=dqkiax6s7obkywcx68zej3&state=id01 HTTP/1.1" 200 -
+[2022-08-29 05:25:56,585] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:25:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:26:04,689] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:04] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:26:19,654] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:19] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 05:26:22,089] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:22] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:26:41,493] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:41] "GET /cb?code=o692adr8khwpvx77y5ab5w&state=id01 HTTP/1.1" 200 -
+[2022-08-29 05:26:41,540] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:26:47,177] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:47] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 05:26:53,701] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:53] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:26:58,266] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:58] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:26:59,159] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:26:59] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:27:19,148] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:27:19,157] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:27:19] "[35m[1mGET /cb?code=n8gfjeup39cczfsgu7e16d&state=id01 HTTP/1.1[0m" 500 -
+[2022-08-29 05:27:19,268] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:27:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:27:28,040] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:27:28] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:27:47,283] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:27:47,285] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:27:47] "[35m[1mGET /cb?code=lozivhpz16f98qzq41gvzq&state=id01 HTTP/1.1[0m" 500 -
+[2022-08-29 05:27:47,441] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:27:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:28:03,398] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:28:03] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:31:28,708] ERROR in app: Exception on /refresh [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 191, in refresh
+    return request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:31:28,710] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:31:28] "[35m[1mGET /refresh?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:31:32,127] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:31:32] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:31:35,447] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:31:35] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:31:56,491] ERROR in app: Exception on /refresh [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 191, in refresh
+    return request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 41, in request_data
+    data = requests.get(data_source_url + '/resource', params = params).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-08-29 05:31:56,497] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:31:56] "[35m[1mGET /refresh?scope=public_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:32:08,962] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:32:08] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:32:09,675] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:32:09] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 05:32:10,459] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:32:10] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 05:32:27,163] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 251, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 44, in request_data
+    db.add_data(id, scope, data[scope])
+  File "/home/ubuntu/operator/database.py", line 151, in add_data
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:32:27,165] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:32:27] "[35m[1mGET /cb?code=752ylb1nhtp9e1q6zo6p99&state=id01 HTTP/1.1[0m" 500 -
+[2022-08-29 05:32:27,222] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:32:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:43:13,277] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 05:43:13,277] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 05:43:22,793] ERROR in app: Exception on /register [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 99, in register
+    _id = check_cookie(cookie)
+  File "/home/ubuntu/operator/operator.py", line 65, in check_cookie
+    timestamp = int(aes.decrypt(b64decode(enc))[:16])
+ValueError: invalid literal for int() with base 10: b'2\xf6\xd0\xd8\xa1\xd0|\xee\x1fh\x9b\xf1\x03O\xd5\xcc'
+[2022-08-29 05:43:22,798] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:43:22] "[35m[1mGET /register?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:43:22,833] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:43:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 05:43:27,335] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 153, in get_data
+    _id = check_cookie(cookie)
+  File "/home/ubuntu/operator/operator.py", line 65, in check_cookie
+    timestamp = int(aes.decrypt(b64decode(enc))[:16])
+ValueError: invalid literal for int() with base 10: b'2\xf6\xd0\xd8\xa1\xd0|\xee\x1fh\x9b\xf1\x03O\xd5\xcc'
+[2022-08-29 05:43:27,337] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:43:27] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:43:39,666] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:43:39] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:43:41,456] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:43:41,460] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:43:41] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:44:06,103] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:06] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:44:08,763] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:44:08,765] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:08] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:44:38,622] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:38] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:44:40,409] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:44:40,411] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:40] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:44:50,458] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:50] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:44:51,784] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:51] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 05:44:54,274] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:54] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 05:44:56,046] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:44:56,050] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:44:56] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:45:39,998] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:45:39] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:45:43,594] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:45:43,596] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:45:43] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:49:26,059] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:49:26] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:49:42,590] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:49:42] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:49:44,258] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:49:44,260] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:49:44] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 05:50:19,511] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:50:19] "POST /login HTTP/1.1" 200 -
+[2022-08-29 05:50:22,303] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 168, in get_data
+    data = db.get_data(_id, _scope)
+  File "/home/ubuntu/operator/database.py", line 167, in get_data
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1054, "Unknown column 'ssn' in 'field list'")
+[2022-08-29 05:50:22,305] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 05:50:22] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-29 06:02:37,467] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 06:02:37,468] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 06:03:03,903] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:03] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:03:07,731] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:07] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:03:09,975] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:09] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:03:31,431] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:31] "GET /cb?code=noeieowh8nrzw65d6injsk&state=id01 HTTP/1.1" 200 -
+[2022-08-29 06:03:31,475] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:03:39,839] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:39] "GET /refresh?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:03:42,032] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:42] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:03:46,609] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:46] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:03:48,243] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:48] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:03:49,134] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:03:49] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:04:13,804] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:13] "GET /cb?code=on7rhsro6jh56z78zy3m2q&state=id01 HTTP/1.1" 200 -
+[2022-08-29 06:04:13,861] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:04:18,222] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:18] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:04:28,352] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:28] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:04:31,398] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:31] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:04:32,421] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:32] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:04:50,130] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:50] "GET /cb?code=56ce6rbcb8kygnifjfzuyz&state=id01 HTTP/1.1" 200 -
+[2022-08-29 06:04:50,184] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:04:53,256] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:04:53] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:07:15,679] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:07:15] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:08:37,666] ERROR in app: Exception on /signup [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 87, in sign_up
+    db.add_user(new_id, pw_hash)
+  File "/home/ubuntu/operator/database.py", line 83, in add_user
+    self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 548, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 775, in _read_query_result
+    result.read()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 1156, in read
+    first_packet = self.connection._read_packet()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 725, in _read_packet
+    packet.raise_for_error()
+  File "/usr/local/lib/python3.8/site-packages/pymysql/protocol.py", line 221, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/err.py", line 143, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'id02' for key 'id'")
+[2022-08-29 06:08:37,673] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:08:37] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+[2022-08-29 06:08:47,842] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:08:47] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:09:27,139] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:09:27] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:09:43,834] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:09:43] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:09:48,775] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:09:48] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:09:55,390] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:09:55] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:10:12,111] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:10:12] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:10:25,810] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:10:25] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:10:39,633] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:10:39] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:10:50,575] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:10:50] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:11:24,718] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:11:24] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:11:39,667] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:11:39] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:11:42,429] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:11:42] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:11:44,150] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:11:44] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:12:16,326] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:16] "GET /cb?code=tj2t9utcnufk8l7du3tnqi&state=id02 HTTP/1.1" 200 -
+[2022-08-29 06:12:16,400] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:12:19,297] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:19] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:12:20,587] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:20] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:12:24,396] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:24] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:12:26,102] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:26] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:12:26,947] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:26] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:12:43,745] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:43] "GET /cb?code=aituqk5vbcc2m4nzu2nwfk&state=id02 HTTP/1.1" 200 -
+[2022-08-29 06:12:43,790] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:12:45,706] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:45] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:12:47,648] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:47] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:12:48,939] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:12:48] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:13:06,345] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:06] "GET /cb?code=ok2wyad32ksp7mvnmw3eux&state=id02 HTTP/1.1" 200 -
+[2022-08-29 06:13:06,395] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:13:08,867] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:08] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:13:11,297] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:11] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:13:13,097] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:13] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:13:15,008] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:15] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:13:28,689] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:28] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:13:30,603] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:30] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:13:32,924] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:32] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:13:55,129] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:55] "GET /cb?code=o5893kmcwb55rs5yooy2ig&state=id03 HTTP/1.1" 200 -
+[2022-08-29 06:13:55,190] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:13:58,899] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:13:58] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:14:02,262] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:02] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:14:04,352] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:04] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:14:05,821] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:05] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:14:10,942] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:10] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:14:12,728] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:12] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:14:17,269] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:17] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:14:35,976] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:35] "GET /cb?code=ddkbeza4ilti426gsomaiy&state=id03 HTTP/1.1" 200 -
+[2022-08-29 06:14:36,068] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:14:38,262] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:38] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:14:42,347] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:14:44,636] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:44] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:14:45,250] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:14:45] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:15:08,376] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:08] "GET /cb?code=4qgyccdugqb2rzclyzpyt2&state=id03 HTTP/1.1" 200 -
+[2022-08-29 06:15:08,540] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:15:10,093] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:10] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:15:17,844] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:17] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:15:20,049] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:20] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:15:21,467] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:15:21] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:16:15,614] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:15] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:16:21,338] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:21] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:16:36,505] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:36] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:16:38,750] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:38] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:16:42,800] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:42] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:16:44,286] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:44] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:16:45,686] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:45] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:16:47,700] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:16:47] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:17:07,816] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:07] "GET /cb?code=d8vdmpa65aswlqlkr9u7w8&state=id04 HTTP/1.1" 200 -
+[2022-08-29 06:17:07,867] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:07] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:17:10,338] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:10] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:17:12,786] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:12] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:17:14,275] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:14] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:17:32,686] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:32] "GET /cb?code=b8rafowetwa7jpxfevj3ld&state=id04 HTTP/1.1" 200 -
+[2022-08-29 06:17:32,731] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:17:34,614] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:34] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:17:39,265] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:39] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:17:40,638] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:40] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:17:41,804] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:41] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:17:58,620] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:58] "GET /cb?code=r5iphqgklol9gczf7okjtj&state=id04 HTTP/1.1" 200 -
+[2022-08-29 06:17:58,726] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:17:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:18:00,246] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:00] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:18:21,021] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:21] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:18:33,257] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:33] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:18:34,389] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:34] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:18:37,071] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:37] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:18:38,981] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:38] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:18:58,233] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:58] "GET /cb?code=ke8boxlwugtlkfkozh7nir&state=id05 HTTP/1.1" 200 -
+[2022-08-29 06:18:58,289] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:18:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:19:00,082] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:00] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:19:02,462] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:02] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:19:05,285] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:05] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:19:24,175] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:24] "GET /cb?code=yjei4wfbp7dt6e2m7n4cg4&state=id05 HTTP/1.1" 200 -
+[2022-08-29 06:19:24,341] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:19:26,478] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:26] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:19:27,943] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:27] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:19:29,705] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:29] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:19:31,034] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:31] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:19:49,375] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:49] "GET /cb?code=4pssptrqd5y5jaqntvgim3&state=id05 HTTP/1.1" 200 -
+[2022-08-29 06:19:49,435] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:19:50,770] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:19:50] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:20:13,680] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:20:13] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:20:26,775] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:20:26] "POST /signup HTTP/1.1" 200 -
+[2022-08-29 06:20:27,967] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:20:27] "POST /login HTTP/1.1" 200 -
+[2022-08-29 06:20:31,739] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:20:31] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:20:34,112] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:20:34] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:21:02,407] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:02] "GET /cb?code=xbtbnu86cpfd746tgfs5wr&state=id06 HTTP/1.1" 200 -
+[2022-08-29 06:21:02,467] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:21:05,294] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:05] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:21:07,701] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:07] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:21:08,814] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:08] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:21:31,419] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:31] "GET /cb?code=9g4wzbnh632oorvb329d5r&state=id06 HTTP/1.1" 200 -
+[2022-08-29 06:21:31,485] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:21:33,000] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:33] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:21:34,836] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:34] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-29 06:21:36,558] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:36] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-29 06:21:37,965] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:37] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 06:21:41,177] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:41] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-29 06:21:57,771] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:57] "GET /cb?code=yol4dtkpuojlj9lugm7knw&state=id06 HTTP/1.1" 200 -
+[2022-08-29 06:21:57,928] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 06:21:59,730] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 06:21:59] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-29 07:09:10,860] INFO in font_manager: generated new fontManager
+[2022-08-29 07:09:11,194] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 07:09:11,194] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 07:28:13,615] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 07:28:13,615] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 07:36:01,832] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 07:36:01,832] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 07:57:10,191] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 07:57:10,191] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 07:57:29,835] INFO in _internal: 163.152.71.98 - - [29/Aug/2022 07:57:29] "GET / HTTP/1.1" 200 -
+[2022-08-29 07:57:30,064] INFO in _internal: 163.152.71.98 - - [29/Aug/2022 07:57:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-29 07:57:55,081] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:55] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:57:55,193] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:55] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:57:55,498] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075755.png'
+[2022-08-29 07:57:55,501] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:55] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 07:57:57,303] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:57] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:57:57,354] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:57] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:57:57,400] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075757.png'
+[2022-08-29 07:57:57,401] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:57] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 07:57:59,473] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:59] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:57:59,632] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:59] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:57:59,649] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075759.png'
+[2022-08-29 07:57:59,649] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:57:59] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 07:58:15,440] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:15] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:58:16,878] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:16] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:58:18,235] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075818.png'
+[2022-08-29 07:58:18,236] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:18] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 07:58:57,072] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:57] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:58:57,609] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:57] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:58:58,303] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075858.png'
+[2022-08-29 07:58:58,304] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:58:58] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 07:59:34,364] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:59:34] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 07:59:35,141] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:59:35] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 07:59:36,132] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_075936.png'
+[2022-08-29 07:59:36,133] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 07:59:36] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:00:13,138] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:13] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:00:13,768] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:13] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:00:14,486] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_080014.png'
+[2022-08-29 08:00:14,486] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:14] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:00:37,545] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:37] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:00:38,021] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:38] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:00:38,689] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_080038.png'
+[2022-08-29 08:00:38,689] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:00:38] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:04:38,601] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:04:38,601] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:04:43,958] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:04:43] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:04:43,998] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:04:43] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:04:44,286] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: 'img/2022-08-29_080443.png'
+[2022-08-29 08:04:44,288] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:04:44] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:08:05,933] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:08:05,934] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:08:08,656] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:08] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:08:08,671] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:08] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:08:08,958] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './img/2022-08-29_080808.png'
+[2022-08-29 08:08:08,961] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:08] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:08:12,334] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:12] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:08:12,486] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:12] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:08:12,518] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './img/2022-08-29_080812.png'
+[2022-08-29 08:08:12,518] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:12] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:08:15,486] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:15] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:08:15,649] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:15] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:08:15,720] ERROR in app: Exception on /engine3 [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "operator.py", line 232, in operator_engine3
+    return engine3.run()
+  File "/home/ubuntu/operator/engine3.py", line 62, in run
+    return engine3()
+  File "/home/ubuntu/operator/engine3.py", line 50, in engine3
+    plt.savefig(filename,
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/pyplot.py", line 977, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/figure.py", line 3058, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 2319, in print_figure
+    result = print_method(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backend_bases.py", line 1648, in wrapper
+    return func(*args, **kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/_api/deprecation.py", line 415, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/backends/backend_agg.py", line 541, in print_png
+    mpl.image.imsave(
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/matplotlib/image.py", line 1675, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/home/ubuntu/.local/lib/python3.8/site-packages/PIL/Image.py", line 2317, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: './img/2022-08-29_080815.png'
+[2022-08-29 08:08:15,720] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:08:15] "[35m[1mGET /engine3 HTTP/1.1[0m" 500 -
+[2022-08-29 08:10:16,054] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:10:16,054] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:10:18,828] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:10:18] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:10:19,250] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:10:19] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:10:19,757] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:10:19] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:16:30,434] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:16:30,435] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:17:00,816] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:17:00] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:17:01,338] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:17:01] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:17:02,784] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:17:02] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:18:12,026] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:18:12] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:18:12,150] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:18:12] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:18:12,356] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:18:12] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:20:59,809] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:20:59,809] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:21:00,712] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:21:00] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:21:00,747] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:21:00] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:21:01,118] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:21:01] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:23:51,900] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:23:51,900] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:23:55,662] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:23:55] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:23:55,772] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:23:55] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:23:56,155] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:23:56] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:27:32,994] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:27:32,994] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:27:36,710] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:27:36] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:27:36,800] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:27:36] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:27:37,194] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:27:37] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 08:52:44,695] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 08:52:44,695] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 08:53:11,397] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:11] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:53:11,457] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:11] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:53:51,352] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:51] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:53:51,401] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:51] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:53:52,976] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:52] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 08:53:53,034] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:53:53] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:54:13,594] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:54:13] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 08:54:14,488] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 08:54:14] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:06:40,315] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 09:06:40,315] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 09:06:56,143] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:06:56] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:06:56,194] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:06:56] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 09:14:44,542] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 09:14:44,542] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 09:14:55,189] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:14:55] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:14:55,235] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:14:55] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 09:15:57,132] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 09:15:57,132] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 09:16:39,248] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:16:39] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:16:39,364] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:16:39] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 09:16:39,774] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:16:39] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 09:23:29,097] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 09:23:29,097] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 09:23:32,953] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:23:32] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:23:32,988] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:23:32] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 09:23:33,407] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:23:33] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 09:26:21,519] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 09:26:21,519] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 09:26:58,118] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:26:58] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 09:26:58,202] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:26:58] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 09:26:58,519] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 09:26:58] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 10:18:32,010] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 10:18:32,010] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 10:18:41,359] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:18:41] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 10:18:41,419] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:18:41] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 10:18:41,836] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:18:41] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 10:21:34,474] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 10:21:34,475] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 10:21:47,890] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:21:47] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 10:21:48,057] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:21:48] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 10:21:48,407] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:21:48] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-29 10:56:05,176] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-29 10:56:05,176] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-29 10:56:07,831] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:56:07] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-29 10:56:07,907] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:56:07] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-29 10:56:08,319] INFO in _internal: 163.152.71.208 - - [29/Aug/2022 10:56:08] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 02:24:32,075] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 02:24:32,076] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 02:51:39,947] INFO in font_manager: generated new fontManager
+[2022-08-31 02:51:40,474] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 02:51:40,474] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 02:52:34,384] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 02:52:34] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 02:52:34,422] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 02:52:34] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 02:52:34,815] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 02:52:34] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:23:22,416] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:23:22] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:23:22,449] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:23:22] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:23:22,644] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:23:22] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:34:14,718] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:14] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:34:14,829] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:14] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:34:15,081] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:15] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:34:22,568] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:22] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:34:22,685] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:22] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:34:22,883] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:34:22] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:35:41,108] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:35:41] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:35:41,263] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:35:41] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:35:41,466] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:35:41] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:36:25,397] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:36:25] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:36:25,449] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:36:25] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:36:25,720] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:36:25] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:40:38,272] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 05:40:38,273] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 05:41:36,187] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:41:36] "POST /signup HTTP/1.1" 200 -
+[2022-08-31 05:41:38,009] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:41:38] "POST /login HTTP/1.1" 200 -
+[2022-08-31 05:41:54,717] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:41:54] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:41:57,232] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:41:57] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:42:50,674] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:42:50] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:43:11,119] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:11] "GET /cb?code=f82vau5humayk1f6pp1eub&state=id07 HTTP/1.1" 200 -
+[2022-08-31 05:43:11,189] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:43:14,858] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:14] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:43:19,088] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:19] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:43:22,946] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:22] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:43:38,238] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:38] "GET /cb?code=7yu7e7cjw5onbq3if4dzo4&state=id07 HTTP/1.1" 200 -
+[2022-08-31 05:43:38,289] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:43:40,132] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:40] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:43:43,177] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:43] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-31 05:43:44,871] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:43:44] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:44:15,347] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:15] "GET /cb?code=sxk7a7u9m9fl4hvdsckql9&state=id07 HTTP/1.1" 200 -
+[2022-08-31 05:44:15,397] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:44:17,369] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:17] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-31 05:44:25,338] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:25] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:44:25,492] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:25] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:44:25,831] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:25] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:44:48,369] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:44:48] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:45:05,016] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:05] "POST /signup HTTP/1.1" 200 -
+[2022-08-31 05:45:06,121] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:06] "POST /login HTTP/1.1" 200 -
+[2022-08-31 05:45:08,948] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:08] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:45:10,309] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:10] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:45:29,771] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:29] "GET /cb?code=144r6rphy6l6gkd3i2vloq&state=id08 HTTP/1.1" 200 -
+[2022-08-31 05:45:29,885] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:45:31,964] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:31] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:45:33,851] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:33] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:45:35,178] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:45:35] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:47:32,208] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:47:32] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:47:49,759] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:47:49] "GET /cb?code=8ugj6g1p4qyuu9z6jg8386&state=id08 HTTP/1.1" 200 -
+[2022-08-31 05:47:49,858] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:47:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:47:52,109] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:47:52] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:47:59,973] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:47:59] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-31 05:48:01,575] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:01] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:48:21,910] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:21] "GET /cb?code=1rlby1ao11d8y2jb995oe3&state=id08 HTTP/1.1" 200 -
+[2022-08-31 05:48:22,021] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:48:24,024] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:24] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-31 05:48:30,110] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:30] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:48:30,214] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:30] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:48:30,465] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:48:30] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 05:51:01,631] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:01] "POST /signup HTTP/1.1" 200 -
+[2022-08-31 05:51:02,752] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:02] "POST /login HTTP/1.1" 200 -
+[2022-08-31 05:51:04,681] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:04] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:51:06,707] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:06] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:51:24,568] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:24] "GET /cb?code=rtai45bnynuwtyjl9ptxm3&state=id09 HTTP/1.1" 200 -
+[2022-08-31 05:51:24,638] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:51:26,590] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:26] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 05:51:28,616] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:28] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:51:30,341] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:30] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:51:48,081] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:48] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:51:51,558] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:51] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-08-31 05:51:53,469] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:51:53] "[32mGET /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-08-31 05:52:22,285] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 269, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 45, in request_data
+    data = requests.get(data_source_url + '/resource', params = params).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-08-31 05:52:22,287] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 269, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 45, in request_data
+    data = requests.get(data_source_url + '/resource', params = params).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-08-31 05:52:22,288] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 269, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 45, in request_data
+    data = requests.get(data_source_url + '/resource', params = params).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-08-31 05:52:22,291] ERROR in app: Exception on /cb [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 440, in send
+    resp = conn.urlopen(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 785, in urlopen
+    retries = retries.increment(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/util/retry.py", line 550, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/packages/six.py", line 769, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 449, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 3, in raise_from
+  File "/usr/local/lib/python3.8/site-packages/urllib3/connectionpool.py", line 444, in _make_request
+    httplib_response = conn.getresponse()
+  File "/usr/local/lib/python3.8/http/client.py", line 1332, in getresponse
+    response.begin()
+  File "/usr/local/lib/python3.8/http/client.py", line 303, in begin
+    version, status, reason = self._read_status()
+  File "/usr/local/lib/python3.8/http/client.py", line 272, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 269, in callback
+    result = request_data(_id, _scope)
+  File "/home/ubuntu/operator/operator.py", line 45, in request_data
+    data = requests.get(data_source_url + '/resource', params = params).json()
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 75, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 529, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/sessions.py", line 645, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/requests/adapters.py", line 501, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+[2022-08-31 05:52:22,299] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[35m[1mGET /cb?code=6mvb7but6wvikh7hstzndc&state=id09 HTTP/1.1[0m" 500 -
+[2022-08-31 05:52:22,301] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[35m[1mGET /cb?code=sqpcgwnr4n3terhqt11pyr&state=id09 HTTP/1.1[0m" 500 -
+[2022-08-31 05:52:22,304] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[35m[1mGET /cb?code=zg1nfz48aw5wx3zvhs9xy7&state=id09 HTTP/1.1[0m" 500 -
+[2022-08-31 05:52:22,306] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[35m[1mGET /cb?code=bxa5dab379klyaqgqjeyyd&state=id09 HTTP/1.1[0m" 500 -
+[2022-08-31 05:52:22,560] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:52:22,568] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:52:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 05:54:49,408] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:54:49] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 05:54:49,590] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:54:49] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 05:54:49,782] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 05:54:49] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:40:14,948] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 06:40:14,949] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 06:40:20,723] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:40:20] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:40:20,779] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:40:20] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:40:21,177] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:40:21] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:40:42,790] ERROR in app: Exception on /data [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 157, in get_data
+    _id = check_cookie(cookie)
+  File "/home/ubuntu/operator/operator.py", line 69, in check_cookie
+    timestamp = int(aes.decrypt(b64decode(enc))[:16])
+ValueError: invalid literal for int() with base 10: b'.B\x05\xcf\xdb\x81O\x1d\x88o\xb4\xdeK\x91\xfe '
+[2022-08-31 06:40:42,794] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:40:42] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-08-31 06:41:06,628] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:06] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:41:10,338] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:10] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:41:17,827] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:17] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:41:20,376] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:20] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:41:45,902] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:45] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:41:48,701] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:48] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:41:56,745] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:41:56] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:42:33,156] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:42:33] "GET /cb?code=e4bv464oelgg9bgcbxke5v&state=id01 HTTP/1.1" 200 -
+[2022-08-31 06:42:33,263] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:42:33] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:42:36,141] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:42:36] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:42:51,894] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:42:51] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:42:53,524] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:42:53] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:43:03,718] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:03] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:43:23,589] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:23] "GET /cb?code=j2cfwvz9khb8l1rtnf568e&state=id02 HTTP/1.1" 200 -
+[2022-08-31 06:43:23,716] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:23] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:43:26,190] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:26] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:43:39,926] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:39] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:43:41,970] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:41] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:43:45,215] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:43:45] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:44:01,304] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:01] "GET /cb?code=pd4kwohe1cvsyeqtfetjmx&state=id03 HTTP/1.1" 200 -
+[2022-08-31 06:44:01,370] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:44:03,701] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:03] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:44:15,655] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:15] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:44:19,223] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:19] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:44:22,358] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:22] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:44:37,076] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:37] "GET /cb?code=5c95n755ipg3lx5rjb3p2j&state=id04 HTTP/1.1" 200 -
+[2022-08-31 06:44:37,230] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:44:39,027] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:39] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:44:47,381] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:47] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:44:48,890] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:48] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:44:49,886] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:49] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:44:50,559] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:44:50] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:45:06,639] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:06] "GET /cb?code=cqtz7ewyxu9ht6gmmrorlf&state=id05 HTTP/1.1" 200 -
+[2022-08-31 06:45:06,700] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:45:08,490] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:08] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:45:19,065] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:19] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:45:20,513] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:20] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:45:22,266] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:22] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:45:36,343] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:36] "GET /cb?code=hrwvirpgjvjf278iqwwh5a&state=id06 HTTP/1.1" 200 -
+[2022-08-31 06:45:36,432] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:45:38,190] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:38] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:45:49,602] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:49] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:45:50,916] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:50] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:45:52,970] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:45:52] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:46:09,140] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:09] "GET /cb?code=t2k1cycs8lmycvjy8owso4&state=id07 HTTP/1.1" 200 -
+[2022-08-31 06:46:09,288] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:46:10,887] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:10] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:46:13,680] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:13] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:46:26,156] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:26] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:46:27,800] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:27] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:46:29,262] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:29] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:46:30,136] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:30] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:46:45,316] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:45] "GET /cb?code=qz6veguulhagqdhs86mz38&state=id08 HTTP/1.1" 200 -
+[2022-08-31 06:46:45,439] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:46:47,695] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:46:47] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:03,870] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:03] "POST /login HTTP/1.1" 200 -
+[2022-08-31 06:47:05,158] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:05] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:06,343] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:06] "[32mGET /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-08-31 06:47:21,164] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:21] "GET /cb?code=4qscha36z49yk5bytv6fhj&state=id09 HTTP/1.1" 200 -
+[2022-08-31 06:47:21,228] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-08-31 06:47:23,381] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:23] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:24,411] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:24] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:24,654] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:24] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:24,885] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:24] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 06:47:28,200] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:28] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:47:28,301] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:28] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:47:28,488] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:28] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:47:31,729] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:31] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:47:31,780] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:31] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:47:31,985] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:31] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:47:39,853] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:39] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:47:39,900] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:39] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:47:40,154] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:47:40] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:48:15,191] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:48:15] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:48:15,243] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:48:15] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:48:15,429] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:48:15] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:49:06,484] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:06] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:49:06,654] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:06] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:49:06,894] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:06] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:49:15,978] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:15] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:49:16,033] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:16] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:49:17,189] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:17] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:49:58,347] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:58] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:49:58,430] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:58] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:49:58,654] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:49:58] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:52:18,593] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 06:52:18,594] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 06:52:21,784] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:52:21] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:52:21,885] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:52:21] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:52:22,171] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:52:22] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 06:53:08,299] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 06:53:08,299] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 06:53:10,884] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:53:10] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 06:53:10,909] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:53:10] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 06:53:11,222] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 06:53:11] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 07:00:21,442] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 07:00:21,442] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 07:00:24,701] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:24] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 07:00:24,702] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:24] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 07:00:25,033] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:25] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 07:00:42,707] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:42] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 07:00:42,761] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:42] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 07:00:42,881] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:00:42] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 07:02:10,538] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-08-31 07:02:10,538] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-08-31 07:02:20,403] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:02:20] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 07:02:20,437] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:02:20] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 07:02:20,768] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:02:20] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 07:07:32,624] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:07:32] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 07:07:32,686] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:07:32] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 07:07:32,824] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 07:07:32] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 09:13:26,472] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:26] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 09:13:26,542] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:26] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 09:13:26,688] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:26] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 09:13:56,341] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:56] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 09:13:56,440] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:56] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 09:13:56,587] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 09:13:56] "GET /engine3 HTTP/1.1" 200 -
+[2022-08-31 11:44:03,618] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:03] "POST /login HTTP/1.1" 200 -
+[2022-08-31 11:44:07,375] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:07] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-08-31 11:44:11,684] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:11] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-08-31 11:44:15,645] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:15] "GET /engine2 HTTP/1.1" 200 -
+[2022-08-31 11:44:15,696] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:15] "GET /engine1 HTTP/1.1" 200 -
+[2022-08-31 11:44:15,861] INFO in _internal: 163.152.71.208 - - [31/Aug/2022 11:44:15] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-01 04:11:32,320] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 04:11:32] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-01 04:11:32,412] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 04:11:32] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-01 04:11:32,562] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 04:11:32] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-01 11:31:41,432] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 756, in _write_bytes
+    self._sock.sendall(data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 814, in _execute_command
+    self._write_bytes(packet)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 759, in _write_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (BrokenPipeError(32, 'Broken pipe'))")
+[2022-09-01 11:31:41,440] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:31:41] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-01 11:31:46,882] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-01 11:31:46,884] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:31:46] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-01 11:32:02,392] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-01 11:32:02,394] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:32:02] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-01 11:35:56,135] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-01 11:35:56,138] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:35:56] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-01 11:37:53,290] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-09-01 11:37:53,290] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-09-01 11:38:25,837] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:38:25] "POST /login HTTP/1.1" 200 -
+[2022-09-01 11:38:41,503] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:38:41] "POST /login HTTP/1.1" 200 -
+[2022-09-01 11:38:44,913] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:38:44] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-01 11:38:44,955] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:38:44] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-01 11:38:45,304] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:38:45] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-01 11:39:07,172] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:39:07] "POST /login HTTP/1.1" 200 -
+[2022-09-01 11:39:08,613] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:39:08] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-01 11:39:26,695] INFO in _internal: 163.152.71.208 - - [01/Sep/2022 11:39:26] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-09-02 05:21:53,299] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 756, in _write_bytes
+    self._sock.sendall(data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 814, in _execute_command
+    self._write_bytes(packet)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 759, in _write_bytes
+    raise err.OperationalError(
+pymysql.err.OperationalError: (2006, "MySQL server has gone away (BrokenPipeError(32, 'Broken pipe'))")
+[2022-09-02 05:21:53,314] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:21:53] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-02 05:21:59,751] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:21:59] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-02 05:21:59,793] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:21:59] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-02 05:21:59,959] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:21:59] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-02 05:30:00,510] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-02 05:30:00,513] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:30:00] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-02 05:30:19,591] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-02 05:30:19,593] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:30:19] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-02 05:30:45,273] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-02 05:30:45,274] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:30:45] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-02 05:30:52,098] ERROR in app: Exception on /login [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/home/ubuntu/operator/operator.py", line 142, in login
+    if db.get_user(_id, pw_hash) == None:
+  File "/home/ubuntu/operator/database.py", line 93, in get_user
+    count = self.cur.execute(sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 148, in execute
+    result = self._query(query)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/cursors.py", line 310, in _query
+    conn.query(q)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 547, in query
+    self._execute_command(COMMAND.COM_QUERY, sql)
+  File "/usr/local/lib/python3.8/site-packages/pymysql/connections.py", line 793, in _execute_command
+    raise err.InterfaceError(0, "")
+pymysql.err.InterfaceError: (0, '')
+[2022-09-02 05:30:52,100] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:30:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-09-02 05:31:58,690] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-09-02 05:31:58,690] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-09-02 05:32:12,920] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:12] "POST /login HTTP/1.1" 200 -
+[2022-09-02 05:32:14,831] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:14] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-02 05:32:14,878] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:14] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-02 05:32:15,195] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:15] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-02 05:32:18,167] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:18] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-09-02 05:32:28,569] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:28] "POST /login HTTP/1.1" 200 -
+[2022-09-02 05:32:30,725] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:30] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-09-02 05:32:32,788] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:32] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-09-02 05:32:34,180] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:34] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:32:46,100] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:46] "POST /login HTTP/1.1" 200 -
+[2022-09-02 05:32:47,909] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:47] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-09-02 05:32:50,199] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:50] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:32:52,559] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:52] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-09-02 05:32:53,805] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:53] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:32:54,971] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:32:54] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:33:18,344] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:33:18] "GET /delete?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:34:32,828] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:34:32] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-09-02 05:34:49,969] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:34:49] "GET /cb?code=i3gmu62xgjp4kywfcc9s6g&state=id09 HTTP/1.1" 200 -
+[2022-09-02 05:34:50,033] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:34:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-09-02 05:34:51,598] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:34:51] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:35:18,223] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:35:18] "POST /login HTTP/1.1" 200 -
+[2022-09-02 05:35:39,363] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:35:39] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:35:45,679] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:35:45] "[32mGET /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-09-02 05:36:01,491] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:36:01] "GET /cb?code=cotlgikh53xvogrjm7c5yb&state=id07 HTTP/1.1" 200 -
+[2022-09-02 05:36:01,596] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:36:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-09-02 05:36:05,690] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:36:05] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:37:07,720] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:07] "GET /refresh?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:37:10,322] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:10] "GET /refresh?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:37:14,613] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:14] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:37:24,547] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:24] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:37:27,230] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:27] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-09-02 05:37:30,203] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:37:30] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:40:08,994] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-09-02 05:40:08,994] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-09-02 05:43:27,187] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:43:27] "POST /login HTTP/1.1" 200 -
+[2022-09-02 05:43:31,116] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:43:31] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-09-02 05:43:33,154] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:43:33] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-09-02 05:43:34,609] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:43:34] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:45:32,563] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:32] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-02 05:45:32,575] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:32] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-02 05:45:32,925] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:32] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-02 05:45:38,643] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:38] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-02 05:45:38,657] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:38] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-02 05:45:38,791] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:38] "GET /engine3 HTTP/1.1" 200 -
+[2022-09-02 05:45:45,239] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:45] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-09-02 05:45:46,476] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:46] "GET /engine2 HTTP/1.1" 200 -
+[2022-09-02 05:45:46,522] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:46] "GET /engine1 HTTP/1.1" 200 -
+[2022-09-02 05:45:46,673] INFO in _internal: 163.152.71.208 - - [02/Sep/2022 05:45:46] "GET /engine3 HTTP/1.1" 200 -
