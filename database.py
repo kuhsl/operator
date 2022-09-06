@@ -33,13 +33,13 @@ scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
                 'medical_data':['medical_data']}
 
-url_list_front = {'financial_data':'http://163.152.30.239:8080/financial',
-                'public_data':'http://163.152.30.239:8080/public',
-                'medical_data':'http://163.152.30.239:8080/medical'}
+url_list_front = {'financial_data':'http://163.152.71.223:8000/financial',
+                'public_data':'http://163.152.71.223:8000/public',
+                'medical_data':'http://163.152.71.223:8000/medical'}
 
-url_list_back = {'financial_data':'http://163.152.30.239:3000/api/financial',
-                'public_data':'http://163.152.30.239:3000/api/public',
-                'medical_data':'http://163.152.30.239:3000/api/medical'}
+url_list_back = {'financial_data':'http://163.152.71.223:3000/api/financial',
+                'public_data':'http://163.152.71.223:3000/api/public',
+                'medical_data':'http://163.152.71.223:3000/api/medical'}
 
 schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('name', 'varchar(20)', ''),
