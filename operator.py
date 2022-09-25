@@ -1,6 +1,4 @@
-from flask import Flask, request, redirect, jsonify, make_response
 import json
-from database import init_db, scope_list, url_list_front, url_list_back
 import requests
 from base64 import b64encode, b64decode
 from secrets import token_bytes
@@ -9,21 +7,9 @@ from Crypto.Cipher import AES
 import time
 import inspect
 
-import engine1, engine2, engine3
-
-app = Flask(__name__)
-db = init_db()
-scope_list = list(scope_list.keys())
-
-operator_id = 'operator_id_001'
-operator_pw = 'pw_operator'
-callback_url = "http://163.152.71.223/cb"
-
-request_queue = {}
-cookie_secret_key = ''
-
-# ERROR message
-err_msg = lambda x : '[ERROR] ' + x + '\n'
+from database import url_list_front, url_list_back
+from interface import *
+import middleware
 
 # related to cookie (encryption)
 BLOCK_SIZE = 16
@@ -216,61 +202,7 @@ def delete():
     ### delete data from operator db
     db.del_data(_id, _scope)
     db.del_token(_id, _scope)
-    return "success\n"
-
-@app.get('/engine1')
-def operator_engine1():
-    res = json.dumps(engine1.run(), ensure_ascii = False)
-    return make_response(res)
-
-@app.get('/engine2')
-def operator_engine2():
-    res = json.dumps(engine2.run(), ensure_ascii = False)
-    return make_response(res)
-
-@app.get('/engine3')
-def operator_engine3():    
-    return make_response( jsonify({"img" : engine3.run()}),200)    
-
-@app.get('/cb') # get grant code (from user) -> get access token (from data source)
-def callback():
-    ### parse request and get grant code
-    if not check_args(request.args, ['state', 'code']):
-        return err_msg('state, code required')
-    else:
-        _id = request.args['state']
-        grant_code = request.args['code']
-    
-    ### validate if the user once requested for register data
-    if request_queue.get(_id) == None:
-        return err_msg('Not Proper Access')
-    else:
-        _scope = request_queue.get(_id)
-
-    ### make request for data source
-    data_source_url = url_list_back[_scope]
-    url = data_source_url + "/token"
-    params = {'grant_type':'authorization_code',
-                'code':grant_code,
-                'redirect_uri':callback_url}
-    headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
-                'Content-Type':'application/x-www-form-urlencoded'}
-    response = requests.post(url, data = params, headers=headers).json()
-    # response : dict type
-
-    ### parse response and get access token
-    access_token = response['access_token']
-    expires_in = response['expires_in']
-
-    ### save token in db
-    db.add_token(_id, _scope, access_token, expires_in)
-
-    ### get data from data source
-    result = request_data(_id, _scope)
-
-    request_queue.pop(_id)      # prevent race condition
-
-    return result
+    return "success\n" 
 
 if __name__ == '__main__':
     cookie_secret_key = token_bytes(BLOCK_SIZE)
