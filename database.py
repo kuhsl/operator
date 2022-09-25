@@ -191,6 +191,44 @@ class Control:
     def __del__(self):
         self.db.close()
 
+
+def init_db_secure():
+    # create database operator;
+    # create user operator@localhost identified by 'mysql_pw';
+    # grant all on operator.* to operator@localhost;
+
+    ### connect db
+    db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+    cur = db.cursor()
+
+    ### creat table "user"
+    sql  = "CREATE TABLE IF NOT EXISTS user ("
+    sql += "id varchar(50) UNIQUE NOT NULL, "
+    sql += "pw varchar(200) NOT NULL, "
+    sql += "key varchar(1024)) )"
+    cur.execute(sql)
+
+    ### create table "token"
+    sql  = "CREATE TABLE IF NOT EXISTS token ("
+    sql += "id varchar(50) NOT NULL, "
+    sql += "scope varchar(20), "
+    sql += "token char(22), "
+    sql += "expire int )"
+    cur.execute(sql)
+
+    ### create data tables as specified by "schema"
+    for table_name in table_list:
+        sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
+        sql += "id varchar(50) NOT NULL, "
+        for column, type, option in schema[table_name]:
+            sql += "%s %s %s, "%(column, type, option)
+        sql = sql[:-2] + ')'
+        cur.execute(sql)
+
+    db.commit()
+
+    return Control(db, cur)
+
 def init_db():
     # create database operator;
     # create user operator@localhost identified by 'mysql_pw';

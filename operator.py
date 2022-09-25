@@ -23,18 +23,6 @@ def check_args(args, li):
             return False
     return True
 
-def request_data(id, scope):
-    ### request data to data source
-    data_source_url = url_list_back[scope]
-    token = db.get_token(id, scope)
-    params = {'token':token, 'data':scope}
-    data = requests.get(data_source_url + '/resource', params = params).json()
-
-    ### store data in db
-    db.add_data(id, scope, data[scope])
-
-    return "success\n"
-
 def make_cookie(seed):
     ### make secret cookie 
     timestamp = str(int(time.time())).rjust(BLOCK_SIZE, '0')
