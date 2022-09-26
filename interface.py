@@ -6,7 +6,7 @@ from database import init_db, scope_list
 err_msg = lambda x : '[ERROR] ' + x + '\n'
 
 app = Flask(__name__)
-db = init_db()
+app_db, mid_db = init_db()
 scope_list = list(scope_list.keys())
 
 operator_id = 'operator_id_001'

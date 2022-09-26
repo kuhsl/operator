@@ -62,7 +62,7 @@ def sign_up():
     
     pw_hash = hashlib.sha256(new_pw.encode()).hexdigest()
 
-    db.add_user(new_id, pw_hash)
+    app_db.add_user(new_id, pw_hash)
 
     return 'sign up success\n'
 
@@ -113,7 +113,7 @@ def login():
 
     pw_hash = hashlib.sha256(_pw.encode()).hexdigest()
 
-    if db.get_user(_id, pw_hash) == None:
+    if app_db.get_user(_id, pw_hash) == None:
         return err_msg('wrong id or password')
     
     ### make response (with cookie)
@@ -143,7 +143,7 @@ def get_data():
         return err_msg('wrong scope')
     
     ### get data from operator's db
-    data = db.get_data(_id, _scope)
+    data = app_db.get_data(_id, _scope)
     return jsonify({_scope:data})
 
 #@app.post('/refresh')
@@ -188,8 +188,8 @@ def delete():
         return err_msg('wrong scope')
     
     ### delete data from operator db
-    db.del_data(_id, _scope)
-    db.del_token(_id, _scope)
+    app_db.del_data(_id, _scope)
+    app_db.del_token(_id, _scope)
     return "success\n" 
 
 if __name__ == '__main__':

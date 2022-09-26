@@ -1,3 +1,6 @@
+import json
+import requests
+from base64 import b64encode, b64decode
 import re
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.PublicKey.RSA import construct
@@ -7,17 +10,20 @@ from interface import *
 def request_data(id, scope):
     ### request data to data source
     data_source_url = url_list_back[scope]
-    token = db.get_token(id, scope)
+    token = mid_db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params).json()
 
     ### update engine db
 
+    ### get key from db
+    key = mid_db.get_key(id)
+
     ### encrypt data
-    
+    enc_data = encrypt_data(data_string, key)
 
     ### store data in db
-    db.add_data(id, scope, data[scope])
+    mid_db.add_data(id, scope, data[scope])
 
     return "success\n"
 
@@ -70,7 +76,7 @@ def callback():
     expires_in = response['expires_in']
 
     ### save token in db
-    db.add_token(_id, _scope, access_token, expires_in)
+    mid_db.add_token(_id, _scope, access_token, expires_in)
 
     ### get data from data source
     result = request_data(_id, _scope)
