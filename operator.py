@@ -90,7 +90,7 @@ def register():
     else:
         _pubkey = request.form['pubkey']
     
-    add_db.add_pubkey(_id, _pubkey)     ## add pubkey into db
+    app_db.add_pubkey(_id, _pubkey)     ## add pubkey into db
 
     ### add info into request_queue
     request_queue[_id] = _scope
