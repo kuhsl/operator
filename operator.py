@@ -66,10 +66,6 @@ def sign_up():
 
     return 'sign up success\n'
 
-@app.get('/test')
-def test():
-    return jsonify(request_queue)
-
 @app.get('/register')      # register data to mydata system
 def register():
     ### check id, pw

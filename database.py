@@ -96,6 +96,30 @@ class Control:
             return result[0][0]
         else:
             return None
+    
+    def add_pubkey(self, id, pkey):
+        ### add pubkey into db
+
+        if self.get_user(id) == None:   ## when id doesn't exist in db
+            return
+
+        sql  = "UPDATE user SET pubkey = %s "%pkey
+        sql += "WHERE id = %s"%id
+        self.cur.execute(sql)
+        self.db.commit()
+        
+        return "success"
+
+    def get_pubkey(self, id):
+        ### get pubkey from db
+        sql = "SELECT pubkey FROM user WHERE "
+        sql += "id = '%s'"%id
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+        if count == 1:
+            return result[0][0]
+        else:
+            return None
 
     def add_token(self, id, scope, token, expire):
         ### delete old token
@@ -220,9 +244,8 @@ def init_db():
 
     ### create data tables as specified by "schema"
     for table_name in table_list:
-        sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
+        sql  = "CREATE TABLE IF NOT EXISTS data ("
         sql += "id varchar(50) NOT NULL, "
-        sql += "scope varchar(50), "
         sql += "enc_data varchar(1000), "
         sql += "idx int )"                                ## idx : not for use // use if len(enc_data) > 1000
         cur.execute(sql)
