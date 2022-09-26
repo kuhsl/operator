@@ -66,7 +66,7 @@ def sign_up():
 
     return 'sign up success\n'
 
-@app.get('/register')      # register data to mydata system
+@app.post('/register')      # register data to mydata system
 def register():
     ### check id, pw
     cookie = request.cookies.get("login")
