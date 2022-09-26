@@ -84,6 +84,14 @@ def register():
     if _scope not in scope_list:
         return err_msg('wrong scope')
 
+    ### check pubkey
+    if not check_args(request.form, ['pubkey']):
+        return err_msg('public key required')
+    else:
+        _pubkey = request.form['pubkey']
+    
+    add_db.add_pubkey(_id, _pubkey)     ## add pubkey into db
+
     ### add info into request_queue
     request_queue[_id] = _scope
 

@@ -15,9 +15,11 @@ def request_data(id, scope):
     data = requests.get(data_source_url + '/resource', params = params).json()
 
     ### update engine db
+    ###
+    ### 
 
     ### get key from db
-    key = mid_db.get_key(id)
+    key = mid_db.get_pubkey(id)
 
     ### encrypt data
     enc_data = encrypt_data(data_string, key)
