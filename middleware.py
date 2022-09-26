@@ -13,6 +13,20 @@ def request_data(id, scope):
     token = mid_db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params).json()
+    
+    ### data format ###
+    # {
+    #     scope : {
+    #         table_name : [
+
+    #             {   column1 : data1_1,
+    #                 column2 : data1_2 },
+
+    #             {   column1 : data2_1,
+    #                 column2 : data2_2 }
+    #         ]
+    #     }
+    # }
 
     ### update engine db
     ###
@@ -22,10 +36,13 @@ def request_data(id, scope):
     key = mid_db.get_pubkey(id)
 
     ### encrypt data
-    enc_data = encrypt_data(data_string, key)
+    enc_data = {}
+    for table_name in list(data[scope].keys()):
+        data_string = str(data[scope][table_name])
+        enc_data[table_name] = [ { 'enc_data': encrypt_data(data_string, key) } ]
 
     ### store data in db
-    mid_db.add_data(id, scope, data[scope])
+    mid_db.add_data(id, scope, enc_data)      ## enc_data : { table1 : [ { 'enc_data' : encrypted_data } ], ... }
 
     return "success\n"
 

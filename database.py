@@ -181,6 +181,21 @@ class Control:
     
     def get_data(self, id, scope):
         ### get data from db
+
+        ### data format ###
+        # {
+        #     'table1' : [
+        #         { 'attribute1':'data11',
+        #             'attribute2':'data12',
+        #             'attribute3':'data13' },
+        #         { 'attribute1':'data21',
+        #             'attribute2':'data22',
+        #             'attribute3':'data23' } ],
+        #     'table2' : [
+        #         { 'attribute4':'data41',
+        #             'attribute5':'data42' } ]
+        # }
+
         data = {}
         for table_name in scope_list[scope]:
             print(table_name)
