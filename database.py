@@ -193,24 +193,21 @@ class Control:
 
 def init_db():
     # CREATE DATABASE operator_platform;
-    # CREATE USER admin@localhost IDENTIFIED BY 'mysql_pw';
-    # GRANT ALL ON operator_platfrom.* TO admin@localhost;
+    # CREATE USER admin@localhost IDENTIFIED BY 'mysql_pw' with grant option;
+    # GRANT ALL ON operator_platfom.* TO admin@localhost;
 
     ## CREATE USER operator@localhost IDENTIFIED BY 'mysql_pw';
-    ## GRANT SELECT, INSERT, DELETE ON operator_platform.user TO operator@localhost;
-    ## GRANT SELECT ON operator_platform.user TO operator@localhost;
     ## CREATE USER middleware@localhost IDENTIFIED BY 'mysql_pw';
-    ## GRANT SELECT, INSERT, DELETE ON operator_platform.user TO middleware@localhost;
 
     ### connect db
-    db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator_platfrom', charset='utf8')
+    db = pymysql.connect(host='localhost', user='admin', passwd='mysql_pw', db='operator_platform', charset='utf8')
     cur = db.cursor()
 
     ### creat table "user"
     sql  = "CREATE TABLE IF NOT EXISTS user ("
     sql += "id varchar(50) UNIQUE NOT NULL, "
-    sql += "pw varchar(200) NOT NULL, 
-    sql += "key varchar(1024) )"
+    sql += "pw varchar(200) NOT NULL, "
+    sql += "pubkey varchar(1024) )"
     cur.execute(sql)
 
     ### create table "token"
@@ -226,11 +223,15 @@ def init_db():
         sql  = "CREATE TABLE IF NOT EXISTS %s ("%(table_name)
         sql += "id varchar(50) NOT NULL, "
         sql += "scope varchar(50), "
-        sql += "enc_data varchar(1000),
-        sql += "index int )"                                ## index : not for use // use if len(enc_data) > 1000
+        sql += "enc_data varchar(1000), "
+        sql += "idx int )"                                ## idx : not for use // use if len(enc_data) > 1000
         cur.execute(sql)
 
     db.commit()
+
+    ## GRANT SELECT, INSERT, DELETE ON operator_platform.user TO operator@localhost;
+    ## GRANT SELECT ON operator_platform.user TO operator@localhost;
+    ## GRANT SELECT, INSERT, DELETE ON operator_platform.user TO middleware@localhost;
 
     ### grant priv to operator
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.user TO operator@localhost")
@@ -241,7 +242,7 @@ def init_db():
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.user TO middleware@localhost")
     for table_name in table_list:
         cur.execute("GRANT INSERT, DELETE ON operator_platform.%s TO middleware@localhost"%table_name)
-    cur.execute("GRANT SELECT, INSERT, DELETE ON operato_platform.token TO middleware@localhost")
+    cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.token TO middleware@localhost")
     
     db.commit()
 
