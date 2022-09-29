@@ -12,7 +12,7 @@ def request_data(id, scope):
     data_source_url = url_list_back[scope]
     token = mid_db.get_token(id, scope)
     params = {'token':token, 'data':scope}
-    data = requests.get(data_source_url + '/resource', params = params).json()
+    data = requests.get(data_source_url + '/resource', params = params, verify=False).json()
     
     ### data format ###
     # {
@@ -87,7 +87,7 @@ def callback():
                 'redirect_uri':callback_url}
     headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
                 'Content-Type':'application/x-www-form-urlencoded'}
-    response = requests.post(url, data = params, headers=headers).json()
+    response = requests.post(url, data = params, headers=headers, verify=False).json()
     # response : dict type
 
     ### parse response and get access token
