@@ -15,12 +15,15 @@ warnings.filterwarnings(action='ignore')
 
 dir = 'img/'
 
+app = Flask(__name__)
+
+### connect db
+#conn = pymysql.connect(host='163.152.71.223', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+#conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+cur = conn.cursor()
+
 def engine3():
-    ### connect db
-    #conn = pymysql.connect(host='163.152.71.223', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
-    conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
-    #conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
-    cur = conn.cursor()
 
     #sql="SELECT name, a.ssn, FLOOR((CHAR_LENGTH(relations)-CHAR_LENGTH(REPLACE(relations, 'c:','')))/2) as child_cnt, balance FROM public_data a JOIN financial_data b ON a.ssn=b.ssn"
     sql="SELECT FLOOR((CHAR_LENGTH(relations)-CHAR_LENGTH(REPLACE(relations, 'c:','')))/2) as child_cnt, balance FROM public_data a JOIN financial_data b ON a.ssn=b.ssn"
@@ -59,8 +62,12 @@ def engine3():
 
     return b64
 
+@app.get('/')
 def run():
-    return engine3()
+    return make_response(jsonify({'img':engine3()}), 200)
 
 if __name__ == '__main__':
-   run()
+    try:
+        app.run(host='0.0.0.0', port=80, debug=False)
+    finally:
+        conn.close()

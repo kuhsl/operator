@@ -7,13 +7,17 @@ import warnings
 warnings.filterwarnings(action='ignore')
 
 labels=['label1','label2','label3']
-result={}
+
+app = Flask(__name__)
+
+### connect db
+#conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
+conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
+cur = conn.cursor()
 
 def engine2():
-    ### connect db
-    #conn = pymysql.connect(host='163.152.30.239', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
-    conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
-    cur = conn.cursor()
+
+    result={}
 
     sql="SELECT balance, disease_num FROM financial_data a LEFT OUTER JOIN medical_data b ON a.ssn=b.ssn ORDER BY balance ASC"
     #sql="SELECT balance, disease_num FROM financial_data a JOIN medical_data b ON a.ssn=b.ssn WHERE disease_num IN ('I10','R81','E66') ORDER BY balance ASC"
@@ -52,6 +56,12 @@ def engine2():
     print(result)
     return result
 
+@app.get('/')
 def run():
-    return engine2()
+    return make_response(json.dumps(engine2(), ensure_ascii = False)
 
+if __name__ == '__main__':
+    try:
+        app.run(host='0.0.0.0', port=80, debug=False)
+    finally:
+        conn.close()
