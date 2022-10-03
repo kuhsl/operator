@@ -15,3 +15,10 @@ callback_url = "http://163.152.71.223/cb"
 
 request_queue = {}
 cookie_secret_key = ''
+
+def check_args(args, li):
+    ### check if necessary parameter included
+    for i in li:
+        if args.get(i) == None:
+            return False
+    return True

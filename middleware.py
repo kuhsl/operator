@@ -46,10 +46,19 @@ def request_data(id, scope):
 
     return "success\n"
 
+def encrypt_internal(data, cipher_spec):
+    encrypted = ''
+
+    for i in range(0, len(data), 190):
+        end = max(i + 190, len(data) - 1)
+        encrypted += cipher_spec.encrypt(data[i : end].encode())
+    
+    return encrypted
+
 def encrypt_data(data, key):
     # RSA 2048 encryption
     # key : "OpenSSLRSAPublicKey{modulus=be90...a8209,publicExponent=10001}"
-    # [output] enc_data : raw ciphertext (not base64 encoded)
+    # [output] enc_data : raw ciphertext ( not base64 encoded / length: 256, 512, 768, ... )
 
     ### parsing 'key' -> modular, exp
     key_string = re.compile('=[0-9|a-f]')
@@ -60,7 +69,7 @@ def encrypt_data(data, key):
     ### RSA encryption 
     pubkey = construct((modular, exp))
     cipher = PKCS1_OAEP.new(pubkey)
-    enc_data = cipher.encrypt(data.encode())
+    enc_data = encrypt_internaL(data, cipher)
 
     return enc_data
 

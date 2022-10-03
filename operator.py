@@ -16,13 +16,6 @@ BLOCK_SIZE = 16
 pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE)
 unpad = lambda s: s[:-ord(s[len(s) - 1:])]
 
-def check_args(args, li):
-    ### check if necessary parameter included
-    for i in li:
-        if args.get(i) == None:
-            return False
-    return True
-
 def make_cookie(seed):
     ### make secret cookie 
     timestamp = str(int(time.time())).rjust(BLOCK_SIZE, '0')
