@@ -7,6 +7,33 @@ from Crypto.PublicKey.RSA import construct
 
 from interface import *
 
+def encrypt_internal(data, cipher_spec):
+    encrypted = ''
+
+    for i in range(0, len(data), 190):
+        end = max(i + 190, len(data) - 1)
+        encrypted += cipher_spec.encrypt(data[i : end].encode())
+    
+    return encrypted
+
+def encrypt_data(data, key):
+    # RSA 2048 encryption
+    # key : "OpenSSLRSAPublicKey{modulus=be90...a8209,publicExponent=10001}"
+    # [output] enc_data : raw ciphertext ( not base64 encoded / length: 256, 512, 768, ... )
+
+    ### parsing 'key' -> modular, exp
+    key_string = re.compile('=[0-9|a-f]')
+    _modular, _exp = key_string.findall(key)
+    modular = int(_modular[1:], 16)
+    exp = int(_exp[1:], 16)
+
+    ### RSA encryption 
+    pubkey = construct((modular, exp))
+    cipher = PKCS1_OAEP.new(pubkey)
+    enc_data = encrypt_internaL(data, cipher)
+
+    return enc_data
+
 def request_data(id, scope):
     ### request data to data source
     data_source_url = url_list_back[scope]
@@ -45,33 +72,6 @@ def request_data(id, scope):
     mid_db.add_data(id, scope, enc_data)      ## enc_data : { table1 : [ { 'enc_data' : encrypted_data } ], ... }
 
     return "success\n"
-
-def encrypt_internal(data, cipher_spec):
-    encrypted = ''
-
-    for i in range(0, len(data), 190):
-        end = max(i + 190, len(data) - 1)
-        encrypted += cipher_spec.encrypt(data[i : end].encode())
-    
-    return encrypted
-
-def encrypt_data(data, key):
-    # RSA 2048 encryption
-    # key : "OpenSSLRSAPublicKey{modulus=be90...a8209,publicExponent=10001}"
-    # [output] enc_data : raw ciphertext ( not base64 encoded / length: 256, 512, 768, ... )
-
-    ### parsing 'key' -> modular, exp
-    key_string = re.compile('=[0-9|a-f]')
-    _modular, _exp = key_string.findall(key)
-    modular = int(_modular[1:], 16)
-    exp = int(_exp[1:], 16)
-
-    ### RSA encryption 
-    pubkey = construct((modular, exp))
-    cipher = PKCS1_OAEP.new(pubkey)
-    enc_data = encrypt_internaL(data, cipher)
-
-    return enc_data
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
