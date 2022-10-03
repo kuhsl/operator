@@ -5,13 +5,14 @@ import re
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.PublicKey.RSA import construct
 
+from database import url_list_front, url_list_back
 from interface import *
 
 def encrypt_internal(data, cipher_spec):
-    encrypted = ''
+    encrypted = b''
 
     for i in range(0, len(data), 190):
-        end = max(i + 190, len(data) - 1)
+        end = min(i + 190, len(data) - 1)
         encrypted += cipher_spec.encrypt(data[i : end].encode())
     
     return encrypted
@@ -22,7 +23,7 @@ def encrypt_data(data, key):
     # [output] enc_data : raw ciphertext ( not base64 encoded / length: 256, 512, 768, ... )
 
     ### parsing 'key' -> modular, exp
-    key_string = re.compile('=[0-9|a-f]')
+    key_string = re.compile('=[0-9|a-f]*')
     _modular, _exp = key_string.findall(key)
     modular = int(_modular[1:], 16)
     exp = int(_exp[1:], 16)
@@ -30,7 +31,7 @@ def encrypt_data(data, key):
     ### RSA encryption 
     pubkey = construct((modular, exp))
     cipher = PKCS1_OAEP.new(pubkey)
-    enc_data = encrypt_internaL(data, cipher)
+    enc_data = encrypt_internal(data, cipher)
 
     return enc_data
 
@@ -66,7 +67,8 @@ def request_data(id, scope):
     enc_data = {}
     for table_name in list(data[scope].keys()):
         data_string = str(data[scope][table_name])
-        enc_data[table_name] = [ { 'enc_data': encrypt_data(data_string, key) } ]
+        encrypted = encrypt_data(data_string, key)
+        enc_data[table_name] = [ { 'enc_data': b64encode(encrypted).decode() } ]
 
     ### store data in db
     mid_db.add_data(id, scope, enc_data)      ## enc_data : { table1 : [ { 'enc_data' : encrypted_data } ], ... }

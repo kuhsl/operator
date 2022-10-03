@@ -172,7 +172,6 @@ class Control:
                 sql  = "INSERT INTO %s "%(table_name)
                 sql += "(id, " + ", ".join(columns) + ") "
                 sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
-                print(sql)
                 self.cur.execute(sql)
         
         self.db.commit()
@@ -198,7 +197,6 @@ class Control:
 
         data = {}
         for table_name in scope_list[scope]:
-            print(table_name)
             columns = [x[0] for x in schema[table_name]]
             sql  = "SELECT " + ', '.join(columns) + ' '
             sql += "FROM %s "%(table_name)
@@ -259,9 +257,9 @@ def init_db():
 
     ### create data tables as specified by "schema"
     for table_name in table_list:
-        sql  = "CREATE TABLE IF NOT EXISTS data ("
+        sql  = "CREATE TABLE IF NOT EXISTS %s ("%table_name
         sql += "id varchar(50) NOT NULL, "
-        sql += "enc_data varchar(1000), "
+        sql += "enc_data text, "
         sql += "idx int )"                                ## idx : not for use // use if len(enc_data) > 1000
         cur.execute(sql)
 
@@ -279,7 +277,7 @@ def init_db():
     ### grant priv to middleware
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.user TO middleware@localhost")
     for table_name in table_list:
-        cur.execute("GRANT INSERT, DELETE ON operator_platform.%s TO middleware@localhost"%table_name)
+        cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.%s TO middleware@localhost"%table_name)
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.token TO middleware@localhost")
     
     db.commit()
@@ -288,6 +286,6 @@ def init_db():
     app_db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator_platform', charset='utf8')
     app_cur = app_db.cursor()
     mid_db = pymysql.connect(host='localhost', user='middleware', passwd='mysql_pw', db='operator_platform', charset='utf8')
-    mid_cur = app_db.cursor()
+    mid_cur = mid_db.cursor()
 
     return Control(app_db, app_cur), Control(mid_db, mid_cur)
