@@ -55,15 +55,15 @@ schema = {'public_data':[('user_id', 'varchar(50)', ''),
             'transaction_data':[('user_id', 'varchar(50)', ''),
                         ('date_time', 'varchar(50)', ''),
                         ('deposit_amount', 'bigint', ''),
-                        ('withdrawal_amount', 'bigint', '')], 
-            'medical_data':[('user_id', 'varchar(50)', ''), 
-                        ('name', 'varchar(20)', ''), 
+                        ('withdrawal_amount', 'bigint', '')],
+            'medical_data':[('user_id', 'varchar(50)', ''),
+                        ('name', 'varchar(20)', ''),
                         ('sex', 'enum(\'F\',\'M\')', ''),
                         ('ssn', 'varchar(15)', ''),
-                        ('date_time', 'varchar(50)', ''), 
+                        ('date_time', 'varchar(50)', ''),
                         ('recovered', 'enum(\'Y\',\'N\')', ''),
-                        ('disease_name', 'varchar(30)', ''), 
-                        ('disease_num', 'varchar(30)', ''), 
+                        ('disease_name', 'varchar(30)', ''),
+                        ('disease_num', 'varchar(30)', ''),
                         ('image_path', 'varchar(200)', '')]}
 
 table_list = set(chain(*scope_list.values()))
@@ -83,7 +83,7 @@ class Control:
         self.cur.execute(sql)
 
         self.db.commit()
-        
+
         return "success"
 
     def get_user(self, id, pw):
@@ -96,18 +96,21 @@ class Control:
             return result[0][0]
         else:
             return None
-    
+
     def add_pubkey(self, id, pkey):
         ### add pubkey into db
 
-        if self.get_user(id) == None:   ## when id doesn't exist in db
+        sql  = "SELECT id FROM user WHERE "
+        sql += "id = '%s'"%id
+        count = self.cur.execute(sql)
+        if count != 1: #when id doesn't exist in db
             return
 
         sql  = "UPDATE user SET pubkey = %s "%pkey
-        sql += "WHERE id = %s"%id
+        sql += "WHERE id = '%s'"%id
         self.cur.execute(sql)
         self.db.commit()
-        
+
         return "success"
 
     def get_pubkey(self, id):
@@ -131,7 +134,7 @@ class Control:
         self.cur.execute(sql)
         self.db.commit()
         return "success"
-    
+
     def get_token(self, id, scope):
         ### get token from db if exists & not expired
         sql  = "SELECT token, expire "
@@ -139,7 +142,7 @@ class Control:
         sql += "WHERE id = '%s' and scope = '%s'"%(id, scope)
         count = self.cur.execute(sql)
         result = self.cur.fetchall()
-        
+
         if count == 1:
             token = result[0][0]
             expire = result[0][1]
@@ -149,14 +152,14 @@ class Control:
                 return "token expired"
         else:
             return None
-    
+
     def del_token(self, id, scope):
         ### delete token from db
         sql  = "DELETE FROM token "
         sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
         count = self.cur.execute(sql)
         self.db.commit()
-        
+
         return count
 
     def add_data(self, id, scope, data):
@@ -173,11 +176,11 @@ class Control:
                 sql += "(id, " + ", ".join(columns) + ") "
                 sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
                 self.cur.execute(sql)
-        
+
         self.db.commit()
-        
+
         return "success"
-    
+
     def get_data(self, id, scope):
         ### get data from db
 
@@ -210,7 +213,7 @@ class Control:
                 for j in range(len(columns)):
                     d[columns[j]] = result[i][j]
                 data[table_name].append(d)
-            
+
         return data
     
     def del_data(self, id, scope):
@@ -279,9 +282,9 @@ def init_db():
     for table_name in table_list:
         cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.%s TO middleware@localhost"%table_name)
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.token TO middleware@localhost")
-    
-    db.commit()
 
+    db.commit()
+    
     ### connect db (operator, middleware)
     app_db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator_platform', charset='utf8')
     app_cur = app_db.cursor()
@@ -289,3 +292,6 @@ def init_db():
     mid_cur = mid_db.cursor()
 
     return Control(app_db, app_cur), Control(mid_db, mid_cur)
+
+ 
+    
