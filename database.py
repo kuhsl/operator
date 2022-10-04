@@ -106,7 +106,7 @@ class Control:
         if count != 1: #when id doesn't exist in db
             return
 
-        sql  = "UPDATE user SET pubkey = %s "%pkey
+        sql  = "UPDATE user SET pubkey = '%s' "%pkey
         sql += "WHERE id = '%s'"%id
         self.cur.execute(sql)
         self.db.commit()
