@@ -200,8 +200,7 @@ class Control:
 
         data = {}
         for table_name in scope_list[scope]:
-            columns = [x[0] for x in schema[table_name]]
-            sql  = "SELECT " + ', '.join(columns) + ' '
+            sql  = "SELECT enc_data "
             sql += "FROM %s "%(table_name)
             sql += "WHERE id = '%s'"%(id)
             count = self.cur.execute(sql)
@@ -210,12 +209,11 @@ class Control:
             data[table_name] = []
             for i in range(count):
                 d = {}
-                for j in range(len(columns)):
-                    d[columns[j]] = result[i][j]
+                d['enc_data'] = result[i][0]
                 data[table_name].append(d)
 
         return data
-    
+
     def del_data(self, id, scope):
         ### delete data from db
         count = 0
@@ -284,7 +282,7 @@ def init_db():
     cur.execute("GRANT SELECT, INSERT, DELETE ON operator_platform.token TO middleware@localhost")
 
     db.commit()
-    
+
     ### connect db (operator, middleware)
     app_db = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator_platform', charset='utf8')
     app_cur = app_db.cursor()
