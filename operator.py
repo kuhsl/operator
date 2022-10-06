@@ -13,12 +13,12 @@ import middleware
 
 # related to cookie (encryption)
 BLOCK_SIZE = 16
-pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE)
-unpad = lambda s: s[:-ord(s[len(s) - 1:])]
+pad = lambda s: bytes(s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE), 'utf-8')
+unpad = lambda s: s[:-ord(s[len(s) - 1:])].decode('utf-8')
 
 def make_cookie(seed):
-    ### make secret cookie 
-    timestamp = str(int(time.time())).rjust(BLOCK_SIZE, '0')
+    ### make secret cookie
+    timestamp = bytes(str(int(time.time())).rjust(BLOCK_SIZE, '0'),'utf-8')
     aes = AES.new(cookie_secret_key, AES.MODE_CBC, timestamp)
     enc = aes.encrypt(pad(seed))
     cookie = seed + ':' + b64encode(enc).decode()
@@ -35,7 +35,7 @@ def check_cookie(cookie):
     aes = AES.new(cookie_secret_key, AES.MODE_CBC, pad(seed)[:16])
     timestamp = int(aes.decrypt(b64decode(enc))[:16])
     diff = int(time.time()) - timestamp
-    
+
     if diff >= 3600:
         return None
     else:
@@ -52,7 +52,7 @@ def sign_up():
     else:
         new_id = request.form['id']
         new_pw = request.form['password']
-    
+
     pw_hash = hashlib.sha256(new_pw.encode()).hexdigest()
 
     app_db.add_user(new_id, pw_hash)
@@ -82,7 +82,7 @@ def register():
         return err_msg('public key required')
     else:
         _pubkey = request.form['pubkey']
-    
+
     app_db.add_pubkey(_id, _pubkey)     ## add pubkey into db
 
     ### add info into request_queue
@@ -112,7 +112,7 @@ def login():
 
     if app_db.get_user(_id, pw_hash) == None:
         return err_msg('wrong id or password')
-    
+
     ### make response (with cookie)
     cookie_value = make_cookie(_id)
     response = make_response("login success\n")
@@ -138,10 +138,11 @@ def get_data():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### get data from operator's db
     data = app_db.get_data(_id, _scope)
     return jsonify({_scope:data})
+
 
 #@app.post('/refresh')
 @app.get('/refresh')       # get data from data-source again if token not expired
@@ -161,7 +162,7 @@ def refresh():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### get data from data source
     return request_data(_id, _scope)
 
@@ -174,7 +175,7 @@ def delete():
 
     if _id == None:
         return err_msg('login first')
-    
+
     ### check scope
     if not check_args(request.args, ['scope']):
         return err_msg('scope required')
@@ -183,13 +184,14 @@ def delete():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### delete data from operator db
     app_db.del_data(_id, _scope)
     app_db.del_token(_id, _scope)
-    return "success\n" 
+    return "success\n"
 
 if __name__ == '__main__':
     cookie_secret_key = token_bytes(BLOCK_SIZE)
-    app.run(host='0.0.0.0', port=80, debug=False)
+    app.run(host='0.0.0.0', port=80, debug=True)
     app.config['JSON_AS_ASCII'] = False
+
