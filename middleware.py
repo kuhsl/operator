@@ -9,12 +9,15 @@ from database import url_list_front, url_list_back
 from interface import *
 
 def encrypt_internal(data, cipher_spec):
+    max_len=190
     encrypted = b''
+    data=data.encode()
 
-    for i in range(0, len(data), 190):
-        end = min(i + 190, len(data) - 1)
-        encrypted += cipher_spec.encrypt(data[i : end].encode())
-    
+
+    for i in range(0, len(data), max_len):
+        end = min(i+max_len, len(data))
+        encrypted += cipher_spec.encrypt(data[i:end])
+
     return encrypted
 
 def encrypt_data(data, key):
@@ -28,7 +31,7 @@ def encrypt_data(data, key):
     modular = int(_modular[1:], 16)
     exp = int(_exp[1:], 16)
 
-    ### RSA encryption 
+    ### RSA encryption
     pubkey = construct((modular, exp))
     cipher = PKCS1_OAEP.new(pubkey)
     enc_data = encrypt_internal(data, cipher)
@@ -58,7 +61,7 @@ def request_data(id, scope):
 
     ### update engine db
     ###
-    ### 
+    ###
 
     ### get key from db
     key = mid_db.get_pubkey(id)
@@ -67,6 +70,7 @@ def request_data(id, scope):
     enc_data = {}
     for table_name in list(data[scope].keys()):
         data_string = str(data[scope][table_name])
+        print('data_string: ',data_string)
         encrypted = encrypt_data(data_string, key)
         enc_data[table_name] = [ { 'enc_data': b64encode(encrypted).decode() } ]
 
@@ -83,7 +87,7 @@ def callback():
     else:
         _id = request.args['state']
         grant_code = request.args['code']
-    
+
     ### validate if the user once requested for register data
     if request_queue.get(_id) == None:
         return err_msg('Not Proper Access')
@@ -96,7 +100,7 @@ def callback():
     params = {'grant_type':'authorization_code',
                 'code':grant_code,
                 'redirect_uri':callback_url}
-    headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
+    headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(),
                 'Content-Type':'application/x-www-form-urlencoded'}
     response = requests.post(url, data = params, headers=headers, verify=False).json()
     # response : dict type
