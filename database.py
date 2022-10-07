@@ -41,6 +41,17 @@ url_list_back = {'financial_data':'https://163.152.71.223/api/financial',
                 'public_data':'https://163.152.71.223/api/public',
                 'medical_data':'https://163.152.71.223/api/medical'}
 
+scope_engine = {'financial_data':['e2','e3'],
+                'public_data':['e1','e3'],
+                'medical_data':['e1','e2']}
+
+
+#TODO : add connect code
+engine_dbcon = {'e1':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=\'3326\',  charset=\'utf8',
+                'e2':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=\'3336\',  charset=\'utf8',
+                'e3':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=\'3346\',  charset=\'utf8'}
+
+
 schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('name', 'varchar(20)', ''),
                         ('relations', 'varchar(200)', ''),
@@ -161,6 +172,32 @@ class Control:
         self.db.commit()
 
         return count
+    
+    def nav_data(self, id, scope, data):
+        con_list=[]
+        con_list=scope_con(scope)
+
+        ### add data into engine db
+        table_names = list(data)
+
+        for con in con_list:
+            #connect db (engine1, engine2. engine3)
+            engine_db = pymysql.connect(con)
+            engine_cur = engine_db.cursor()
+
+
+            for table_name in table_names:
+                for d in data[table_name]:
+                    columns = list(d)
+                    vals = [d[x] for x in columns]
+                    sql  = "INSERT INTO %s "%(table_name)
+                    sql += "(id, " + ", ".join(columns) + ") "
+                    sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
+                    print(sql)
+                    engine_cur.execute(sql)
+            engine_db.commit()
+            engine_db.close()
+
 
     def add_data(self, id, scope, data):
         ### delete old data
@@ -226,8 +263,45 @@ class Control:
 
         return count
 
+    def get_ip(self, scope):
+
+        #get engines from scope
+        sql  = "SELECT engine "
+        sql += "FROM scope_engine "
+        sql += "WHERE scope = '%s'"%(scope)
+        count = self.cur.execute(sql)
+
+        if count == 1:
+            engine_list = result[0][0].split(';')
+        else:
+            return None
+
+        for engine in engine_list:
+            #get ip addr from engine
+            sql  = "SELECT ip "
+            sql += "FROM engine_ip "
+            sql += "WHERE engine = '%s'"%(engine)
+            count = self.cur.execute(sql)
+
+        if count == 1:
+            ip_list = result[0][0].split(';')
+        else:
+            return None
+
+        return ip_list
+
+    def scope_con(self,scope):
+        con_list=[]
+        #get con queries from scope
+        for engine in scope_engine[scope]:
+            for con in engine_dbcon[engine]:
+                con_list += con
+
+        return con_list
+
     def __del__(self):
         self.db.close()
+
 
 def init_db():
     # CREATE DATABASE operator_platform;
@@ -254,6 +328,18 @@ def init_db():
     sql += "scope varchar(20), "
     sql += "token char(22), "
     sql += "expire int )"
+    cur.execute(sql)
+
+    ### create table "scope_engine"
+    sql  = "CREATE TABLE IF NOT EXISTS scope_engine ("
+    sql += "scope varchar(20) UNIQUE NOT NULL, "
+    sql += "engine varchar(20) )"
+    cur.execute(sql)
+
+    ### create table "engine_ip"
+    sql  = "CREATE TABLE IF NOT EXISTS engine_ip ("
+    sql += "engine varchar(20) UNIQUE NOT NULL, "
+    sql += "ip varchar(20) )"
     cur.execute(sql)
 
     ### create data tables as specified by "schema"
