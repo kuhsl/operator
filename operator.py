@@ -140,7 +140,7 @@ def get_data():
         return err_msg('wrong scope')
 
     ### get data from operator's db
-    data = app_db.get_data(_id, _scope)
+    data = app_db.get_enc_data(_id, _scope)
     return jsonify({_scope:data})
 
 

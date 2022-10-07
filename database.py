@@ -237,6 +237,27 @@ class Control:
 
         data = {}
         for table_name in scope_list[scope]:
+            columns = [x[0] for x in schema[table_name]]
+            sql  = "SELECT " + ', '.join(columns) + ' '
+            sql += "FROM %s "%(table_name)
+            sql += "WHERE id = '%s'"%(id)
+            count = self.cur.execute(sql)
+            result = self.cur.fetchall()
+
+            data[table_name] = []
+            for i in range(count):
+                d = {}
+                for j in range(len(columns)):
+                    d[columns[j]] = result[i][j]
+                data[table_name].append(d)
+            
+        return data
+
+    def get_enc_data(self, id, scope):
+        ### get encrypted data from db
+
+        data = {}
+        for table_name in scope_list[scope]:
             sql  = "SELECT enc_data "
             sql += "FROM %s "%(table_name)
             sql += "WHERE id = '%s'"%(id)
