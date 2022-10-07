@@ -213,6 +213,7 @@ class Control:
                 sql += "(id, " + ", ".join(columns) + ") "
                 sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
                 self.cur.execute(sql)
+                print(sql)
 
         self.db.commit()
 

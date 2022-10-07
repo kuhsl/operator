@@ -3,6 +3,7 @@ import requests
 from base64 import b64encode, b64decode
 import re
 from Crypto.Cipher import PKCS1_OAEP
+import Crypto.Hash.SHA256 as sha256
 from Crypto.PublicKey.RSA import construct
 
 from database import url_list_front, url_list_back
@@ -12,7 +13,6 @@ def encrypt_internal(data, cipher_spec):
     max_len=190
     encrypted = b''
     data=data.encode()
-
 
     for i in range(0, len(data), max_len):
         end = min(i+max_len, len(data))
@@ -33,7 +33,8 @@ def encrypt_data(data, key):
 
     ### RSA encryption
     pubkey = construct((modular, exp))
-    cipher = PKCS1_OAEP.new(pubkey)
+    print(pubkey.exportKey().decode())
+    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=sha256)
     enc_data = encrypt_internal(data, cipher)
 
     return enc_data
@@ -60,7 +61,7 @@ def request_data(id, scope):
     # }
 
     ### update engine db
-    mid_db.nav_data(id, scope, data[scope])
+    #mid_db.nav_data(id, scope, data[scope])
 
     ### get key from db
     key = mid_db.get_pubkey(id)
