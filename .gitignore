@@ -2,3 +2,4 @@ __pycache__/*
 img/*
 *.log
 *test*
+database_db-server.py
