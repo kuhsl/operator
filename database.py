@@ -3,8 +3,6 @@ from itertools import chain
 import time
 from logging.config import dictConfig
 
-
-
 dictConfig({
     'version': 1,
     'formatters': {
@@ -28,7 +26,6 @@ dictConfig({
     }
 })
 
-
 scope_list = {'financial_data':['transaction_data', 'financial_data'],
                 'public_data':['public_data'],
                 'medical_data':['medical_data']}
@@ -40,17 +37,6 @@ url_list_front = {'financial_data':'http://163.152.71.223:8000/financial',
 url_list_back = {'financial_data':'https://163.152.71.223/api/financial',
                 'public_data':'https://163.152.71.223/api/public',
                 'medical_data':'https://163.152.71.223/api/medical'}
-
-scope_engine = {'financial_data':['e2','e3'],
-                'public_data':['e1','e3'],
-                'medical_data':['e1','e2']}
-
-
-#TODO : add connect code
-engine_dbcon = {'e1':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=\'3326\',  charset=\'utf8',
-                'e2':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=\'3336\',  charset=\'utf8',
-                'e3':'host=\'163.152.71.223\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=\'3346\',  charset=\'utf8'}
-
 
 schema = {'public_data':[('user_id', 'varchar(50)', ''),
                         ('name', 'varchar(20)', ''),
@@ -87,142 +73,13 @@ class Control:
         self.db = db
         self.cur = cur
 
-    def add_user(self, new_id, new_pw):
-        ### add user info into db
-        sql  = "INSERT INTO user (id, pw) "
-        sql += "VALUES ('%s', '%s')"%(new_id, new_pw)
-        self.cur.execute(sql)
-
-        self.db.commit()
-
-        return "success"
-
-    def get_user(self, id, pw):
-        ### get user id from db
-        sql  = "SELECT id FROM user WHERE "
-        sql += "id = '%s' AND pw = '%s'"%(id, pw)
-        count = self.cur.execute(sql)
-        result = self.cur.fetchall()
-        if count == 1:
-            return result[0][0]
-        else:
-            return None
-
-    def add_pubkey(self, id, pkey):
-        ### add pubkey into db
-
-        sql  = "SELECT id FROM user WHERE "
-        sql += "id = '%s'"%id
-        count = self.cur.execute(sql)
-        if count != 1: #when id doesn't exist in db
-            return
-
-        sql  = "UPDATE user SET pubkey = '%s' "%pkey
-        sql += "WHERE id = '%s'"%id
-        self.cur.execute(sql)
-        self.db.commit()
-
-        return "success"
-
-    def get_pubkey(self, id):
-        ### get pubkey from db
-        sql = "SELECT pubkey FROM user WHERE "
-        sql += "id = '%s'"%id
-        count = self.cur.execute(sql)
-        result = self.cur.fetchall()
-        if count == 1:
-            return result[0][0]
-        else:
-            return None
-
-    def add_token(self, id, scope, token, expire):
-        ### delete old token
-        self.del_token(id, scope)
-
-        ### add token into db
-        sql  = "INSERT INTO token (id, scope, token, expire) "
-        sql += "VALUES ('%s', '%s', '%s', %d)"%(id, scope, token, expire)
-        self.cur.execute(sql)
-        self.db.commit()
-        return "success"
-
-    def get_token(self, id, scope):
-        ### get token from db if exists & not expired
-        sql  = "SELECT token, expire "
-        sql += "FROM token "
-        sql += "WHERE id = '%s' and scope = '%s'"%(id, scope)
-        count = self.cur.execute(sql)
-        result = self.cur.fetchall()
-
-        if count == 1:
-            token = result[0][0]
-            expire = result[0][1]
-            if int(time.time()) <= expire:
-                return token
-            else:
-                return "token expired"
-        else:
-            return None
-
-    def del_token(self, id, scope):
-        ### delete token from db
-        sql  = "DELETE FROM token "
-        sql += "WHERE id='%s' AND scope='%s'"%(id, scope)
-        count = self.cur.execute(sql)
-        self.db.commit()
-
-        return count
-    
-    def nav_data(self, id, scope, data):
-        con_list=[]
-        con_list=scope_con(scope)
-
-        ### add data into engine db
-        table_names = list(data)
-
-        for con in con_list:
-            #connect db (engine1, engine2. engine3)
-            engine_db = pymysql.connect(con)
-            engine_cur = engine_db.cursor()
-
-
-            for table_name in table_names:
-                for d in data[table_name]:
-                    columns = list(d)
-                    vals = [d[x] for x in columns]
-                    sql  = "INSERT INTO %s "%(table_name)
-                    sql += "(id, " + ", ".join(columns) + ") "
-                    sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
-                    print(sql)
-                    engine_cur.execute(sql)
-            engine_db.commit()
-            engine_db.close()
-
-
-    def add_data(self, id, scope, data):
-        ### delete old data
-        self.del_data(id, scope)
-
-        ### add data into db
-        table_names = list(data)
-        for table_name in table_names:
-            for d in data[table_name]:
-                columns = list(d)
-                vals = [d[x] for x in columns]
-                sql  = "INSERT INTO %s "%(table_name)
-                sql += "(id, " + ", ".join(columns) + ") "
-                sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
-                self.cur.execute(sql)
-                print(sql)
-
-        self.db.commit()
-
-        return "success"
+    def __del__(self):
+        self.db.close()
 
     def get_data(self, id, scope):
         ### get data from db
 
-        ### data format ###
+        ### data format (input/output) ###
         # {
         #     'table1' : [
         #         { 'attribute1':'data11',
@@ -254,6 +111,141 @@ class Control:
             
         return data
 
+    def add_data(self, data):
+        ### add data into db
+        table_names = list(data)
+        for table_name in table_names:
+            for d in data[table_name]:
+                columns = list(d)
+                vals = [d[x] for x in columns]
+                sql  = "INSERT INTO %s "%(table_name)
+                sql += "(" + ", ".join(columns) + ") "
+                sql += "VALUES (" + str(vals)[1:-1] + ")"
+                self.cur.execute(sql)
+                print(sql)
+
+        self.db.commit()
+
+        return "success"
+    
+    def del_data(self, table_list, condition):
+        ### delete data from table(s)
+        count = 0
+        for table_name in table_list:
+            sql = "DELETE FROM %s WHERE %s" % (table_name, condition)
+            count += self.cur.execute(sql)
+
+        self.db.commit()
+
+        return count
+
+class DB_Control(Control):
+
+    def add_user(self, new_id, new_pw):
+        ### construct data
+        data = {'user' : [{'id':new_id, 'pw':new_pw}]}
+
+        ### add user info into db
+        return super().add_data(data)
+
+    def get_user(self, id, pw):
+        ### get user id from db
+        sql  = "SELECT id FROM user WHERE "
+        sql += "id = '%s' AND pw = '%s'"%(id, pw)
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+        if count == 1:
+            return result[0][0]
+        else:
+            return None
+
+    def add_pubkey(self, id, pkey):
+        ### check if id exists
+        sql  = "SELECT id FROM user WHERE "
+        sql += "id = '%s'"%id
+        count = self.cur.execute(sql)
+        if count != 1: #when id doesn't exist in db
+            return
+
+        ### add pubkey into db
+        sql  = "UPDATE user SET pubkey = '%s' "%pkey
+        sql += "WHERE id = '%s'"%id
+        self.cur.execute(sql)
+        self.db.commit()
+
+        return "success"
+
+    def get_pubkey(self, id):
+        ### get pubkey from db
+        sql = "SELECT pubkey FROM user WHERE "
+        sql += "id = '%s'"%id
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+        if count == 1:
+            return result[0][0]
+        else:
+            return None
+
+    def add_token(self, id, scope, token, expire):
+        ### delete old token
+        self.del_token(id, scope)
+
+        ### construct data
+        data = {'token' : [{'id':id, 'scope':scope, 'token':token, 'expire':expire}]}
+
+        ### add user info into db
+        return super().add_data(data)
+
+    def get_token(self, id, scope):
+        ### get token from db if exists & not expired
+        sql  = "SELECT token, expire "
+        sql += "FROM token "
+        sql += "WHERE id = '%s' and scope = '%s'"%(id, scope)
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+
+        if count == 1:
+            token = result[0][0]
+            expire = result[0][1]
+            if int(time.time()) <= expire:
+                return token
+            else:
+                return "token expired"
+        else:
+            return None
+
+    def del_token(self, id, scope):
+        ### construct data
+        table_list = ['token']
+        condition = "id = '%s' AND scope='%s'" % (id, scope)
+
+        ### delete data from db
+        return super().del_data(table_list, condition)
+
+    def get_data(self, id, scope):
+            
+        return super().get_data(id, scope)
+    
+    def add_data(self, id, scope, data):
+        ### delete old data
+        self.del_data(id, scope)
+
+        ### construct data: add id info into data
+        table_names = list(data)
+        for table_name in table_names:
+            data[table_name]['id'] = id
+
+        ### add data into db
+        return super().add_data(data)
+
+    def del_data(self, id, scope):
+        ### construct data
+        table_list = scope_list[scope]
+        condition = "id = '%s'" % id
+
+        ### delete data from db
+        return super().del_data(table_list, condition)
+
     def get_enc_data(self, id, scope):
         ### get encrypted data from db
 
@@ -273,17 +265,30 @@ class Control:
 
         return data
 
-    def del_data(self, id, scope):
-        ### delete data from db
-        count = 0
-        for table_name in scope_list[scope]:
-            sql  = "DELETE FROM %s "%(table_name)
-            sql += "WHERE id = '%s'"%(id)
-            count += self.cur.execute(sql)
+class Engine_Control(Control):
+    def nav_data(self, id, scope, data):
+        con_list=[]
+        con_list=scope_con(scope)
 
-        self.db.commit()
+        ### add data into engine db
+        table_names = list(data)
 
-        return count
+        for con in con_list:
+            #connect db (engine1, engine2. engine3)
+            engine_db = pymysql.connect(con)
+            engine_cur = engine_db.cursor()
+
+            for table_name in table_names:
+                for d in data[table_name]:
+                    columns = list(d)
+                    vals = [d[x] for x in columns]
+                    sql  = "INSERT INTO %s "%(table_name)
+                    sql += "(id, " + ", ".join(columns) + ") "
+                    sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
+                    print(sql)
+                    engine_cur.execute(sql)
+            engine_db.commit()
+            engine_db.close()
 
     def get_ip(self, scope):
 
@@ -320,10 +325,6 @@ class Control:
                 con_list += con
 
         return con_list
-
-    def __del__(self):
-        self.db.close()
-
 
 def init_db():
     # CREATE DATABASE operator_platform;
@@ -397,7 +398,13 @@ def init_db():
     mid_db = pymysql.connect(host='localhost', user='middleware', passwd='mysql_pw', db='operator_platform', charset='utf8')
     mid_cur = mid_db.cursor()
 
-    return Control(app_db, app_cur), Control(mid_db, mid_cur)
+    return DB_Control(app_db, app_cur), DB_Control(mid_db, mid_cur)
 
- 
+def init_engine_db(connection_info):
+    ### connect db
+    line = 'db = pymysql.connect(%s)' % connection_info
+    eval(line)
+    cur = db.cursor()
+
+    return Engine_Control(db, cur)
     
