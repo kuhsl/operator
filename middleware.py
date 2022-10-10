@@ -6,7 +6,7 @@ from Crypto.Cipher import PKCS1_OAEP
 import Crypto.Hash.SHA256 as sha256
 from Crypto.PublicKey.RSA import construct
 
-from database import url_list_front, url_list_back
+from database import url_list_front, url_list_back, init_engine_db
 from interface import *
 
 engine_list = ['e1', 'e2', 'e3']
@@ -15,9 +15,12 @@ scope_engine = {'financial_data':['e2','e3'],
                 'public_data':['e1','e3'],
                 'medical_data':['e1','e2']}
 
-engine_dbcon = {'e1':'host=\'192.168.0.103\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=\'3326\',  charset=\'utf8',
-                'e2':'host=\'192.168.0.114\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=\'3336\',  charset=\'utf8',
-                'e3':'host=\'192.168.0.106\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=\'3346\',  charset=\'utf8'}
+engine_dbcon = {'e1':'host=\'192.168.0.103\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=3326,  charset=\'utf8\'',
+                'e2':'host=\'192.168.0.114\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=3336,  charset=\'utf8\'',
+                'e3':'host=\'192.168.0.106\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=3346,  charset=\'utf8\''}
+
+for engine in engine_list:
+    engine_dbcon[engine] = init_engine_db(engine_dbcon[engine])
 
 def encrypt_internal(data, cipher_spec):
     max_len=190
@@ -71,7 +74,9 @@ def request_data(id, scope):
     # }
 
     ### update engine db
-    mid_db.nav_data(id, scope, data[scope])
+    for engine in scope_engine[scope]:
+        engine_dbcon[engine].refresh_data(id, data[scope])
+    #mid_db.nav_data(id, scope, data[scope])
 
     ### get key from db
     key = mid_db.get_pubkey(id)

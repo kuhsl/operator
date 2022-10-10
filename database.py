@@ -76,8 +76,8 @@ class Control:
     def __del__(self):
         self.db.close()
 
-    def get_data(self, id, scope):
-        ### get data from db
+    def add_data(self, data):
+        ### add data into db
 
         ### data format (input/output) ###
         # {
@@ -93,26 +93,6 @@ class Control:
         #             'attribute5':'data42' } ]
         # }
 
-        data = {}
-        for table_name in scope_list[scope]:
-            columns = [x[0] for x in schema[table_name]]
-            sql  = "SELECT " + ', '.join(columns) + ' '
-            sql += "FROM %s "%(table_name)
-            sql += "WHERE id = '%s'"%(id)
-            count = self.cur.execute(sql)
-            result = self.cur.fetchall()
-
-            data[table_name] = []
-            for i in range(count):
-                d = {}
-                for j in range(len(columns)):
-                    d[columns[j]] = result[i][j]
-                data[table_name].append(d)
-            
-        return data
-
-    def add_data(self, data):
-        ### add data into db
         table_names = list(data)
         for table_name in table_names:
             for d in data[table_name]:
@@ -140,6 +120,66 @@ class Control:
         return count
 
 class DB_Control(Control):
+
+    def get_data(self, id, scope):
+        ### get data from db
+        data = {}
+        for table_name in scope_list[scope]:
+            columns = [x[0] for x in schema[table_name]]
+            sql  = "SELECT " + ', '.join(columns) + ' '
+            sql += "FROM %s "%(table_name)
+            sql += "WHERE id = '%s'"%(id)
+            count = self.cur.execute(sql)
+            result = self.cur.fetchall()
+
+            data[table_name] = []
+            for i in range(count):
+                d = {}
+                for j in range(len(columns)):
+                    d[columns[j]] = result[i][j]
+                data[table_name].append(d)
+            
+        return data
+    
+    def add_data(self, id, scope, data):
+        ### delete old data
+        self.del_data(id, scope)
+
+        ### construct data: add id info into data
+        table_names = list(data)
+        for table_name in table_names:
+            for element in data[table_name]:
+                element['id'] = id
+
+        ### add data into db
+        return super().add_data(data)
+
+    def del_data(self, id, scope):
+        ### construct data
+        table_list = scope_list[scope]
+        condition = "id = '%s'" % id
+
+        ### delete data from db
+        return super().del_data(table_list, condition)
+
+    def get_enc_data(self, id, scope):
+        ### get encrypted data from db
+
+        data = {}
+        for table_name in scope_list[scope]:
+            sql  = "SELECT enc_data "
+            sql += "FROM %s "%(table_name)
+            sql += "WHERE id = '%s'"%(id)
+            count = self.cur.execute(sql)
+            result = self.cur.fetchall()
+
+            data[table_name] = []
+            for i in range(count):
+                d = {}
+                d['enc_data'] = result[i][0]
+                data[table_name].append(d)
+
+        return data
 
     def add_user(self, new_id, new_pw):
         ### construct data
@@ -222,50 +262,24 @@ class DB_Control(Control):
         ### delete data from db
         return super().del_data(table_list, condition)
 
-    def get_data(self, id, scope):
-            
-        return super().get_data(id, scope)
-    
-    def add_data(self, id, scope, data):
-        ### delete old data
-        self.del_data(id, scope)
+class Engine_Control(Control):
+
+    def refresh_data(self, id, data):
+        ### construct data
+        table_list = list(data)
+        condition = "id = '%s'" % id
+
+        ### delete data from db
+        super().del_data(table_list, condition)
 
         ### construct data: add id info into data
-        table_names = list(data)
-        for table_name in table_names:
-            data[table_name]['id'] = id
+        for table_name in table_list:
+            for element in data[table_name]:
+                element['id'] = id
 
         ### add data into db
         return super().add_data(data)
 
-    def del_data(self, id, scope):
-        ### construct data
-        table_list = scope_list[scope]
-        condition = "id = '%s'" % id
-
-        ### delete data from db
-        return super().del_data(table_list, condition)
-
-    def get_enc_data(self, id, scope):
-        ### get encrypted data from db
-
-        data = {}
-        for table_name in scope_list[scope]:
-            sql  = "SELECT enc_data "
-            sql += "FROM %s "%(table_name)
-            sql += "WHERE id = '%s'"%(id)
-            count = self.cur.execute(sql)
-            result = self.cur.fetchall()
-
-            data[table_name] = []
-            for i in range(count):
-                d = {}
-                d['enc_data'] = result[i][0]
-                data[table_name].append(d)
-
-        return data
-
-class Engine_Control(Control):
     def nav_data(self, id, scope, data):
         con_list=[]
         con_list=scope_con(scope)
@@ -402,8 +416,8 @@ def init_db():
 
 def init_engine_db(connection_info):
     ### connect db
-    line = 'db = pymysql.connect(%s)' % connection_info
-    eval(line)
+    line = 'pymysql.connect(%s)' % connection_info
+    db = eval(line)
     cur = db.cursor()
 
     return Engine_Control(db, cur)
