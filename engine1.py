@@ -9,6 +9,8 @@ warnings.filterwarnings(action='ignore')
 
 disease_list=['I10','R81','E66']
 
+table_list = ['public_data', 'medical_data']
+
 app = Flask(__name__)
 
 ### connect db
@@ -16,13 +18,31 @@ app = Flask(__name__)
 #conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
 conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
 
-def refresh_data():
-    
-    pass
+def refresh_data(table_name):
+
+    ### find all id
+    sql = "SELECT id FROM %s" % table_name
+    count = self.cur.execute(sql)
+    result = self.cur.fetchall()
+    id_list = result[0]
+
+    ### find max idx (idx of recent data) for each id
+    ### and delete all old data
+    for i in id_list:
+        sql = "SELCT MAX(idx) FROM %s" % table_name
+        count = self.cur.execute(sql)
+        result = self.cur.fetchall()
+        max_value = result[0][0]
+        
+        sql = "DELETE FROM %s WHERE id = %s and idx != %d" % (table_name, i, max_value)
+        count = self.cur.execute(sql)
+
+    self.db.commit()
 
 def engine1_internal(disease_num):
 
-    refresh_data()
+    for table in table_list:
+        refresh_data(table)
 
     sql="SELECT a.name, a.ssn, relations, FLOOR((CHAR_LENGTH(relations)-CHAR_LENGTH(REPLACE(relations, 'c:','')))/2) AS child_cnt, disease_num FROM public_data a JOIN medical_data b ON a.ssn=b.ssn WHERE disease_num='"+disease_num+"' ORDER BY BIRTH ASC"
 

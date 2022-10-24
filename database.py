@@ -264,11 +264,18 @@ class DB_Control(Control):
 
 class Engine_Control(Control):
 
+    def __init__():
+        super().__init__()
+        self.idx = 0
+
     def insert_data(self, id, data):
         ### construct data: add id info into data
         for table_name in table_list:
             for element in data[table_name]:
                 element['id'] = id
+                element['idx'] = self.idx
+
+        self.idx += 1
 
         ### add data into db
         return super().add_data(data)
