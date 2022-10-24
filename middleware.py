@@ -75,8 +75,7 @@ def request_data(id, scope):
 
     ### update engine db
     for engine in scope_engine[scope]:
-        engine_dbcon[engine].refresh_data(id, data[scope])
-    #mid_db.nav_data(id, scope, data[scope])
+        engine_dbcon[engine].insert_data(id, data[scope])
 
     ### get key from db
     key = mid_db.get_pubkey(id)

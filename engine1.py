@@ -16,7 +16,13 @@ app = Flask(__name__)
 #conn = pymysql.connect(host='localhost', user='root', passwd='hw147258369!', db='db-server', charset='utf8')
 conn = pymysql.connect(host='localhost', user='operator', passwd='mysql_pw', db='operator', charset='utf8')
 
+def refresh_data():
+    
+    pass
+
 def engine1_internal(disease_num):
+
+    refresh_data()
 
     sql="SELECT a.name, a.ssn, relations, FLOOR((CHAR_LENGTH(relations)-CHAR_LENGTH(REPLACE(relations, 'c:','')))/2) AS child_cnt, disease_num FROM public_data a JOIN medical_data b ON a.ssn=b.ssn WHERE disease_num='"+disease_num+"' ORDER BY BIRTH ASC"
 
