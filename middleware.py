@@ -3,7 +3,8 @@ import requests
 from base64 import b64encode, b64decode
 import re
 from Crypto.Cipher import PKCS1_OAEP
-import Crypto.Hash.SHA256 as sha256
+from Crypto.Hash import SHA256, SHA1
+from Crypto.Signature import pss
 from Crypto.PublicKey.RSA import construct
 
 from database import url_list_front, url_list_back, init_engine_db
@@ -47,7 +48,7 @@ def encrypt_data(data, key):
     ### RSA encryption
     pubkey = construct((modular, exp))
     print(pubkey.exportKey().decode())
-    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=sha256)
+    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA256, mgfunc = lambda x, y: pss.MGF1(x, y, SHA1))
     enc_data = encrypt_internal(data, cipher)
 
     return enc_data
