@@ -48,7 +48,7 @@ def encrypt_data(data, key):
     ### RSA encryption
     pubkey = construct((modular, exp))
     print(pubkey.exportKey().decode())
-    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA256, mgfunc = lambda x, y: pss.MGF1(x, y, SHA1))
+    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA1, mgfunc = lambda x, y: pss.MGF1(x, y, SHA1))
     enc_data = encrypt_internal(data, cipher)
 
     return enc_data
