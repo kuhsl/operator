@@ -133,7 +133,7 @@ master 통합여부 : O
 master 통합여부 : X
 
 ## branch engine-platform
-: 각 분석엔진이 별도의 vm 상에 존재
-데이터 암호화 및 복호화 기능 추가
-통합테스트 완료
-master 통합여부 : X
+: 각 분석엔진이 별도의 vm 상에 존재  
+데이터 암호화 및 복호화 기능 추가  
+통합테스트 완료  
+master 통합여부 : X  
