@@ -18,16 +18,17 @@ scope_list = list(scope_list.keys())
 operator_id = 'operator_id_001'
 operator_pw = 'pw_operator'
 callback_url = "http://163.152.71.223/cb"
+cookie_secret_key=''
 
 request_queue = {}
-cookie_secret_key = ''
+
 
 # ERROR message
 err_msg = lambda x : '[ERROR] ' + x + '\n'
 
 # related to cookie (encryption)
 BLOCK_SIZE = 16
-pad = lambda s: s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE)
+pad = lambda s: bytes(s + (BLOCK_SIZE - len(s) % BLOCK_SIZE) * chr(BLOCK_SIZE - len(s) % BLOCK_SIZE), 'utf-8')
 unpad = lambda s: s[:-ord(s[len(s) - 1:])]
 
 def check_args(args, li):
@@ -49,9 +50,10 @@ def request_data(id, scope):
 
     return "success\n"
 
+
 def make_cookie(seed):
-    ### make secret cookie 
-    timestamp = str(int(time.time())).rjust(BLOCK_SIZE, '0')
+    ### make secret cookie
+    timestamp = bytes(str(int(time.time())).rjust(BLOCK_SIZE, '0'),'utf-8')
     aes = AES.new(cookie_secret_key, AES.MODE_CBC, timestamp)
     enc = aes.encrypt(pad(seed))
     cookie = seed + ':' + b64encode(enc).decode()
@@ -68,7 +70,7 @@ def check_cookie(cookie):
     aes = AES.new(cookie_secret_key, AES.MODE_CBC, pad(seed)[:16])
     timestamp = int(aes.decrypt(b64decode(enc))[:16])
     diff = int(time.time()) - timestamp
-    
+
     if diff >= 3600:
         return None
     else:
@@ -85,7 +87,7 @@ def sign_up():
     else:
         new_id = request.form['id']
         new_pw = request.form['password']
-    
+
     pw_hash = hashlib.sha256(new_pw.encode()).hexdigest()
 
     db.add_user(new_id, pw_hash)
@@ -101,6 +103,8 @@ def register():
     ### check id, pw
     cookie = request.cookies.get("login")
     _id = check_cookie(cookie)
+
+    print('cookie: ',_id)
 
     if _id == None:
         return err_msg('login first')
@@ -141,7 +145,7 @@ def login():
 
     if db.get_user(_id, pw_hash) == None:
         return err_msg('wrong id or password')
-    
+
     ### make response (with cookie)
     cookie_value = make_cookie(_id)
     response = make_response("login success\n")
@@ -167,7 +171,7 @@ def get_data():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### get data from operator's db
     data = db.get_data(_id, _scope)
     return jsonify({_scope:data})
@@ -190,7 +194,7 @@ def refresh():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### get data from data source
     return request_data(_id, _scope)
 
@@ -203,7 +207,7 @@ def delete():
 
     if _id == None:
         return err_msg('login first')
-    
+
     ### check scope
     if not check_args(request.args, ['scope']):
         return err_msg('scope required')
@@ -212,7 +216,7 @@ def delete():
 
     if _scope not in scope_list:
         return err_msg('wrong scope')
-    
+
     ### delete data from operator db
     db.del_data(_id, _scope)
     db.del_token(_id, _scope)
@@ -229,8 +233,8 @@ def operator_engine2():
     return make_response(res)
 
 @app.get('/engine3')
-def operator_engine3():    
-    return make_response( jsonify({"img" : engine3.run()}),200)    
+def operator_engine3():
+    return make_response( jsonify({"img" : engine3.run()}),200)
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
@@ -240,7 +244,7 @@ def callback():
     else:
         _id = request.args['state']
         grant_code = request.args['code']
-    
+
     ### validate if the user once requested for register data
     if request_queue.get(_id) == None:
         return err_msg('Not Proper Access')
@@ -253,7 +257,7 @@ def callback():
     params = {'grant_type':'authorization_code',
                 'code':grant_code,
                 'redirect_uri':callback_url}
-    headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(), 
+    headers = {'Authorization':'Basic ' + b64encode((operator_id+':'+operator_pw).encode()).decode(),
                 'Content-Type':'application/x-www-form-urlencoded'}
     response = requests.post(url, data = params, headers=headers).json()
     # response : dict type
@@ -274,5 +278,5 @@ def callback():
 
 if __name__ == '__main__':
     cookie_secret_key = token_bytes(BLOCK_SIZE)
-    app.run(host='0.0.0.0', port=80, debug=False)
+    app.run(host='0.0.0.0', port=80, debug=True)
     app.config['JSON_AS_ASCII'] = False
