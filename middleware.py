@@ -1,6 +1,7 @@
 import json
 import requests
 from base64 import b64encode, b64decode
+import time
 import re
 from Crypto.Cipher import PKCS1_OAEP
 from Crypto.Hash import SHA256, SHA1
@@ -16,21 +17,22 @@ scope_engine = {'financial_data':['e2','e3'],
                 'public_data':['e1','e3'],
                 'medical_data':['e1','e2']}
 
-engine_dbcon = {'e1':'host=\'192.168.0.103\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=3326,  charset=\'utf8\'',
-                'e2':'host=\'192.168.0.114\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=3336,  charset=\'utf8\'',
-                'e3':'host=\'192.168.0.106\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=3346,  charset=\'utf8\''}
+engine_dbcon = {'e1':'host=\'10.11.12.7\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine1\', port=3326,  charset=\'utf8\'',
+                'e2':'host=\'10.11.12.14\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine2\', port=3336,  charset=\'utf8\'',
+                'e3':'host=\'10.11.12.12\', user=\'middleware\', passwd=\'mysql_pw\', db=\'engine3\', port=3346,  charset=\'utf8\''}
 
 for engine in engine_list:
     engine_dbcon[engine] = init_engine_db(engine_dbcon[engine])
 
 def encrypt_internal(data, cipher_spec):
-    max_len=190
+    max_len=214
     encrypted = b''
     data=data.encode()
 
     for i in range(0, len(data), max_len):
         end = min(i+max_len, len(data))
         encrypted += cipher_spec.encrypt(data[i:end])
+        print(cipher_spec.encrypt(data[i:end]))
 
     return encrypted
 
@@ -48,7 +50,7 @@ def encrypt_data(data, key):
     ### RSA encryption
     pubkey = construct((modular, exp))
     print(pubkey.exportKey().decode())
-    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA1, mgfunc = lambda x, y: pss.MGF1(x, y, SHA1))
+    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA1, mgfunc=lambda x, y: pss.MGF1(x,y,SHA1))
     enc_data = encrypt_internal(data, cipher)
 
     return enc_data
@@ -76,6 +78,8 @@ def request_data(id, scope):
 
     ### update engine db
     for engine in scope_engine[scope]:
+        print('data:', data)
+        print('data_scope:', data[scope])
         engine_dbcon[engine].insert_data(id, data[scope])
 
     ### get key from db
@@ -96,6 +100,7 @@ def request_data(id, scope):
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
 def callback():
+    print('timestamp-[start]: ',round(time.time()*1000))
     ### parse request and get grant code
     if not check_args(request.args, ['state', 'code']):
         return err_msg('state, code required')
@@ -130,6 +135,7 @@ def callback():
     ### get data from data source
     result = request_data(_id, _scope)
 
+    print('test#1:timestamp-[end]: ',round(time.time()*1000))
     request_queue.pop(_id)      # prevent race condition
 
     return result
