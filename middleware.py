@@ -4,10 +4,11 @@ from base64 import b64encode, b64decode
 import time
 import re
 from Crypto.Cipher import PKCS1_OAEP
-from Crypto.Hash import SHA256, SHA1
-from Crypto.Signature import pss
+import Crypto.Hash.SHA1 as sha1
+import Crypto.Hash.SHA256 as sha256
 from Crypto.PublicKey.RSA import construct
-
+from Crypto.Signature import pss
+import time
 from database import url_list_front, url_list_back, init_engine_db
 from interface import *
 
@@ -32,6 +33,7 @@ def encrypt_internal(data, cipher_spec):
     for i in range(0, len(data), max_len):
         end = min(i+max_len, len(data))
         encrypted += cipher_spec.encrypt(data[i:end])
+        print(cipher_spec.encrypt(data[i:end]))
         print(cipher_spec.encrypt(data[i:end]))
 
     return encrypted
@@ -61,7 +63,7 @@ def request_data(id, scope):
     token = mid_db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params, verify=False).json()
-    
+
     ### data format ###
     # {
     #     scope : {
@@ -95,7 +97,7 @@ def request_data(id, scope):
 
     ### store data in db
     mid_db.add_data(id, scope, enc_data)      ## enc_data : { table1 : [ { 'enc_data' : encrypted_data } ], ... }
-
+    print('timestamp-[end]: ',round(time.time()*1000))
     return "success\n"
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)
