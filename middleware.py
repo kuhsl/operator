@@ -1,7 +1,6 @@
 import json
 import requests
 from base64 import b64encode, b64decode
-import time
 import re
 from Crypto.Cipher import PKCS1_OAEP
 import Crypto.Hash.SHA1 as sha1
@@ -34,7 +33,6 @@ def encrypt_internal(data, cipher_spec):
         end = min(i+max_len, len(data))
         encrypted += cipher_spec.encrypt(data[i:end])
         print(cipher_spec.encrypt(data[i:end]))
-        print(cipher_spec.encrypt(data[i:end]))
 
     return encrypted
 
@@ -52,9 +50,9 @@ def encrypt_data(data, key):
     ### RSA encryption
     pubkey = construct((modular, exp))
     print(pubkey.exportKey().decode())
-    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=SHA1, mgfunc=lambda x, y: pss.MGF1(x,y,SHA1))
+    cipher = PKCS1_OAEP.new(pubkey, hashAlgo=sha1, mgfunc=lambda x, y: pss.MGF1(x,y,sha1))
     enc_data = encrypt_internal(data, cipher)
-
+    
     return enc_data
 
 def request_data(id, scope):
@@ -63,7 +61,7 @@ def request_data(id, scope):
     token = mid_db.get_token(id, scope)
     params = {'token':token, 'data':scope}
     data = requests.get(data_source_url + '/resource', params = params, verify=False).json()
-
+    
     ### data format ###
     # {
     #     scope : {
@@ -80,9 +78,10 @@ def request_data(id, scope):
 
     ### update engine db
     for engine in scope_engine[scope]:
-        print('data:', data)
+        print('data:',data)
         print('data_scope:', data[scope])
-        engine_dbcon[engine].insert_data(id, data[scope])
+        engine_dbcon[engine].refresh_data(id, data[scope])
+    #mid_db.nav_data(id, scope, data[scope])
 
     ### get key from db
     key = mid_db.get_pubkey(id)
@@ -97,7 +96,6 @@ def request_data(id, scope):
 
     ### store data in db
     mid_db.add_data(id, scope, enc_data)      ## enc_data : { table1 : [ { 'enc_data' : encrypted_data } ], ... }
-    print('timestamp-[end]: ',round(time.time()*1000))
     return "success\n"
 
 @app.get('/cb') # get grant code (from user) -> get access token (from data source)

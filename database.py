@@ -101,6 +101,7 @@ class Control:
                 sql  = "INSERT INTO %s "%(table_name)
                 sql += "(" + ", ".join(columns) + ") "
                 sql += "VALUES (" + str(vals)[1:-1] + ")"
+                print(sql)
                 self.cur.execute(sql)
                 print(sql)
 
@@ -150,7 +151,6 @@ class DB_Control(Control):
         for table_name in table_names:
             for element in data[table_name]:
                 element['id'] = id
-
         ### add data into db
         return super().add_data(data)
 
@@ -194,6 +194,7 @@ class DB_Control(Control):
         sql += "id = '%s' AND pw = '%s'"%(id, pw)
         count = self.cur.execute(sql)
         result = self.cur.fetchall()
+        
         if count == 1:
             return result[0][0]
         else:
@@ -264,21 +265,81 @@ class DB_Control(Control):
 
 class Engine_Control(Control):
 
-    def __init__():
-        super().__init__()
-        self.idx = 0
+    def refresh_data(self, id, data):
+        ### construct data
+        table_list = list(data)
+        condition = "id = '%s'" % id
 
-    def insert_data(self, id, data):
+        ### delete data from db
+        super().del_data(table_list, condition)
+
         ### construct data: add id info into data
         for table_name in table_list:
             for element in data[table_name]:
                 element['id'] = id
-                element['idx'] = self.idx
-
-        self.idx += 1
-
+        
         ### add data into db
         return super().add_data(data)
+
+    def nav_data(self, id, scope, data):
+        con_list=[]
+        con_list=scope_con(scope)
+
+        ### add data into engine db
+        table_names = list(data)
+
+        for con in con_list:
+            #connect db (engine1, engine2. engine3)
+            engine_db = pymysql.connect(con)
+            engine_cur = engine_db.cursor()
+
+            for table_name in table_names:
+                for d in data[table_name]:
+                    columns = list(d)
+                    vals = [d[x] for x in columns]
+                    sql  = "INSERT INTO %s "%(table_name)
+                    sql += "(id, " + ", ".join(columns) + ") "
+                    sql += "VALUES ('%s',"%(id) + str(vals)[1:-1] + ")"
+                    print(sql)
+                    engine_cur.execute(sql)
+            engine_db.commit()
+            engine_db.close()
+
+    def get_ip(self, scope):
+
+        #get engines from scope
+        sql  = "SELECT engine "
+        sql += "FROM scope_engine "
+        sql += "WHERE scope = '%s'"%(scope)
+        count = self.cur.execute(sql)
+
+        if count == 1:
+            engine_list = result[0][0].split(';')
+        else:
+            return None
+
+        for engine in engine_list:
+            #get ip addr from engine
+            sql  = "SELECT ip "
+            sql += "FROM engine_ip "
+            sql += "WHERE engine = '%s'"%(engine)
+            count = self.cur.execute(sql)
+
+        if count == 1:
+            ip_list = result[0][0].split(';')
+        else:
+            return None
+
+        return ip_list
+
+    def scope_con(self,scope):
+        con_list=[]
+        #get con queries from scope
+        for engine in scope_engine[scope]:
+            for con in engine_dbcon[engine]:
+                con_list += con
+
+        return con_list
 
 def init_db():
     # CREATE DATABASE operator_platform;
@@ -355,10 +416,6 @@ def init_db():
     return DB_Control(app_db, app_cur), DB_Control(mid_db, mid_cur)
 
 def init_engine_db(connection_info):
-
-    ### for each engine DB,
-    ### GRANT INSERT ON `engine1(2/3)`.* TO 'middleware'@'192.168.0.112'
-
     ### connect db
     line = 'pymysql.connect(%s)' % connection_info
     db = eval(line)

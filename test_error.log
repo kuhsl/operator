@@ -3352,3 +3352,1478 @@ requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected(
 [2022-09-06 08:28:31,955] WARNING in _internal:  * Running on all addresses.
    WARNING: This is a development server. Do not use it in a production deployment.
 [2022-09-06 08:28:31,955] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-10 06:58:19,797] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-10 06:58:19,797] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-10 06:58:19,798] INFO in _internal:  * Restarting with stat
+[2022-10-10 06:58:19,990] WARNING in _internal:  * Debugger is active!
+[2022-10-10 06:58:19,993] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-10 07:10:26,229] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 07:10:26] "POST /login HTTP/1.1" 200 -
+[2022-10-10 07:31:02,514] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 07:31:02] "POST /login HTTP/1.1" 200 -
+[2022-10-10 07:34:00,252] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 07:34:00] "POST /login HTTP/1.1" 200 -
+[2022-10-10 08:23:00,119] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 08:23:00] "POST /login HTTP/1.1" 200 -
+[2022-10-10 08:48:00,070] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 08:48:00] "POST /login HTTP/1.1" 200 -
+[2022-10-10 08:51:55,315] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 08:51:55] "POST /login HTTP/1.1" 200 -
+[2022-10-10 08:58:56,218] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 08:58:56] "POST /login HTTP/1.1" 200 -
+[2022-10-10 08:59:38,000] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 08:59:38] "POST /login HTTP/1.1" 200 -
+[2022-10-10 09:08:09,976] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 09:08:09] "POST /login HTTP/1.1" 200 -
+[2022-10-10 09:31:26,441] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 09:31:26] "POST /login HTTP/1.1" 200 -
+[2022-10-10 09:32:06,964] INFO in _internal: 163.152.71.98 - - [10/Oct/2022 09:32:06] "POST /login HTTP/1.1" 200 -
+[2022-10-10 19:14:10,764] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-10 19:14:10,764] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-10 19:14:10,765] INFO in _internal:  * Restarting with stat
+[2022-10-10 19:14:10,966] WARNING in _internal:  * Debugger is active!
+[2022-10-10 19:14:10,969] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 03:47:14,921] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 03:47:14,922] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 03:47:14,922] INFO in _internal:  * Restarting with stat
+[2022-10-11 03:47:15,148] WARNING in _internal:  * Debugger is active!
+[2022-10-11 03:47:15,151] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 03:50:32,180] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:50:32] "POST /login HTTP/1.1" 200 -
+[2022-10-11 03:50:35,066] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:50:35] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 03:51:02,776] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "[35m[1mGET /cb?code=hpnsmzl389rn148rgrs54h&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 03:51:02,824] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 03:51:02,827] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 03:51:02,858] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 03:51:02,880] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 03:51:02,925] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:51:02] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 03:59:59,564] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 03:59:59] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:00:03,226] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:03] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:00:16,820] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "[35m[1mGET /cb?code=bew2bohtgu1wb6aqn4xmn2&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:00:16,857] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:00:16,858] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:00:16,901] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:00:16,913] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:00:16,949] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:00:16] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:07:28,803] INFO in _internal:  * Detected change in '/home/ubuntu/operator/database.py', reloading
+[2022-10-11 04:07:28,863] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:07:29,083] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:07:29,086] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 04:08:08,535] INFO in _internal:  * Detected change in '/home/ubuntu/operator/operator.py', reloading
+[2022-10-11 04:08:08,590] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:08:08,803] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:08:08,805] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 04:08:20,946] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:08:20,946] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:08:20,947] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:08:21,148] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:08:21,150] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 04:08:33,696] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:33] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:08:37,129] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:37] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:08:50,304] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "[35m[1mGET /cb?code=zmis8tbyiwsj6624h4g86d&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:08:50,341] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:08:50,343] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:08:50,379] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:08:50,393] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:08:50,441] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:08:50] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:09:16,218] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:09:16,219] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:09:16,219] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:09:16,419] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:09:16,422] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:09:26,460] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:26] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:09:29,594] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:29] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:09:44,590] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "[35m[1mGET /cb?code=9x49o6cah7u11hjj2w8gkm&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:09:44,639] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:09:44,640] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:09:44,673] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:09:44,684] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:09:44,740] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:09:44] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:12:01,034] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:12:01,035] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:12:01,035] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:12:01,235] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:12:01,238] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:12:10,903] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:10] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:12:14,526] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:14] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:12:29,148] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "[35m[1mGET /cb?code=ryjscngc1eekoezba88okb&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:12:29,183] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:12:29,184] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:12:29,217] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:12:29,240] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:12:29,280] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:12:29] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:14:32,031] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:14:32,031] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:14:32,032] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:14:32,232] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:14:32,235] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:14:40,714] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:14:40] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:14:43,278] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:14:43] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:15:00,955] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:00] "[35m[1mGET /cb?code=7o8ofnjp7m4zmjgm29lkm3&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:15:00,990] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:00] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:15:00,993] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:00] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:15:01,035] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:01] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:15:01,044] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:01] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:15:01,088] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:01] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:15:37,168] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:15:37,168] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:15:37,169] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:15:37,369] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:15:37,371] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:15:39,229] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "[35m[1mPOST /register?scope=public_data HTTP/1.1[0m" 500 -
+[2022-10-11 04:15:39,260] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:15:39,263] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:15:39,303] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:15:39,308] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:15:39,346] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:39] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:15:49,502] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:49] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:15:52,373] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:15:52] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:16:01,330] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "[35m[1mGET /cb?code=3iha3wjltno7m3a9sfkr2g&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:16:01,368] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:16:01,369] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:16:01,403] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:16:01,414] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:16:01,464] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:16:01] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:19:53,949] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:19:53,949] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:19:53,950] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:19:54,148] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:19:54,150] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:20:05,771] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:05] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:20:08,690] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:08] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:20:27,469] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:27] "GET /cb?code=ckh6vxzdvif36qbvn6x1io&state=id01 HTTP/1.1" 200 -
+[2022-10-11 04:20:27,503] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 04:20:47,751] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:47] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:20:51,949] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:20:51] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:21:04,913] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:04] "[35m[1mGET /cb?code=ihuwirrllnj3x4wl2wbohm&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:21:04,947] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:04] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:21:04,948] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:04] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:21:04,987] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:04] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:21:05,000] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:05] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:21:05,045] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:21:05] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:22:57,659] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:22:57,659] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:22:57,659] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:22:57,858] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:22:57,861] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:23:05,017] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:05] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:23:07,462] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:07] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:23:20,068] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "[35m[1mGET /cb?code=tvojobgm4nzpg7aohl2krb&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-11 04:23:20,116] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-11 04:23:20,120] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-11 04:23:20,161] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-11 04:23:20,164] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:23:20,199] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:23:20] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-11 04:26:15,702] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:26:15,703] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:26:15,703] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:26:15,905] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:26:15,908] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:29:26,075] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:29:26,075] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:29:26,076] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:29:26,275] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:29:26,278] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 04:29:35,262] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:29:35] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:29:38,884] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:29:38] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:29:50,567] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:29:50] "GET /cb?code=j65dxc9e4bx5ibrmacazuq&state=id01 HTTP/1.1" 200 -
+[2022-10-11 04:29:50,616] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:29:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 04:33:06,731] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 04:33:06,731] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 04:33:06,732] INFO in _internal:  * Restarting with stat
+[2022-10-11 04:33:06,929] WARNING in _internal:  * Debugger is active!
+[2022-10-11 04:33:06,932] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 04:33:09,053] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:33:09] "[35m[1mGET /data?scope=financial_data HTTP/1.1[0m" 500 -
+[2022-10-11 04:34:12,048] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:34:12] "POST /login HTTP/1.1" 200 -
+[2022-10-11 04:34:16,660] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:34:16] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:34:35,329] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:34:35] "GET /cb?code=xemwvh51w6tjij3tqv3bly&state=id01 HTTP/1.1" 200 -
+[2022-10-11 04:34:35,369] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:34:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 04:34:47,588] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:34:47] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-11 04:35:03,303] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:35:03] "GET /cb?code=jdxdd6lb8bmyewrutrlof9&state=id01 HTTP/1.1" 200 -
+[2022-10-11 04:35:03,347] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 04:35:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 05:38:20,608] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:38:20] "POST /login HTTP/1.1" 200 -
+[2022-10-11 05:38:23,756] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:38:23] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-11 05:38:41,077] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:38:41] "GET /cb?code=lrngmlyoz8xbb68jozbzsf&state=id01 HTTP/1.1" 200 -
+[2022-10-11 05:38:41,114] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:38:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 05:39:40,753] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:39:40] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-11 05:40:04,638] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:40:04] "GET /cb?code=jrvx5tqkr1nuxdedyuh45w&state=id01 HTTP/1.1" 200 -
+[2022-10-11 05:40:04,673] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 05:40:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 06:31:58,869] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:31:58] "POST /login HTTP/1.1" 200 -
+[2022-10-11 06:55:40,604] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 06:55:40,605] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 06:55:40,605] INFO in _internal:  * Restarting with stat
+[2022-10-11 06:55:40,806] WARNING in _internal:  * Debugger is active!
+[2022-10-11 06:55:40,809] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 06:55:42,799] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:55:42] "POST /login HTTP/1.1" 200 -
+[2022-10-11 06:55:51,183] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:55:51] "POST /login HTTP/1.1" 200 -
+[2022-10-11 06:55:59,237] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:55:59] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+[2022-10-11 06:56:09,954] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:56:09] "POST /login HTTP/1.1" 200 -
+[2022-10-11 06:57:52,100] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 06:57:52,100] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 06:57:52,101] INFO in _internal:  * Restarting with stat
+[2022-10-11 06:57:52,296] WARNING in _internal:  * Debugger is active!
+[2022-10-11 06:57:52,299] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 06:57:55,314] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:57:55] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+[2022-10-11 06:59:28,517] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 06:59:28,518] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 06:59:28,518] INFO in _internal:  * Restarting with stat
+[2022-10-11 06:59:28,717] WARNING in _internal:  * Debugger is active!
+[2022-10-11 06:59:28,719] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 06:59:30,069] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 06:59:30] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:00:02,064] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:00:02] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:00:09,401] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:00:09] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:13:40,785] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:13:40,786] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:13:40,786] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:13:40,983] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:13:40,986] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:14:28,920] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:14:28] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:14:37,682] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:14:37] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:20:51,621] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:20:51,621] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:20:51,622] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:20:51,821] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:20:51,824] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:21:08,418] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:21:08] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:21:40,050] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:21:40] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:23:27,112] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:23:27] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:25:59,626] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:25:59] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:26:59,366] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:26:59] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:33:24,514] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:33:24,514] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:33:24,515] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:33:24,715] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:33:24,718] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:33:34,492] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:33:34] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:34:40,818] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:34:40,818] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:34:40,818] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:34:41,014] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:34:41,017] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:34:41,526] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:34:41] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:34:49,529] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:34:49] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:35:26,263] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:35:26,263] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:35:26,263] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:35:26,465] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:35:26,468] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:35:31,991] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:35:31] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:35:52,048] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:35:52] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:36:18,448] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:36:18,448] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:36:18,449] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:36:18,646] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:36:18,649] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:36:20,026] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:36:20] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:36:38,455] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:36:38] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:36:51,299] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:36:51] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:38:43,974] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:38:43,974] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:38:43,975] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:38:44,172] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:38:44,175] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:38:46,076] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:38:46] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:39:37,239] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:39:37,239] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:39:37,240] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:39:37,441] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:39:37,444] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:39:38,742] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:39:38] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:42:53,136] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:42:53,137] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:42:53,137] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:42:53,338] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:42:53,341] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:42:55,188] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:42:55] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:46:20,554] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:46:20,555] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:46:20,555] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:46:20,754] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:46:20,757] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-11 07:46:22,007] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:22] "POST /signup HTTP/1.1" 200 -
+[2022-10-11 07:46:24,083] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:24] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:46:30,851] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:30] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:46:46,884] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:46] "GET /cb?code=rspx3vtj6gfrpw299eonoj&state=id02 HTTP/1.1" 200 -
+[2022-10-11 07:46:46,929] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:46] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:46:51,322] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:46:51] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:47:03,458] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:47:03] "GET /cb?code=3tnckoc9avrgubcvflchub&state=id02 HTTP/1.1" 200 -
+[2022-10-11 07:47:03,525] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:47:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:47:08,769] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:47:08] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:47:20,469] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:47:20] "GET /cb?code=kzd8p9y3wpd2zzkwyyx7qh&state=id02 HTTP/1.1" 200 -
+[2022-10-11 07:47:20,510] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:47:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:52:47,418] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:52:47] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:52:48,472] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:52:48] "POST /signup HTTP/1.1" 200 -
+[2022-10-11 07:52:49,569] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:52:49] "POST /login HTTP/1.1" 200 -
+[2022-10-11 07:52:52,999] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:52:52] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:53:10,143] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:10] "GET /cb?code=xi6hl1sy1pkof4a9nkzv1v&state=id03 HTTP/1.1" 200 -
+[2022-10-11 07:53:10,183] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:53:19,809] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:19] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:53:39,069] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:39] "GET /cb?code=f3fl5gfv962s763yisrtu9&state=id03 HTTP/1.1" 200 -
+[2022-10-11 07:53:39,110] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:53:43,004] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:53:43] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-11 07:54:01,058] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:54:01] "GET /cb?code=ar9d3nn3bezllk1l1gfoay&state=id03 HTTP/1.1" 200 -
+[2022-10-11 07:54:01,099] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 07:54:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-11 07:57:38,436] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-11 07:57:38,436] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-11 07:57:38,437] INFO in _internal:  * Restarting with stat
+[2022-10-11 07:57:38,634] WARNING in _internal:  * Debugger is active!
+[2022-10-11 07:57:38,637] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-11 09:19:12,242] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:19:12] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:19:28,880] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:19:28] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:20:24,574] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:20:24] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:21:13,894] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:21:13] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:21:46,823] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:21:46] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:24:03,210] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:24:03] "POST /login HTTP/1.1" 200 -
+[2022-10-11 09:24:45,809] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 09:24:45] "POST /login HTTP/1.1" 200 -
+[2022-10-11 10:07:15,141] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 10:07:15] "POST /login HTTP/1.1" 200 -
+[2022-10-11 10:17:44,916] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 10:17:44] "POST /login HTTP/1.1" 200 -
+[2022-10-11 11:23:23,510] INFO in _internal: 163.152.71.98 - - [11/Oct/2022 11:23:23] "POST /login HTTP/1.1" 200 -
+[2022-10-12 16:37:55,598] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 16:37:55] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-12 16:38:31,902] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-12 16:38:31,902] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-12 16:38:31,903] INFO in _internal:  * Restarting with stat
+[2022-10-12 16:38:32,106] WARNING in _internal:  * Debugger is active!
+[2022-10-12 16:38:32,109] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-12 16:38:33,921] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 16:38:33] "POST /login HTTP/1.1" 200 -
+[2022-10-12 16:55:11,960] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 16:55:11] "POST /login HTTP/1.1" 200 -
+[2022-10-12 16:55:45,561] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 16:55:45] "POST /login HTTP/1.1" 200 -
+[2022-10-12 16:59:12,740] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 16:59:12] "POST /login HTTP/1.1" 200 -
+[2022-10-12 17:06:05,975] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 17:06:05] "POST /login HTTP/1.1" 200 -
+[2022-10-12 17:10:39,964] INFO in _internal: 163.152.71.98 - - [12/Oct/2022 17:10:39] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:16:29,752] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:16:29] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-13 14:16:37,437] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-13 14:16:37,438] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-13 14:16:37,438] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:16:37,638] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:16:37,641] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:16:40,242] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-13 14:16:40,242] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-13 14:16:40,242] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:16:40,442] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:16:40,445] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:16:41,537] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:16:41] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:17:13,488] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:17:13] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:17:19,863] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:17:19] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:20:47,241] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-13 14:20:47,299] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:20:47,510] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:20:47,513] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:21:03,139] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-13 14:21:03,139] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-13 14:21:03,140] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:21:03,337] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:21:03,340] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:21:12,132] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-13 14:21:12,133] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-13 14:21:12,133] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:21:12,332] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:21:12,335] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:30:44,273] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:30:44] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:35:52,621] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:35:52] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:39:40,227] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:39:40] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:40:07,703] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:40:07] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:47:34,032] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-13 14:47:34,089] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:47:34,306] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:47:34,308] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:47:40,108] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-13 14:47:40,108] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-13 14:47:40,109] INFO in _internal:  * Restarting with stat
+[2022-10-13 14:47:40,308] WARNING in _internal:  * Debugger is active!
+[2022-10-13 14:47:40,310] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-13 14:51:15,102] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:51:15] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:51:34,514] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:51:34] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-13 14:52:12,053] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:12] "POST /login HTTP/1.1" 200 -
+[2022-10-13 14:52:30,943] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:30] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-13 14:52:46,137] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "[35m[1mGET /cb?code=npohyhebn4wexmbd5g8ed9&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-13 14:52:46,180] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-13 14:52:46,183] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-13 14:52:46,225] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-13 14:52:46,251] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-13 14:52:46,316] INFO in _internal: 163.152.71.98 - - [13/Oct/2022 14:52:46] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 02:36:35,719] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:36:35] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-14 02:36:52,632] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:36:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-14 02:36:52,652] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:36:52] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-14 02:37:20,744] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:37:20] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+[2022-10-14 02:37:28,856] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 02:37:28,856] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 02:37:28,857] INFO in _internal:  * Restarting with stat
+[2022-10-14 02:37:29,058] WARNING in _internal:  * Debugger is active!
+[2022-10-14 02:37:29,061] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 02:38:17,232] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:38:17] "POST /login HTTP/1.1" 200 -
+[2022-10-14 02:38:30,672] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 02:38:30] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:34:15,940] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:34:15] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:41:58,477] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:41:58] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:44:42,384] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:44:42] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:50:07,812] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:50:07] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:50:25,426] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:50:25] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:51:11,122] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:11] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:51:21,841] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:21] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:51:37,099] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "[35m[1mGET /cb?code=9pt25r9s6isflv5uhrdhvn&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-14 03:51:37,197] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-14 03:51:37,200] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-14 03:51:37,233] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 03:51:37,259] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-14 03:51:37,306] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:51:37] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 03:52:37,535] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-14 03:52:37,590] INFO in _internal:  * Restarting with stat
+[2022-10-14 03:52:37,802] WARNING in _internal:  * Debugger is active!
+[2022-10-14 03:52:37,804] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 03:52:43,426] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 03:52:43,426] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 03:52:43,427] INFO in _internal:  * Restarting with stat
+[2022-10-14 03:52:43,626] WARNING in _internal:  * Debugger is active!
+[2022-10-14 03:52:43,629] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 03:53:02,711] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:02] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:53:14,215] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:14] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:53:33,480] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "[35m[1mGET /cb?code=owstdvr3o5j8apm5fvm7li&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-14 03:53:33,527] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-14 03:53:33,528] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-14 03:53:33,585] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 03:53:33,586] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-14 03:53:33,646] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:53:33] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 03:54:09,599] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-14 03:54:09,652] INFO in _internal:  * Restarting with stat
+[2022-10-14 03:54:09,860] WARNING in _internal:  * Debugger is active!
+[2022-10-14 03:54:09,863] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 03:54:12,931] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 03:54:12,931] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 03:54:12,931] INFO in _internal:  * Restarting with stat
+[2022-10-14 03:54:13,131] WARNING in _internal:  * Debugger is active!
+[2022-10-14 03:54:13,133] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 03:54:23,991] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:54:23] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:54:35,111] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:54:35] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:54:48,210] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:54:48] "GET /cb?code=im1md2yphdnyywe2awdz5a&state=id01 HTTP/1.1" 200 -
+[2022-10-14 03:54:48,260] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:54:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 03:55:02,456] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:55:02] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 03:57:01,659] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:57:01] "POST /login HTTP/1.1" 200 -
+[2022-10-14 03:57:14,607] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:57:14] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 03:57:26,079] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:57:26] "GET /cb?code=1aunr4r5lvrxfx1491j1zw&state=id01 HTTP/1.1" 200 -
+[2022-10-14 03:57:26,123] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:57:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 03:57:28,120] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 03:57:28] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:19:49,160] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:19:49] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:20:01,287] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:20:01] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:20:13,986] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:20:13] "GET /cb?code=ldmq53rpvn7dpw9ytnj4zr&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:20:14,042] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:20:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:20:15,944] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:20:15] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:24:44,612] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:24:44] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:25:29,210] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:25:29] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:25:41,448] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:25:41] "GET /cb?code=wjk1ptax8iw992k7ok8lnz&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:25:41,493] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:25:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:25:45,474] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:25:45] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:27:30,329] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:27:30] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:27:47,169] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:27:47] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:27:59,821] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:27:59] "GET /cb?code=k7zjbdf5sqhsf32zep7jmn&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:27:59,881] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:27:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:28:02,327] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:28:02] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:29:23,696] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:29:23] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:29:27,865] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:29:27] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:29:40,250] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:29:40] "GET /cb?code=knxa65m478lf4k6bag4j41&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:29:40,317] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:29:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:29:41,594] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:29:41] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:34:24,176] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:34:24] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:34:28,045] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:34:28] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:34:39,524] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:34:39] "GET /cb?code=322ayccfdg4qujpve5gs6q&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:34:39,569] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:34:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:34:40,999] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:34:40] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:40:17,569] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:40:17] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:40:22,979] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:40:22] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:40:39,791] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:40:39] "GET /cb?code=rspq4vasqrq575c2zxxmx7&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:40:39,843] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:40:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:40:41,230] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:40:41] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 04:45:22,377] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:45:22] "POST /login HTTP/1.1" 200 -
+[2022-10-14 04:45:25,215] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:45:25] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 04:45:35,547] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:45:35] "GET /cb?code=92355fezzimyvxhg6yvw7j&state=id01 HTTP/1.1" 200 -
+[2022-10-14 04:45:35,595] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:45:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 04:45:37,026] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 04:45:37] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:38:38,057] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:38:38] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:38:40,384] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:38:40] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:38:58,139] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:38:58] "GET /cb?code=u1bk3cz5p693cglmfqgb51&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:38:58,178] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:38:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:39:00,462] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:39:00] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:43:02,768] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:43:02,768] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:43:02,769] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:43:02,969] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:43:02,972] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:44:12,522] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:44:12] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:44:15,930] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:44:15] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:44:29,269] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:44:29] "GET /cb?code=rrrpvbv2rl9l5rffk1fd1t&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:44:29,309] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:44:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:46:11,324] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:11] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:46:14,380] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:14] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:46:48,468] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:46:48,469] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:46:48,469] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:46:48,666] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:46:48,669] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:46:50,658] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "[35m[1mPOST /register?scope=public_data HTTP/1.1[0m" 500 -
+[2022-10-14 05:46:50,694] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-14 05:46:50,697] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-14 05:46:50,733] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-14 05:46:50,755] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 05:46:50,779] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:50] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-14 05:46:57,656] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:46:57] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:47:00,696] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:47:00] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:47:19,329] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:47:19] "GET /cb?code=1vls19pkqn5t65u5kjksbc&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:47:19,438] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:47:19] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:47:20,871] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:47:20] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:48:04,445] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:48:04,445] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:48:04,446] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:48:04,646] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:48:04,648] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:48:09,979] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:48:09] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:48:12,540] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:48:12] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:48:22,783] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:48:22] "GET /cb?code=miwg154otv48x2fzmrdz2q&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:48:22,825] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:48:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:48:25,676] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:48:25] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:50:18,060] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:50:18,060] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:50:18,061] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:50:18,260] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:50:18,263] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:50:26,544] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:50:26] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:50:29,131] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:50:29] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:50:40,993] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:50:40] "GET /cb?code=t8lf2s7hy8vovr3oxnk3z4&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:50:41,039] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:50:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:50:42,628] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:50:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:51:25,100] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:51:25,100] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:51:25,101] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:51:25,299] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:51:25,302] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:51:43,390] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:51:43] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:51:46,296] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:51:46] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:51:55,338] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:51:55] "GET /cb?code=ixlg8u1uqkeiviapnqbj85&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:51:55,545] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:51:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:51:57,639] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:51:57] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 05:54:29,321] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:54:29] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:54:32,971] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:54:32] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:54:44,552] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:54:44] "GET /cb?code=3srdez8etzgltj9dradt9k&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:54:44,585] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:54:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:54:54,364] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 05:54:54,364] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 05:54:54,365] INFO in _internal:  * Restarting with stat
+[2022-10-14 05:54:54,562] WARNING in _internal:  * Debugger is active!
+[2022-10-14 05:54:54,565] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 05:55:07,235] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:55:07] "POST /login HTTP/1.1" 200 -
+[2022-10-14 05:55:11,393] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:55:11] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 05:55:22,850] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:55:22] "GET /cb?code=21ah75pw8squjl9adgy3up&state=id01 HTTP/1.1" 200 -
+[2022-10-14 05:55:22,901] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:55:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 05:55:24,849] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 05:55:24] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:00:16,987] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 06:00:16,987] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 06:00:16,988] INFO in _internal:  * Restarting with stat
+[2022-10-14 06:00:17,187] WARNING in _internal:  * Debugger is active!
+[2022-10-14 06:00:17,190] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 06:00:26,780] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:00:26] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:00:31,067] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:00:31] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:00:40,931] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:00:40] "GET /cb?code=d2162kuc55yzgmk5yh5tut&state=id01 HTTP/1.1" 200 -
+[2022-10-14 06:00:41,007] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:00:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 06:00:42,783] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:00:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:03:07,522] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:03:07] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:03:11,610] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:03:11] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:30:34,324] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:30:34] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:30:39,045] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:30:39] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:30:51,577] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:30:51] "GET /cb?code=tysbfvwxna44swq7yulo1d&state=id01 HTTP/1.1" 200 -
+[2022-10-14 06:30:51,620] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:30:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 06:30:53,124] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:30:53] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:40:03,975] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 06:40:03,975] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 06:40:03,975] INFO in _internal:  * Restarting with stat
+[2022-10-14 06:40:04,176] WARNING in _internal:  * Debugger is active!
+[2022-10-14 06:40:04,179] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 06:40:11,495] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:40:11] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:40:15,374] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:40:15] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:40:27,260] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:40:27] "GET /cb?code=jh3rvk1nkzgmvv8ce9xp5q&state=id01 HTTP/1.1" 200 -
+[2022-10-14 06:40:27,308] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:40:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 06:40:28,751] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:40:28] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:43:17,818] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:43:17] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:43:42,541] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:43:42] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:43:53,844] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:43:53] "GET /cb?code=tjozh6gtzttqqicouoe29d&state=id01 HTTP/1.1" 200 -
+[2022-10-14 06:43:53,891] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:43:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 06:43:56,002] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:43:56] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:44:55,331] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:44:55] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:46:10,203] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:46:10] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 06:46:26,007] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:46:26] "GET /cb?code=w8lkelzgjabqsl8kf19niv&state=id01 HTTP/1.1" 200 -
+[2022-10-14 06:46:26,057] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:46:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 06:46:27,316] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:46:27] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 06:49:53,777] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:49:53] "POST /login HTTP/1.1" 200 -
+[2022-10-14 06:50:11,938] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 06:50:11] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:09:31,473] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:09:31] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:09:38,309] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:09:38] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:09:56,423] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:09:56] "GET /cb?code=rpujpmqjmigxnuidekhdpt&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:09:56,467] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:09:56] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:10:53,731] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:10:53] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:11:49,050] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:11:49] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:12:04,325] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:12:04] "GET /cb?code=niwu8tt9hcdjmmt5my2dcd&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:12:04,369] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:12:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:12:06,120] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:12:06] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:12:52,588] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:12:52] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:12:55,038] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:12:55] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:13:05,139] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:13:05] "GET /cb?code=msb6d16n9isbma6vnz5nl9&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:13:05,195] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:13:05] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:13:06,842] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:13:06] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:13:48,060] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:13:48] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:13:57,864] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:13:57] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:14:10,138] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:14:10] "GET /cb?code=aznml48gb7btw2ssir1tb4&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:14:10,191] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:14:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:14:11,505] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:14:11] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:19:50,700] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:19:50] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:19:53,490] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:19:53] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:20:03,534] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:20:03] "GET /cb?code=id923p9n19jzzby1ye97j3&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:20:03,579] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:20:03] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:20:04,938] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:20:04] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:24:30,439] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:24:30] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:47:41,321] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:47:41] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:47:44,401] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:47:44] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:47:54,800] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:47:54] "GET /cb?code=wxh3ghogesqlvnd8njmhxj&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:47:54,836] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:47:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:47:56,622] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:47:56] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:51:26,694] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:51:26] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:51:33,179] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:51:33] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:51:50,414] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:51:50] "GET /cb?code=3ye7c93sx83z3fn7x6ptj4&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:51:50,457] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:51:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:51:51,631] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:51:51] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:53:39,942] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:53:39] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:53:44,900] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:53:44] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:53:59,247] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:53:59] "GET /cb?code=k5gisjix4ndtjh8g63u6ho&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:53:59,293] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:53:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:54:02,331] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:54:02] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:56:49,572] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:56:49] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:56:52,493] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:56:52] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 07:57:06,783] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:57:06] "GET /cb?code=cais6gbt5s3wj8x4ycshkl&state=id01 HTTP/1.1" 200 -
+[2022-10-14 07:57:06,839] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:57:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 07:57:08,704] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:57:08] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 07:58:48,609] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:58:48] "POST /login HTTP/1.1" 200 -
+[2022-10-14 07:59:43,385] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 07:59:43] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:01:06,895] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:01:06] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:01:37,611] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:01:37] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:01:53,342] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:01:53] "GET /cb?code=nfl61sn8nawe22qf98rqxn&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:01:53,377] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:01:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:02:12,037] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:02:12] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:02:23,386] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:02:23] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:02:41,033] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:02:41] "GET /cb?code=xqqg59taqexafrpp3ojju2&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:02:41,111] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:02:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:02:42,437] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:02:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 08:18:14,481] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:18:14] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:18:17,565] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:18:17] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:18:29,272] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:18:29] "GET /cb?code=wwgpdl1g1uoplmjfyv3anx&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:18:29,319] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:18:29] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:18:30,649] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:18:30] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 08:23:18,070] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 08:23:18,070] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 08:23:18,071] INFO in _internal:  * Restarting with stat
+[2022-10-14 08:23:18,273] WARNING in _internal:  * Debugger is active!
+[2022-10-14 08:23:18,275] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 08:24:28,578] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 08:24:28,578] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 08:24:28,579] INFO in _internal:  * Restarting with stat
+[2022-10-14 08:24:28,778] WARNING in _internal:  * Debugger is active!
+[2022-10-14 08:24:28,780] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-14 08:25:01,746] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:25:01] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:25:05,306] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:25:05] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:25:18,704] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:25:18] "GET /cb?code=21a7i461gf81gtaodl9spc&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:25:18,750] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:25:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:25:20,587] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:25:20] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 08:26:33,483] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-14 08:26:33,483] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-14 08:26:33,484] INFO in _internal:  * Restarting with stat
+[2022-10-14 08:26:33,682] WARNING in _internal:  * Debugger is active!
+[2022-10-14 08:26:33,685] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-14 08:39:20,707] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:39:20] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:39:24,577] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:39:24] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:39:37,880] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:39:37] "GET /cb?code=hq3vu1cff6ahngg4n3s342&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:39:37,928] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:39:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:39:39,331] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:39:39] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 08:41:28,869] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:41:28] "POST /login HTTP/1.1" 200 -
+[2022-10-14 08:41:45,767] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:41:45] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-14 08:41:57,482] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:41:57] "GET /cb?code=72r91e5cbtsaonly36h3c8&state=id01 HTTP/1.1" 200 -
+[2022-10-14 08:41:57,584] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:41:57] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-14 08:42:00,692] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 08:42:00] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-14 09:57:54,651] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 09:57:54] "POST /login HTTP/1.1" 200 -
+[2022-10-14 10:12:12,961] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 10:12:12] "POST /login HTTP/1.1" 200 -
+[2022-10-14 10:16:09,087] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 10:16:09] "POST /login HTTP/1.1" 200 -
+[2022-10-14 10:17:04,780] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 10:17:04] "POST /login HTTP/1.1" 200 -
+[2022-10-14 10:18:52,467] INFO in _internal: 163.152.71.98 - - [14/Oct/2022 10:18:52] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:13:51,143] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-17 03:13:51,199] INFO in _internal:  * Restarting with stat
+[2022-10-17 03:13:51,426] WARNING in _internal:  * Debugger is active!
+[2022-10-17 03:13:51,429] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-17 03:33:34,534] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-17 03:33:34,535] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-17 03:33:34,535] INFO in _internal:  * Restarting with stat
+[2022-10-17 03:33:34,792] WARNING in _internal:  * Debugger is active!
+[2022-10-17 03:33:34,796] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-17 03:34:36,388] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:34:36] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:34:57,729] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:34:57] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-17 03:35:18,895] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:35:18] "GET /cb?code=j9udg9ltj1qf5j4clm8pgp&state=id01 HTTP/1.1" 200 -
+[2022-10-17 03:35:18,951] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:35:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-17 03:35:20,683] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:35:20] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-17 03:37:33,894] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:37:33] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:38:01,155] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:38:01] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-17 03:38:17,480] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:38:17] "GET /cb?code=3nayz4x7q9vgwl6l4bzta2&state=id01 HTTP/1.1" 200 -
+[2022-10-17 03:38:17,526] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:38:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-17 03:38:18,947] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:38:18] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-17 03:47:36,490] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:47:36] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:48:00,187] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:48:00] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-17 03:48:11,944] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:48:11] "GET /cb?code=auzo1ma4siglugzd6jnivh&state=id01 HTTP/1.1" 200 -
+[2022-10-17 03:48:12,000] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:48:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-17 03:48:24,085] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:48:24] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-17 03:48:55,226] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:48:55] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:49:27,270] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:49:27] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-17 03:49:38,319] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:49:38] "GET /cb?code=dv8dty2w3wlx45j8tnoyso&state=id01 HTTP/1.1" 200 -
+[2022-10-17 03:49:38,426] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:49:38] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-17 03:49:42,334] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:49:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-17 03:58:44,341] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:58:44] "POST /login HTTP/1.1" 200 -
+[2022-10-17 03:59:00,144] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:59:00] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-17 03:59:17,294] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:59:17] "GET /cb?code=j8pxb2hiebsvfisjd6h4uw&state=id01 HTTP/1.1" 200 -
+[2022-10-17 03:59:17,337] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:59:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-17 03:59:19,486] INFO in _internal: 163.152.71.98 - - [17/Oct/2022 03:59:19] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 08:07:53,252] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-18 08:07:53,252] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-18 08:07:53,253] INFO in _internal:  * Restarting with stat
+[2022-10-18 08:07:53,458] WARNING in _internal:  * Debugger is active!
+[2022-10-18 08:07:53,461] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-18 08:08:10,662] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-18 08:08:10,717] INFO in _internal:  * Restarting with stat
+[2022-10-18 08:08:10,927] WARNING in _internal:  * Debugger is active!
+[2022-10-18 08:08:10,930] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-18 08:32:49,758] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:32:49] "POST /login HTTP/1.1" 200 -
+[2022-10-18 08:34:07,361] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:34:07] "POST /login HTTP/1.1" 200 -
+[2022-10-18 08:38:55,665] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-18 08:38:55,719] INFO in _internal:  * Restarting with stat
+[2022-10-18 08:38:55,932] WARNING in _internal:  * Debugger is active!
+[2022-10-18 08:38:55,938] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-18 08:39:15,166] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-18 08:39:15,222] INFO in _internal:  * Restarting with stat
+[2022-10-18 08:39:15,435] WARNING in _internal:  * Debugger is active!
+[2022-10-18 08:39:15,437] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-18 08:39:18,930] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-18 08:39:18,930] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-18 08:39:18,931] INFO in _internal:  * Restarting with stat
+[2022-10-18 08:39:19,131] WARNING in _internal:  * Debugger is active!
+[2022-10-18 08:39:19,133] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-18 08:40:30,404] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:40:30] "POST /login HTTP/1.1" 200 -
+[2022-10-18 08:40:38,522] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:40:38] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 08:40:58,870] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:40:58] "GET /cb?code=2r3e6cfwx73xcw3rjyaa4z&state=id01 HTTP/1.1" 200 -
+[2022-10-18 08:40:58,915] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:40:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 08:41:01,522] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:41:01] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 08:43:40,822] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:43:40] "POST /login HTTP/1.1" 200 -
+[2022-10-18 08:43:48,600] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:43:48] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 08:44:04,729] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:44:04] "GET /cb?code=wnusf4bihmomo7dxq33nok&state=id01 HTTP/1.1" 200 -
+[2022-10-18 08:44:04,768] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:44:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 08:44:06,555] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 08:44:06] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:04:20,639] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:04:20] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:04:23,222] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:04:23] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:04:35,996] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:04:35] "GET /cb?code=4luq4662vpxbwu311ehgyi&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:04:36,041] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:04:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:04:37,156] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:04:37] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:13:09,313] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:13:09] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:13:12,107] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:13:12] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:14:13,151] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:14:13] "GET /cb?code=hky85n476gn65hneszw1k3&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:14:13,228] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:14:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:14:30,901] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:14:30] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:16:49,532] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:16:49] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:17:01,010] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:17:01] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:17:15,567] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:17:15] "GET /cb?code=bfoj75mn6tjqeaklmttv6p&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:17:15,629] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:17:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:17:17,958] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:17:17] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:19:11,090] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:19:11] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:19:19,096] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:19:19] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:19:37,026] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:19:37] "GET /cb?code=rgagce3qgu3my9xfwljvhz&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:19:37,071] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:19:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:19:38,647] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:19:38] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:25:44,260] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:25:44] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:25:55,859] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:25:55] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:26:08,380] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:26:08] "GET /cb?code=k8wa25fi15fjft92b1wly4&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:26:08,435] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:26:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:26:09,975] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:26:09] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:29:46,197] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:29:46] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:29:55,447] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:29:55] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:30:06,732] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:30:06] "GET /cb?code=th2i336ea6irm314qbjolc&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:30:06,781] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:30:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:30:08,200] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:30:08] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-18 10:35:10,136] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:35:10] "POST /login HTTP/1.1" 200 -
+[2022-10-18 10:35:15,612] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:35:15] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-18 10:35:30,483] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:35:30] "GET /cb?code=68eigjsdi3gxf7em12y6xm&state=id01 HTTP/1.1" 200 -
+[2022-10-18 10:35:30,689] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:35:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-18 10:35:32,301] INFO in _internal: 163.152.71.98 - - [18/Oct/2022 10:35:32] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-22 08:36:27,429] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-22 08:36:27,429] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-22 08:36:27,430] INFO in _internal:  * Restarting with stat
+[2022-10-22 08:36:27,632] WARNING in _internal:  * Debugger is active!
+[2022-10-22 08:36:27,635] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-22 08:38:13,427] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:13] "POST /login HTTP/1.1" 200 -
+[2022-10-22 08:38:19,705] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:19] "POST /login HTTP/1.1" 200 -
+[2022-10-22 08:38:22,710] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:22] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-22 08:38:33,981] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:33] "GET /cb?code=4kku8pkbt7ymzpzu1x3t2e&state=id01 HTTP/1.1" 200 -
+[2022-10-22 08:38:34,046] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 08:38:37,855] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:38:37] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-22 08:46:01,920] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:46:01] "POST /login HTTP/1.1" 200 -
+[2022-10-22 08:46:06,327] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:46:06] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-22 08:46:16,372] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:46:16] "GET /cb?code=98p62c97x8js1txg5fq237&state=id01 HTTP/1.1" 200 -
+[2022-10-22 08:46:16,417] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:46:16] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 08:46:17,846] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 08:46:17] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-22 09:25:42,047] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:25:42] "POST /login HTTP/1.1" 200 -
+[2022-10-22 09:25:47,429] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:25:47] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-22 09:26:04,708] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:26:04] "GET /cb?code=g17mbdn16djjspn91jow3i&state=id01 HTTP/1.1" 200 -
+[2022-10-22 09:26:04,824] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:26:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 09:26:06,654] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:26:06] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-22 09:34:14,928] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:34:14] "POST /login HTTP/1.1" 200 -
+[2022-10-22 09:34:18,725] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:34:18] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 09:34:36,260] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:34:36] "GET /cb?code=uitrnsnk855vtjyeeq5wk2&state=id01 HTTP/1.1" 200 -
+[2022-10-22 09:34:36,305] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:34:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 09:34:38,064] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:34:38] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 09:38:58,248] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:38:58] "POST /login HTTP/1.1" 200 -
+[2022-10-22 09:39:09,118] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:39:09] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 09:39:26,213] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:39:26] "GET /cb?code=cotf5m84v2s4bofztsxbmq&state=id01 HTTP/1.1" 200 -
+[2022-10-22 09:39:26,253] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:39:26] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 09:39:28,443] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:39:28] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 09:40:23,985] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:40:23] "POST /login HTTP/1.1" 200 -
+[2022-10-22 09:40:32,671] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:40:32] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 09:40:49,219] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:40:49] "GET /cb?code=vvu227prgck82t67ijjhns&state=id01 HTTP/1.1" 200 -
+[2022-10-22 09:40:49,260] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:40:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 09:40:51,934] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:40:51] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 09:43:17,589] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:43:17] "GET / HTTP/1.1" 200 -
+[2022-10-22 09:43:17,628] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:43:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 09:53:33,289] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 09:53:33] "[33mGET /api/financial:8000 HTTP/1.1[0m" 404 -
+[2022-10-22 10:01:51,270] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:01:51] "POST /login HTTP/1.1" 200 -
+[2022-10-22 10:01:59,526] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:01:59] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 10:02:13,618] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:02:13] "GET /cb?code=f4gte9z4b8m21bbt9jnse6&state=id01 HTTP/1.1" 200 -
+[2022-10-22 10:02:13,670] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:02:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 10:02:15,953] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:02:15] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 10:23:38,799] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:23:38] "POST /login HTTP/1.1" 200 -
+[2022-10-22 10:23:47,021] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:23:47] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 10:23:59,991] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:23:59] "GET /cb?code=7hyzbufsoi8z9lafy9d3c9&state=id01 HTTP/1.1" 200 -
+[2022-10-22 10:24:00,033] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 10:24:01,978] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:01] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 10:24:43,131] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:43] "POST /login HTTP/1.1" 200 -
+[2022-10-22 10:24:46,312] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:46] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 10:24:58,251] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:58] "GET /cb?code=c7fejqt7abpcwg3emhcthm&state=id01 HTTP/1.1" 200 -
+[2022-10-22 10:24:58,286] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 10:24:59,401] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:24:59] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-22 10:26:01,798] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:26:01] "POST /login HTTP/1.1" 200 -
+[2022-10-22 10:26:09,686] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:26:09] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-22 10:26:27,693] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:26:27] "GET /cb?code=bwmkwsfbt9v1xhadp4zwrs&state=id01 HTTP/1.1" 200 -
+[2022-10-22 10:26:27,745] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:26:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-22 10:26:29,796] INFO in _internal: 163.152.71.98 - - [22/Oct/2022 10:26:29] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-24 03:24:01,465] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-24 03:24:01,465] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-24 03:24:01,465] INFO in _internal:  * Restarting with stat
+[2022-10-24 03:24:01,666] WARNING in _internal:  * Debugger is active!
+[2022-10-24 03:24:01,669] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-24 03:24:14,421] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:14] "POST /login HTTP/1.1" 200 -
+[2022-10-24 03:24:17,825] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:17] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-24 03:24:28,394] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:28] "GET /cb?code=rnfqbacxnbf6r5vchx3716&state=id01 HTTP/1.1" 200 -
+[2022-10-24 03:24:28,454] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 03:24:30,472] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:30] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-24 03:24:37,492] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:37] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-24 03:24:55,805] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:55] "GET /cb?code=6t7of2nvak3cxhhwnvhd8j&state=id01 HTTP/1.1" 200 -
+[2022-10-24 03:24:55,848] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 03:24:57,425] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:24:57] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-24 03:25:01,324] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:25:01] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-24 03:25:12,393] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:25:12] "GET /cb?code=vf1gv9lta7c1yc7plo53lq&state=id01 HTTP/1.1" 200 -
+[2022-10-24 03:25:12,431] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:25:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 03:25:14,236] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:25:14] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-24 03:33:28,724] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:28] "POST /login HTTP/1.1" 200 -
+[2022-10-24 03:33:32,911] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:32] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-24 03:33:44,093] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:44] "GET /cb?code=gzn1sm9rplndgaec4hyfd6&state=id01 HTTP/1.1" 200 -
+[2022-10-24 03:33:44,221] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 03:33:48,078] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:48] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-24 03:33:51,350] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 03:33:51] "[35m[1mGET /refresh?scope=public_data HTTP/1.1[0m" 500 -
+[2022-10-24 05:32:19,235] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:32:19] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:32:42,574] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:32:42] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:32:45,192] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:32:45] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:33:00,331] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:00] "GET /cb?code=6213wm4plv4kk9ltae19p5&state=id02 HTTP/1.1" 200 -
+[2022-10-24 05:33:00,367] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:00] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:33:01,768] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:01] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-24 05:33:33,517] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:33] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-24 05:33:45,742] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:45] "[35m[1mPOST /signup HTTP/1.1[0m" 500 -
+[2022-10-24 05:33:46,910] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:46] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:33:50,095] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:33:50] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:34:01,959] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:01] "GET /cb?code=47th1whzn7sx1xvypvleco&state=id02 HTTP/1.1" 200 -
+[2022-10-24 05:34:01,996] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:01] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:34:03,025] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:03] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-24 05:34:07,835] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:07] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:34:22,333] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:22] "GET /cb?code=mijtqggmn4urbvzqigi5y9&state=id02 HTTP/1.1" 200 -
+[2022-10-24 05:34:22,369] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:34:24,157] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:24] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-24 05:34:34,941] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:34] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:34:37,370] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:37] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:34:51,773] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:51] "GET /cb?code=6qj85w4x9xh8moqe8lhkwe&state=id03 HTTP/1.1" 200 -
+[2022-10-24 05:34:51,826] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:34:52,933] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:52] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-24 05:34:56,636] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:34:56] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:35:12,122] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:12] "GET /cb?code=m9olm7zbkhsjxyld453bkw&state=id03 HTTP/1.1" 200 -
+[2022-10-24 05:35:12,168] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:35:13,389] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:13] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-24 05:35:16,862] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:16] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:35:43,418] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:43] "GET /cb?code=kvm1lqaqnuvgkztc1e1ben&state=id03 HTTP/1.1" 200 -
+[2022-10-24 05:35:43,465] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:35:44,529] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:44] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-24 05:35:55,799] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:35:55] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:36:01,198] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:36:01] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:37:21,441] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:21] "POST /login HTTP/1.1" 200 -
+[2022-10-24 05:37:25,339] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:25] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:37:35,469] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:35] "GET /cb?code=fh1q4ifpk9p1w3k2w81t3n&state=id01 HTTP/1.1" 200 -
+[2022-10-24 05:37:35,513] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:37:38,396] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:38] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-24 05:37:42,302] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:42] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:37:53,001] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:53] "GET /cb?code=sy32c4to1ygp2gm3sitg93&state=id01 HTTP/1.1" 200 -
+[2022-10-24 05:37:53,039] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:37:54,331] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:54] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-24 05:37:57,889] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:37:57] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-24 05:38:14,385] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:38:14] "GET /cb?code=kqvx8u6mp26recchz6f7sn&state=id01 HTTP/1.1" 200 -
+[2022-10-24 05:38:14,430] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:38:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-24 05:38:15,650] INFO in _internal: 163.152.71.98 - - [24/Oct/2022 05:38:15] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 04:05:31,855] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 04:05:31,855] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 04:05:31,856] INFO in _internal:  * Restarting with stat
+[2022-10-28 04:05:32,078] WARNING in _internal:  * Debugger is active!
+[2022-10-28 04:05:32,081] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-28 04:21:50,020] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-10-28 04:21:50,080] INFO in _internal:  * Restarting with stat
+[2022-10-28 04:21:50,297] WARNING in _internal:  * Debugger is active!
+[2022-10-28 04:21:50,300] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-28 04:29:06,770] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 04:29:06,770] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 04:29:06,770] INFO in _internal:  * Restarting with stat
+[2022-10-28 04:29:06,971] WARNING in _internal:  * Debugger is active!
+[2022-10-28 04:29:06,974] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-28 04:29:57,211] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:29:57] "POST /login HTTP/1.1" 200 -
+[2022-10-28 04:30:41,234] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:41] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 04:30:58,168] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "[35m[1mGET /cb?code=ttjuvvpiiugt4vo55efrf7&state=id01 HTTP/1.1[0m" 500 -
+[2022-10-28 04:30:58,218] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-28 04:30:58,223] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-28 04:30:58,283] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 04:30:58,303] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-28 04:30:58,348] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 04:30:58] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 06:38:58,815] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 06:38:58,815] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 06:38:58,816] INFO in _internal:  * Restarting with stat
+[2022-10-28 06:38:59,016] WARNING in _internal:  * Debugger is active!
+[2022-10-28 06:38:59,019] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-28 06:39:16,052] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:39:16] "POST /login HTTP/1.1" 200 -
+[2022-10-28 06:39:29,497] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:39:29] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 06:39:40,250] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:39:40] "GET /cb?code=589pugifqzz8l916lz9j6h&state=id01 HTTP/1.1" 200 -
+[2022-10-28 06:39:40,307] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:39:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 06:39:42,122] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:39:42] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 06:41:40,200] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 06:41:40,201] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 06:41:40,201] INFO in _internal:  * Restarting with stat
+[2022-10-28 06:41:40,403] WARNING in _internal:  * Debugger is active!
+[2022-10-28 06:41:40,406] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-28 06:50:20,970] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:50:20] "POST /login HTTP/1.1" 200 -
+[2022-10-28 06:50:34,986] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:50:34] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 06:50:49,014] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:50:49] "GET /cb?code=ih3fndn66hscjsg49v7xyh&state=id01 HTTP/1.1" 200 -
+[2022-10-28 06:50:49,060] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:50:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 06:50:51,023] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:50:51] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 06:55:26,133] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 06:55:26,133] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 06:55:26,134] INFO in _internal:  * Restarting with stat
+[2022-10-28 06:55:26,334] WARNING in _internal:  * Debugger is active!
+[2022-10-28 06:55:26,337] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-28 06:56:42,902] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:56:42] "POST /login HTTP/1.1" 200 -
+[2022-10-28 06:56:56,275] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:56:56] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 06:57:08,113] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:57:08] "GET /cb?code=n38yqitwv7m4kx5sminqss&state=id01 HTTP/1.1" 200 -
+[2022-10-28 06:57:08,163] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:57:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 06:57:11,036] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 06:57:11] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:07:55,896] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 07:07:55,897] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 07:07:55,897] INFO in _internal:  * Restarting with stat
+[2022-10-28 07:07:56,099] WARNING in _internal:  * Debugger is active!
+[2022-10-28 07:07:56,101] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-10-28 07:08:24,655] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:24] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:08:26,344] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:26] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:08:30,925] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:30] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:08:49,219] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:49] "GET /cb?code=lakvsxcios9pwajmebany5&state=id04 HTTP/1.1" 200 -
+[2022-10-28 07:08:49,269] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:49] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:08:50,507] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:50] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:08:55,444] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:08:55] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:09:09,005] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:09] "GET /cb?code=u384qko4593k76c4l4lei4&state=id04 HTTP/1.1" 200 -
+[2022-10-28 07:09:09,040] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:09:11,307] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:11] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-28 07:09:14,164] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:14] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:09:25,611] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:25] "GET /cb?code=dmzqe5imsoj6fuc4mg4bby&state=id04 HTTP/1.1" 200 -
+[2022-10-28 07:09:25,659] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:09:27,383] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:27] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:09:44,690] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:44] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:09:45,747] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:45] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:09:48,745] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:09:48] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:10:02,670] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:02] "GET /cb?code=9jerapsgwnvpzzl9nkbntr&state=id05 HTTP/1.1" 200 -
+[2022-10-28 07:10:02,706] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:10:04,148] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:04] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:10:07,736] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:07] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:10:39,214] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "[35m[1mGET /cb?code=tkfzwyum12d1nznycv3pj5&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:10:39,217] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "[35m[1mGET /cb?code=uom6fyx8d3locy3yh3d3di&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:10:39,219] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "[35m[1mGET /cb?code=c357nm32zsbg52pfkkbt5r&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:10:39,560] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-28 07:10:39,563] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-28 07:10:39,609] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 07:10:39,625] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-28 07:10:39,751] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:39] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 07:10:45,850] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:10:45] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:11:20,702] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "[35m[1mGET /cb?code=19w9v3p51w17dtzmjvjgrb&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:11:20,743] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "[35m[1mGET /cb?code=7pnydyu2356nv5bsw7lf3r&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:11:20,749] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "[35m[1mGET /cb?code=tx7bleb5mplk58qw69qlml&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:11:20,749] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "[35m[1mGET /cb?code=8tcp4delwumf56kv4az66x&state=id05 HTTP/1.1[0m" 500 -
+[2022-10-28 07:11:20,808] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "GET /cb?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+[2022-10-28 07:11:20,809] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "GET /cb?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+[2022-10-28 07:11:20,851] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 07:11:20,876] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:20] "GET /cb?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.1" 200 -
+[2022-10-28 07:11:21,157] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:11:21] "GET /cb?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+[2022-10-28 07:12:19,333] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:19] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:12:31,270] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:31] "GET /cb?code=1bmlkheeznzovns79hseha&state=id05 HTTP/1.1" 200 -
+[2022-10-28 07:12:31,313] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:12:32,428] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:32] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:12:49,291] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:49] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:12:55,255] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:55] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:12:56,644] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:12:56] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:13:00,416] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:00] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:13:11,808] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:11] "GET /cb?code=nm5olq5zpjbb32njygm8xh&state=id06 HTTP/1.1" 200 -
+[2022-10-28 07:13:11,847] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:11] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:13:13,650] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:13] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:13:16,825] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:16] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:13:27,659] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:27] "GET /cb?code=2agoi69sa353yupb255mft&state=id06 HTTP/1.1" 200 -
+[2022-10-28 07:13:27,704] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:13:29,115] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:29] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-28 07:13:32,143] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:32] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:13:43,228] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:43] "GET /cb?code=hc7pey3zooznktbokxgmgn&state=id06 HTTP/1.1" 200 -
+[2022-10-28 07:13:43,267] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:13:44,376] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:13:44] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:14:02,834] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:02] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:14:03,906] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:03] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:14:06,434] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:06] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:14:24,221] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:24] "GET /cb?code=teese5zeqm76q8cxrggu8z&state=id07 HTTP/1.1" 200 -
+[2022-10-28 07:14:24,265] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:24] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:14:25,830] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:25] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:14:29,366] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:29] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:14:39,709] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:39] "GET /cb?code=szxfryemntt6qvthobargj&state=id07 HTTP/1.1" 200 -
+[2022-10-28 07:14:39,787] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:39] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:14:41,250] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:41] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-28 07:14:44,498] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:44] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:14:54,798] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:54] "GET /cb?code=vg75houa4l1tt3pnsiui7v&state=id07 HTTP/1.1" 200 -
+[2022-10-28 07:14:54,843] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:54] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:14:55,806] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:14:55] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:15:12,725] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:12] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:15:14,146] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:14] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:15:20,818] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:20] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:15:37,157] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:37] "GET /cb?code=fc8qjolzk8r4qau3amhdoc&state=id08 HTTP/1.1" 200 -
+[2022-10-28 07:15:37,192] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:15:38,670] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:38] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:15:41,432] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:41] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:15:51,536] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:51] "GET /cb?code=gzjny3vyngfa8t9bqeielx&state=id08 HTTP/1.1" 200 -
+[2022-10-28 07:15:51,570] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:15:52,808] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:52] "GET /data?scope=medical_data HTTP/1.1" 200 -
+[2022-10-28 07:15:56,164] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:15:56] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:16:12,390] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:12] "GET /cb?code=mdm5e5tk5jymb1a2ufoiph&state=id08 HTTP/1.1" 200 -
+[2022-10-28 07:16:12,431] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:16:14,396] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:14] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:16:33,456] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:33] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:16:34,736] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:34] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:16:37,870] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:37] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:16:51,077] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:51] "GET /cb?code=x9646xq9ltuh8t48e59vgt&state=id09 HTTP/1.1" 200 -
+[2022-10-28 07:16:51,115] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:16:52,658] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:52] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:16:55,484] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:16:55] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:17:10,625] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:10] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:17:21,410] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:21] "GET /cb?code=adscfddkvlz321huclclty&state=id09 HTTP/1.1" 200 -
+[2022-10-28 07:17:21,446] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:17:22,523] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:22] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:17:42,973] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:42] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:17:44,219] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:44] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:17:49,264] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:17:49] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:18:02,246] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:02] "GET /cb?code=4w8ztgu6xd5vdhy1hu9rlw&state=id10 HTTP/1.1" 200 -
+[2022-10-28 07:18:02,285] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:02] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:18:03,544] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:03] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:18:06,599] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:06] "[32mPOST /register?scope=medical_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:18:27,901] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:27] "[32mPOST /register?scope=financial_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:18:41,017] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:41] "GET /cb?code=5gjoz7zi4rk4t42jnmqgwi&state=id10 HTTP/1.1" 200 -
+[2022-10-28 07:18:41,055] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:18:42,172] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:42] "GET /data?scope=financial_data HTTP/1.1" 200 -
+[2022-10-28 07:18:59,970] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:18:59] "POST /signup HTTP/1.1" 200 -
+[2022-10-28 07:19:01,177] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:19:01] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:19:04,427] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:19:04] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:22:30,693] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 07:22:30,693] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 07:22:30,693] INFO in _internal:  * Restarting with stat
+[2022-10-28 07:22:30,890] WARNING in _internal:  * Debugger is active!
+[2022-10-28 07:22:30,893] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-10-28 07:23:01,211] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:23:01] "POST /login HTTP/1.1" 200 -
+[2022-10-28 07:23:15,945] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:23:15] "[32mPOST /register?scope=public_data HTTP/1.1[0m" 302 -
+[2022-10-28 07:23:28,786] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:23:28] "GET /cb?code=ecrl7h4poms61zxr4yybv3&state=id01 HTTP/1.1" 200 -
+[2022-10-28 07:23:28,830] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:23:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-10-28 07:23:31,036] INFO in _internal: 163.152.71.98 - - [28/Oct/2022 07:23:31] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-10-28 07:32:06,927] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-10-28 07:32:06,927] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-10-28 07:32:06,927] INFO in _internal:  * Restarting with stat
+[2022-10-28 07:32:07,128] WARNING in _internal:  * Debugger is active!
+[2022-10-28 07:32:07,131] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-15 07:35:44,791] INFO in _internal: 163.152.71.98 - - [15/Nov/2022 07:35:44] "GET / HTTP/1.1" 200 -
+[2022-11-15 07:35:45,276] INFO in _internal: 163.152.71.98 - - [15/Nov/2022 07:35:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-11-15 07:35:59,254] INFO in _internal: 163.152.71.98 - - [15/Nov/2022 07:35:59] "GET / HTTP/1.1" 200 -
+[2022-11-24 09:02:52,277] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 09:02:52] "GET / HTTP/1.0" 200 -
+[2022-11-24 09:05:07,800] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 09:05:07] "GET / HTTP/1.0" 200 -
+[2022-11-24 09:05:22,715] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 09:05:22] "GET / HTTP/1.0" 200 -
+[2022-11-24 09:07:28,892] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 09:07:28] "GET / HTTP/1.0" 200 -
+[2022-11-24 09:12:14,877] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-24 09:12:14,877] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-24 09:12:14,878] INFO in _internal:  * Restarting with stat
+[2022-11-24 09:12:15,081] WARNING in _internal:  * Debugger is active!
+[2022-11-24 09:12:15,084] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 09:14:10,942] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 09:14:10] "GET / HTTP/1.0" 200 -
+[2022-11-24 09:15:17,506] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-24 09:15:17,506] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-24 09:15:17,507] INFO in _internal:  * Restarting with stat
+[2022-11-24 09:15:17,709] WARNING in _internal:  * Debugger is active!
+[2022-11-24 09:15:17,716] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 11:48:40,893] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 11:48:40] "GET / HTTP/1.0" 200 -
+[2022-11-24 11:50:42,296] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-24 11:50:42,296] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-24 11:50:42,297] INFO in _internal:  * Restarting with stat
+[2022-11-24 11:50:42,499] WARNING in _internal:  * Debugger is active!
+[2022-11-24 11:50:42,502] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 11:51:17,893] INFO in _internal:  * Detected change in '/home/ubuntu/operator/operator.py', reloading
+[2022-11-24 11:51:17,949] INFO in _internal:  * Restarting with stat
+[2022-11-24 11:51:18,158] WARNING in _internal:  * Debugger is active!
+[2022-11-24 11:51:18,161] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 11:51:22,238] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-24 11:51:22,238] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-24 11:51:22,238] INFO in _internal:  * Restarting with stat
+[2022-11-24 11:51:22,438] WARNING in _internal:  * Debugger is active!
+[2022-11-24 11:51:22,441] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 11:51:34,287] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 11:51:34] "GET / HTTP/1.0" 200 -
+[2022-11-24 11:57:01,243] INFO in _internal:  * Detected change in '/home/ubuntu/operator/operator.py', reloading
+[2022-11-24 11:57:01,299] INFO in _internal:  * Restarting with stat
+[2022-11-24 11:57:01,509] WARNING in _internal:  * Debugger is active!
+[2022-11-24 11:57:01,512] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 11:57:10,365] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 11:57:10] "GET / HTTP/1.0" 200 -
+[2022-11-24 12:06:16,118] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 12:06:16] "POST /login HTTP/1.0" 200 -
+[2022-11-24 12:07:24,371] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 12:07:24] "POST /login HTTP/1.0" 200 -
+[2022-11-24 12:12:23,503] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-24 12:12:23,503] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-24 12:12:23,503] INFO in _internal:  * Restarting with stat
+[2022-11-24 12:12:23,706] WARNING in _internal:  * Debugger is active!
+[2022-11-24 12:12:23,709] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-24 12:12:54,215] INFO in _internal: 10.11.12.15 - - [24/Nov/2022 12:12:54] "POST /login HTTP/1.0" 200 -
+[2022-11-25 05:56:30,417] INFO in _internal: 10.11.12.15 - - [25/Nov/2022 05:56:30] "GET / HTTP/1.0" 200 -
+[2022-11-25 06:04:54,529] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-25 06:04:54,530] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-25 06:04:54,530] INFO in _internal:  * Restarting with stat
+[2022-11-25 06:04:54,732] WARNING in _internal:  * Debugger is active!
+[2022-11-25 06:04:54,735] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-11-25 06:05:05,110] INFO in _internal: 10.11.12.15 - - [25/Nov/2022 06:05:05] "POST /login HTTP/1.0" 200 -
+[2022-11-25 06:05:50,600] INFO in _internal: 10.11.12.15 - - [25/Nov/2022 06:05:50] "POST /login HTTP/1.0" 200 -
+[2022-11-25 07:10:59,734] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-11-25 07:10:59,734] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-11-25 07:10:59,735] INFO in _internal:  * Restarting with stat
+[2022-11-25 07:10:59,935] WARNING in _internal:  * Debugger is active!
+[2022-11-25 07:10:59,938] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-12-05 07:40:32,530] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-12-05 07:40:32,586] INFO in _internal:  * Restarting with stat
+[2022-12-06 03:49:03,488] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 03:49:03,488] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 03:49:03,489] INFO in _internal:  * Restarting with stat
+[2022-12-06 03:49:03,703] WARNING in _internal:  * Debugger is active!
+[2022-12-06 03:49:03,706] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:09:41,882] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 04:09:41,882] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 04:09:41,883] INFO in _internal:  * Restarting with stat
+[2022-12-06 04:09:42,080] WARNING in _internal:  * Debugger is active!
+[2022-12-06 04:09:42,082] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:10:29,420] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:10:29] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:10:35,270] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:10:35] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:10:47,888] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:10:47] "GET /cb?code=u5s5qkc4yrzg2jbau36ddl&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:10:47,933] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:10:47] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:12:43,470] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:12:43] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:14:34,344] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:14:34] "GET /cb?code=a3tbz2ep131esjac5g79po&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:14:34,375] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:14:34] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:15:01,910] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:01] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:15:16,248] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:16] "GET /cb?code=nezvr95pfhqngiwmkknvhu&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:15:16,287] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:16] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:15:31,953] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:31] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:15:43,397] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:43] "GET /cb?code=vdv3oo3tx3rbkus75c9o2m&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:15:43,439] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:15:43] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:16:04,824] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:04] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:16:17,889] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:17] "GET /cb?code=tzb1nj483cjg2ysxwio1t6&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:16:17,923] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:17] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:16:29,318] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:29] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:16:40,383] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:40] "GET /cb?code=rw1135uone4kkprsos64jh&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:16:40,419] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:40] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:16:53,928] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:16:53] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:17:06,784] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:06] "GET /cb?code=ygudgdp1obsk8flxbquwrq&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:17:06,824] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:06] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:17:18,894] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:18] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:17:34,109] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:34] "GET /cb?code=65kmb2wm57auiq5x3fw7hj&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:17:34,142] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:34] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:17:46,187] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:17:46] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:18:03,999] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:18:03] "GET /cb?code=vnwfss21atd4sxqggyombu&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:18:04,041] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:18:04] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:18:33,011] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:18:33] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:18:46,053] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:18:46] "GET /cb?code=b8z4f1ckwn9u49mxo4m923&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:18:46,091] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:18:46] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:24:06,031] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 04:24:06,031] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 04:24:06,032] INFO in _internal:  * Restarting with stat
+[2022-12-06 04:24:06,234] WARNING in _internal:  * Debugger is active!
+[2022-12-06 04:24:06,237] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:24:23,752] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "[35m[1mPOST /register?scope=public_data HTTP/1.0[0m" 500 -
+[2022-12-06 04:24:23,794] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "GET /register?__debugger__=yes&cmd=resource&f=style.css HTTP/1.0" 200 -
+[2022-12-06 04:24:23,799] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "GET /register?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.0" 200 -
+[2022-12-06 04:24:23,825] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "GET /register?__debugger__=yes&cmd=resource&f=ubuntu.ttf HTTP/1.0" 200 -
+[2022-12-06 04:24:23,855] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+[2022-12-06 04:24:23,876] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:23] "GET /register?__debugger__=yes&cmd=resource&f=console.png HTTP/1.0" 200 -
+[2022-12-06 04:24:53,231] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:24:53] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:27:28,366] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 04:27:28,366] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 04:27:28,367] INFO in _internal:  * Restarting with stat
+[2022-12-06 04:27:28,566] WARNING in _internal:  * Debugger is active!
+[2022-12-06 04:27:28,569] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:27:31,294] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:27:31] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:27:38,067] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:27:38] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:32:57,957] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 04:32:57,957] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 04:32:57,958] INFO in _internal:  * Restarting with stat
+[2022-12-06 04:32:58,154] WARNING in _internal:  * Debugger is active!
+[2022-12-06 04:32:58,157] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:33:20,666] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:33:20] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:33:24,679] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:33:24] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:33:34,638] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:33:34] "GET /cb?code=wic2xrtms3gcgbanfmddhs&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:33:34,682] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:33:34] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:33:54,262] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 04:33:54,262] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 04:33:54,263] INFO in _internal:  * Restarting with stat
+[2022-12-06 04:33:54,477] WARNING in _internal:  * Debugger is active!
+[2022-12-06 04:33:54,480] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 04:34:02,991] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:34:02] "POST /login HTTP/1.0" 200 -
+[2022-12-06 04:34:06,729] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:34:06] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:34:21,421] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:34:21] "GET /cb?code=9vji6dzfti7zuxbxhx8xmj&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:34:21,452] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:34:21] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:35:27,178] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:35:27] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:35:37,490] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:35:37] "GET /cb?code=uniw7rrwqn3yr8imla38kn&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:35:37,528] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:35:37] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:35:59,411] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:35:59] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:36:09,119] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:36:09] "GET /cb?code=obtzyrjez9y7vh3absryo3&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:36:09,153] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:36:09] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:36:30,248] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:36:30] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:36:43,233] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:36:43] "GET /cb?code=winu1j79zl9b8fe5924ht5&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:36:43,279] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:36:43] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:37:08,040] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:37:08] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:37:52,701] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:37:52] "GET /cb?code=nufu8wruz1tuvkykn167kp&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:37:52,855] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:37:52] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:38:11,999] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:11] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:38:22,595] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:22] "GET /cb?code=kj912k8xtjzot7t7nfwnyd&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:38:22,616] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:22] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:38:40,321] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:40] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:38:53,362] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:53] "GET /cb?code=4aptbjw6te6jy3ddnldir9&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:38:53,391] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:38:53] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:39:17,644] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:39:17] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:39:33,818] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:39:33] "GET /cb?code=n89w88znxth7e1fh1dcro9&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:39:33,855] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:39:33] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:39:50,623] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:39:50] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:40:04,056] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:40:04] "GET /cb?code=tqodbgfiwqco4vnmlt4c5r&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:40:04,086] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:40:04] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 04:40:36,549] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:40:36] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 04:40:56,645] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:40:56] "GET /cb?code=ljw3vhw9nvvpfucpqedjfn&state=id01 HTTP/1.0" 200 -
+[2022-12-06 04:40:56,688] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 04:40:56] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:40:10,938] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 10:40:10,938] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 10:40:10,939] INFO in _internal:  * Restarting with stat
+[2022-12-06 10:40:11,137] WARNING in _internal:  * Debugger is active!
+[2022-12-06 10:40:11,141] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 10:40:36,258] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:40:36] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:41:03,425] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:41:03] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:41:11,531] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:41:11] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:41:27,842] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:41:27] "GET /cb?code=2uttc1snpzbjzypv9h6pqx&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:41:27,883] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:41:27] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:41:30,510] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:41:30] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:42:00,542] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:00] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:42:03,187] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:03] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:42:16,695] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:16] "GET /cb?code=kc776tv2juackpmatgnnnn&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:42:16,740] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:16] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:42:18,195] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:18] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:42:37,618] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:37] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:42:41,887] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:41] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:42:51,033] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:51] "GET /cb?code=oyedvvdww9hyitf8fyj99f&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:42:51,069] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:51] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:42:52,546] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:42:52] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:43:01,887] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:01] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:43:04,511] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:04] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:43:16,639] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:16] "GET /cb?code=54duvcm5b64kpb2yimt9xh&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:43:16,681] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:16] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:43:18,124] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:18] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:43:29,151] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:29] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:43:31,789] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:31] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:43:42,977] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:42] "GET /cb?code=dsqo4wh47rq1ah4u3lgn9q&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:43:43,016] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:43] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:43:44,206] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:44] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:43:59,359] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:43:59] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:44:03,649] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:03] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:44:14,542] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:14] "GET /cb?code=i7uqunwnmhchkdj2rsafhx&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:44:14,580] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:14] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:44:16,096] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:16] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:44:30,498] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:30] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:44:33,254] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:33] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:44:46,972] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:46] "GET /cb?code=5rya2ap9bgxpdsqfr2yzb2&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:44:47,007] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:47] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:44:48,467] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:44:48] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:45:04,996] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:04] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:45:07,632] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:07] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:45:18,942] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:18] "GET /cb?code=18nlz3wi5bv3cdmyb4zjh3&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:45:18,977] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:18] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:45:20,177] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:20] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:45:44,645] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:44] "POST /login HTTP/1.0" 200 -
+[2022-12-06 10:45:47,232] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:47] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 10:45:58,767] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:58] "GET /cb?code=slrk2lts8eo3hg2bk54lwi&state=id01 HTTP/1.0" 200 -
+[2022-12-06 10:45:59,011] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:45:59] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 10:46:00,430] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:46:00] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:46:05,181] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 10:46:05] "GET /data?scope=public_data HTTP/1.0" 200 -
+[2022-12-06 10:48:50,902] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 10:48:50,903] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 10:48:50,903] INFO in _internal:  * Restarting with stat
+[2022-12-06 10:48:51,112] WARNING in _internal:  * Debugger is active!
+[2022-12-06 10:48:51,115] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-12-06 11:25:14,389] INFO in _internal:  * Detected change in '/home/ubuntu/operator/middleware.py', reloading
+[2022-12-06 11:25:14,445] INFO in _internal:  * Restarting with stat
+[2022-12-06 11:25:14,654] WARNING in _internal:  * Debugger is active!
+[2022-12-06 11:25:14,657] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-12-06 11:25:33,098] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 11:25:33,098] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 11:25:33,099] INFO in _internal:  * Restarting with stat
+[2022-12-06 11:25:33,296] WARNING in _internal:  * Debugger is active!
+[2022-12-06 11:25:33,299] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 11:27:53,252] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:27:53] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:27:55,869] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:27:55] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:28:13,313] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:28:13] "GET /cb?code=uzfsgwet4gai7hnsppybkg&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:28:13,348] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:28:13] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:37:30,357] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 11:37:30,357] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 11:37:30,358] INFO in _internal:  * Restarting with stat
+[2022-12-06 11:37:30,555] WARNING in _internal:  * Debugger is active!
+[2022-12-06 11:37:30,558] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 11:37:36,826] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:37:36] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:37:41,823] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:37:41] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:37:53,231] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:37:53] "GET /cb?code=wmlfrxex21hwsgk5l4aifb&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:37:53,271] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:37:53] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:38:06,627] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:38:06] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:38:24,751] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 11:38:24,752] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 11:38:24,752] INFO in _internal:  * Restarting with stat
+[2022-12-06 11:38:24,949] WARNING in _internal:  * Debugger is active!
+[2022-12-06 11:38:24,952] INFO in _internal:  * Debugger PIN: 109-197-423
+[2022-12-06 11:38:36,323] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:38:36] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:38:40,264] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:38:40] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:38:54,471] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:38:54] "GET /cb?code=b327594l1b6p7vhmvjwwcl&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:38:54,677] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:38:54] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:39:59,400] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:39:59] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:40:54,726] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:40:54] "GET /cb?code=98uz6nrsy3tannvyobisf9&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:40:54,762] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:40:54] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:43:13,551] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:43:13] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:43:23,412] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:43:23] "POST /login HTTP/1.0" 200 -
+[2022-12-06 11:43:26,380] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:43:26] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:43:36,279] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:43:36] "GET /cb?code=saxytovxb8gngdvxa1t1e9&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:43:36,310] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:43:36] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:44:44,223] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:44:44] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:45:01,273] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:45:01] "GET /cb?code=a4gs17ye4jv1kbha6hy66e&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:45:01,329] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:45:01] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:45:58,575] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:45:58] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:46:08,324] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:46:08] "GET /cb?code=cj937sn13gjg2ug2xc3q4a&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:46:08,364] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:46:08] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:47:00,795] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:47:00] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:47:18,771] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:47:18] "GET /cb?code=fu1lnf5mtm68r33h48keae&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:47:18,807] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:47:18] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:48:33,335] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:48:33] "[32mPOST /register?scope=public_data HTTP/1.0[0m" 302 -
+[2022-12-06 11:48:43,916] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:48:43] "GET /cb?code=v553ehlm1wgi8l1gz5hxvl&state=id01 HTTP/1.0" 200 -
+[2022-12-06 11:48:43,961] INFO in _internal: 10.11.12.15 - - [06/Dec/2022 11:48:43] "[33mGET /favicon.ico HTTP/1.0[0m" 404 -
+[2022-12-06 11:49:54,603] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-06 11:49:54,603] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-06 11:49:54,604] INFO in _internal:  * Restarting with stat
+[2022-12-06 11:49:54,800] WARNING in _internal:  * Debugger is active!
+[2022-12-06 11:49:54,803] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-12-08 08:39:54,247] WARNING in _internal:  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+[2022-12-08 08:39:54,247] INFO in _internal:  * Running on http://10.11.12.3:80/ (Press CTRL+C to quit)
+[2022-12-08 08:39:54,248] INFO in _internal:  * Restarting with stat
+[2022-12-08 08:39:54,446] WARNING in _internal:  * Debugger is active!
+[2022-12-08 08:39:54,449] INFO in _internal:  * Debugger PIN: 447-824-545
+[2022-12-08 08:40:33,842] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:33] "POST /login HTTP/1.1" 200 -
+[2022-12-08 08:40:43,119] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:43] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-12-08 08:40:44,280] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:44] "[31m[1mGET /register?scope=public_data HTTP/1.1[0m" 405 -
+[2022-12-08 08:40:44,324] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-12-08 08:40:52,950] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:52] "POST /login HTTP/1.1" 200 -
+[2022-12-08 08:40:54,252] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:54] "GET /data?scope=public_data HTTP/1.1" 200 -
+[2022-12-08 08:40:55,475] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:55] "[31m[1mGET /register?scope=public_data HTTP/1.1[0m" 405 -
+[2022-12-08 08:40:55,531] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:40:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-12-08 08:42:04,096] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:42:04] "[31m[1mGET /register?scope=public_data HTTP/1.1[0m" 405 -
+[2022-12-08 08:42:04,157] INFO in _internal: 163.152.71.98 - - [08/Dec/2022 08:42:04] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[2022-12-08 08:44:02,256] INFO in _internal: 127.0.0.1 - - [08/Dec/2022 08:44:02] "GET / HTTP/1.1" 200 -

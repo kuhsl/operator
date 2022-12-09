@@ -117,7 +117,7 @@ def login():
     cookie_value = make_cookie(_id)
     response = make_response("login success\n")
     response.set_cookie("login", cookie_value)
-
+    
     return response
 
 #@app.post('/data')
